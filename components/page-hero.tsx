@@ -56,18 +56,19 @@ export function PageHero({
         className="object-cover"
       />
 
-      {/* Brand-tinted dark overlay — preserves legibility while showing image */}
+      {/* Brand-tinted overlay — minimal so the image stays visible */}
       <div
-        className="absolute inset-0 bg-(--color-brand-navy)/85"
+        className="absolute inset-0 bg-(--color-brand-navy)/55"
         aria-hidden
       />
+      {/* Bottom-weighted gradient for text legibility on the lower portion */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-(--color-brand-navy)/50 via-(--color-brand-navy)/70 to-(--color-brand-navy)/95"
+        className="absolute inset-0 bg-gradient-to-b from-(--color-brand-navy)/20 via-(--color-brand-navy)/45 to-(--color-brand-navy)/80"
         aria-hidden
       />
-      {/* Subtle electric-blue accent at bottom */}
+      {/* Subtle electric-blue accent line at bottom */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-(--color-brand-electric) to-transparent opacity-60"
+        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-(--color-brand-electric) to-transparent opacity-70"
         aria-hidden
       />
 
