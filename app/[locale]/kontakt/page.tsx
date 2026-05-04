@@ -1,5 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { Phone, Mail, MessageCircle, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { env } from "@/lib/utils";
@@ -43,17 +43,6 @@ export default async function ContactPage({
       href: `mailto:${env.email}`,
       note: tCh("emailNote"),
     },
-    ...(env.whatsapp
-      ? [
-          {
-            Icon: MessageCircle,
-            title: tCh("whatsapp"),
-            value: env.phoneDisplay,
-            href: `https://wa.me/${env.whatsapp}`,
-            note: tCh("whatsappNote"),
-          },
-        ]
-      : []),
     {
       Icon: MapPin,
       title: tCh("address"),

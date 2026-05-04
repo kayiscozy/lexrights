@@ -79,6 +79,7 @@ export default function RootLayout({
   return (
     <html
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
       <body className="min-h-dvh antialiased">{children}</body>

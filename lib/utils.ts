@@ -23,7 +23,6 @@ export const env = {
   phone: process.env.NEXT_PUBLIC_PHONE || "+493055508242",
   phoneDisplay:
     process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+49 30 5550 8242",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "491735508242",
   email: process.env.NEXT_PUBLIC_EMAIL || "kontakt@lexrights.com",
   emailMandate:
     process.env.NEXT_PUBLIC_EMAIL_MANDATE || "mandate@lexrights.com",

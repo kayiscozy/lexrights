@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
-import { Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { env } from "@/lib/utils";
 
@@ -45,17 +45,6 @@ export function StickyCta() {
             >
               <Phone className="size-4" aria-hidden />
             </a>
-            {env.whatsapp && (
-              <a
-                href={`https://wa.me/${env.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.08] hover:text-[--color-brand-electric] hover:shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-              >
-                <MessageCircle className="size-4" aria-hidden />
-              </a>
-            )}
             <Link
               href="/erstberatung"
               className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-[--color-brand-electric] bg-[--color-brand-electric] px-4 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(4,58,253,0.3),0_8px_24px_-8px_rgba(4,58,253,0.6)] transition-all duration-200 active:scale-[0.98] hover:bg-[--color-brand-glow] hover:border-[--color-brand-glow]"
