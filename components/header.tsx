@@ -62,11 +62,8 @@ export function Header({ locale: _locale }: { locale: Locale }) {
   // Legal pages have no hero → dark text always.
   const isLightHeroPage =
     pathname === "/" ||
-    pathname === "" ||
     pathname.startsWith("/impressum") ||
-    pathname.startsWith("/datenschutz") ||
-    pathname.startsWith("/legal-notice") ||
-    pathname.startsWith("/privacy");
+    pathname.startsWith("/datenschutz");
 
   // True when nav sits on top of a dark hero image (sub-pages, not scrolled)
   const onDarkHero = !scrolled && !isLightHeroPage;
