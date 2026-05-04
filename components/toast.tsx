@@ -119,9 +119,8 @@ function ToastCard({
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       role="status"
       className={cn(
-        "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border bg-[--color-bg-elevated]/95 p-4 backdrop-blur-xl",
+        "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border bg-[--color-bg-surface] p-4 shadow-[var(--shadow-lg)]",
         border,
-        ring,
       )}
     >
       <Icon className={cn("size-5 shrink-0 mt-0.5", iconColor)} aria-hidden />

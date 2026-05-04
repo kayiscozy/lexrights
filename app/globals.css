@@ -6,32 +6,33 @@
   --color-brand-electric: #043afd;
   --color-brand-glow: #2e5bff;
 
-  /* ── Background System (Premium Dark) ──────────────────── */
-  --color-bg: #050a1f;
-  --color-bg-surface: #0a1230;
-  --color-bg-elevated: #0f1a40;
-  --color-bg-overlay: rgba(5, 10, 31, 0.8);
+  /* ── Background System (Light, Premium Editorial) ──────── */
+  --color-bg: #fafbfd;
+  --color-bg-surface: #ffffff;
+  --color-bg-elevated: #ffffff;
+  --color-bg-overlay: rgba(250, 251, 253, 0.85);
+  --color-bg-tint: #f1f3f8;
 
-  /* ── Text ──────────────────────────────────────────────── */
-  --color-fg: #f5f7ff;
-  --color-fg-muted: #8b95b8;
-  --color-fg-subtle: #5b6594;
+  /* ── Text (Navy-based, classic legal) ──────────────────── */
+  --color-fg: #011444;
+  --color-fg-muted: #4a5573;
+  --color-fg-subtle: #6e7894;
 
-  /* ── Borders (white-tinted for cleaner premium look) ─────── */
-  --color-border: rgba(245, 247, 255, 0.10);
-  --color-border-strong: rgba(245, 247, 255, 0.18);
-  --color-border-brand: rgba(4, 58, 253, 0.45);
+  /* ── Borders (navy-tinted, subtle) ─────────────────────── */
+  --color-border: rgba(1, 20, 68, 0.08);
+  --color-border-strong: rgba(1, 20, 68, 0.15);
+  --color-border-brand: rgba(4, 58, 253, 0.35);
 
   /* ── Accents ───────────────────────────────────────────── */
   --color-accent: #043afd;
   --color-accent-hover: #2e5bff;
 
   /* ── Status ────────────────────────────────────────────── */
-  --color-success: #4ade80;
-  --color-warning: #fbb04f;
-  --color-error: #f87171;
+  --color-success: #16a34a;
+  --color-warning: #c2740d;
+  --color-error: #dc2626;
 
-  /* ── Typography (Geist via geist npm package, self-hosted) ─ */
+  /* ── Typography ────────────────────────────────────────── */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", "Menlo",
@@ -42,14 +43,17 @@
   --radius-xs: 4px;
   --radius-sm: 6px;
   --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-2xl: 32px;
+  --radius-lg: 12px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
 
-  /* ── Shadows ───────────────────────────────────────────── */
-  --shadow-glow-sm: 0 0 0 1px rgba(4, 58, 253, 0.2);
-  --shadow-glow-md: 0 0 24px rgba(4, 58, 253, 0.18);
-  --shadow-glow-lg: 0 0 48px rgba(4, 58, 253, 0.22);
+  /* ── Shadows (clean, professional, no glow) ────────────── */
+  --shadow-xs: 0 1px 2px rgba(1, 20, 68, 0.04);
+  --shadow-sm: 0 2px 6px rgba(1, 20, 68, 0.06), 0 1px 2px rgba(1, 20, 68, 0.04);
+  --shadow-md: 0 6px 16px -4px rgba(1, 20, 68, 0.08),
+    0 2px 4px rgba(1, 20, 68, 0.04);
+  --shadow-lg: 0 14px 32px -8px rgba(1, 20, 68, 0.10),
+    0 4px 8px rgba(1, 20, 68, 0.05);
 
   /* ── Animation ─────────────────────────────────────────── */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -81,7 +85,6 @@
     overflow-x: hidden;
   }
 
-  /* Universal click feedback for every interactive element */
   button,
   a[href],
   [role="button"],
@@ -94,11 +97,11 @@
   }
 
   ::selection {
-    background: rgba(4, 58, 253, 0.4);
-    color: var(--color-fg);
+    background: rgba(4, 58, 253, 0.18);
+    color: var(--color-brand-navy);
   }
 
-  /* Smooth page-content fade-in on initial load (subtle) */
+  /* Smooth page-content fade-in */
   main {
     animation: page-fade-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
@@ -114,6 +117,7 @@
     }
   }
 
+  /* Scrollbar — subtle, light theme appropriate */
   ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
@@ -124,53 +128,23 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-bg-elevated);
+    background: rgba(1, 20, 68, 0.12);
     border: 3px solid var(--color-bg);
     border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-fg-subtle);
+    background: rgba(1, 20, 68, 0.25);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-electric);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
   }
 }
 
-/* ── Aurora Background (Hero) ─────────────────────────────── */
 @layer utilities {
-  .aurora-bg {
-    background:
-      radial-gradient(
-        ellipse 80% 50% at 50% -10%,
-        rgba(4, 58, 253, 0.12),
-        transparent 55%
-      ),
-      radial-gradient(
-        ellipse 60% 50% at 90% 30%,
-        rgba(46, 91, 255, 0.07),
-        transparent 55%
-      ),
-      radial-gradient(
-        ellipse 60% 60% at 10% 50%,
-        rgba(1, 20, 68, 0.3),
-        transparent 65%
-      );
-  }
-
-  .aurora-bg-soft {
-    background: radial-gradient(
-      ellipse 60% 40% at 50% 0%,
-      rgba(4, 58, 253, 0.08),
-      transparent 55%
-    );
-  }
-
-  .aurora-grid {
-    background-image:
-      linear-gradient(to right, rgba(139, 149, 184, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(139, 149, 184, 0.04) 1px, transparent 1px);
-    background-size: 64px 64px;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent);
-  }
-
   .text-balance {
     text-wrap: balance;
   }
@@ -179,80 +153,54 @@
     text-wrap: pretty;
   }
 
-  .glow-cyan {
-    box-shadow: var(--shadow-glow-md);
+  /* Subtle hero gradient — warm off-white to slight cool tint, NO glow */
+  .editorial-bg {
+    background: linear-gradient(
+      to bottom,
+      #fafbfd 0%,
+      #f4f6fa 100%
+    );
   }
 
-  .glass {
-    background: rgba(15, 26, 64, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--color-border);
+  /* Subtle dotted divider */
+  .editorial-divider {
+    background-image: radial-gradient(
+      circle,
+      rgba(1, 20, 68, 0.15) 1px,
+      transparent 1px
+    );
+    background-size: 8px 8px;
   }
 
-  /* Premium card hover — used on all clickable cards.
-     Hover STRONGLY brightens the surface so it's unambiguously interactive. */
+  /* Premium card hover — light theme: subtle lift + brand-tinted border */
   .card-hover {
-    transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
-      border-color 240ms cubic-bezier(0.16, 1, 0.3, 1),
-      background-color 240ms cubic-bezier(0.16, 1, 0.3, 1),
-      box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 220ms cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform;
   }
   .card-hover:hover {
-    border-color: rgba(4, 58, 253, 0.85);
-    background-color: rgba(4, 58, 253, 0.10);
-    transform: translateY(-3px);
-    box-shadow:
-      0 0 0 3px rgba(4, 58, 253, 0.16),
-      0 18px 44px -16px rgba(4, 58, 253, 0.65),
-      inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+    border-color: var(--color-border-brand);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
   }
   .card-hover:active {
-    transform: translateY(-1px) scale(0.99);
+    transform: translateY(-1px) scale(0.995);
     transition-duration: 80ms;
-    border-color: rgb(4, 58, 253);
-    background-color: rgba(4, 58, 253, 0.18);
-    box-shadow:
-      0 0 0 4px rgba(4, 58, 253, 0.28),
-      inset 0 0 24px rgba(4, 58, 253, 0.18);
+    border-color: var(--color-brand-electric);
+    box-shadow: var(--shadow-md);
   }
   .card-hover:focus-visible {
     outline: none;
-    border-color: rgb(4, 58, 253);
+    border-color: var(--color-brand-electric);
     box-shadow:
-      0 0 0 3px rgba(4, 58, 253, 0.35),
-      0 14px 36px -18px rgba(4, 58, 253, 0.5);
+      0 0 0 3px rgba(4, 58, 253, 0.18),
+      var(--shadow-md);
   }
 
-  /* Subtle inner gradient on hover for premium feel */
-  .card-glow {
-    position: relative;
-    overflow: hidden;
-  }
-  .card-glow::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      circle at var(--mx, 50%) var(--my, 50%),
-      rgba(4, 58, 253, 0.08),
-      transparent 40%
-    );
-    opacity: 0;
-    transition: opacity 300ms ease-out;
-    pointer-events: none;
-  }
-  .card-glow:hover::before {
-    opacity: 1;
-  }
-
-  /* Subtle hover-shine on links */
+  /* Animated underline (premium link style) */
   .link-hover {
-    background-image: linear-gradient(
-      currentColor,
-      currentColor
-    );
+    background-image: linear-gradient(currentColor, currentColor);
     background-size: 0% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -263,7 +211,6 @@
   }
 }
 
-/* ── Reduced Motion ──────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -272,14 +219,5 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* ── Focus Ring (A11y) ───────────────────────────────────── */
-@layer base {
-  :focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 3px;
-    border-radius: var(--radius-xs);
   }
 }

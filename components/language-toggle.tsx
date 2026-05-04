@@ -26,7 +26,7 @@ export function LanguageToggle({ className }: { className?: string }) {
       role="group"
       aria-label={t("language")}
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-[--color-fg]/20 bg-[--color-fg]/[0.05] p-0.5 backdrop-blur-sm transition-colors duration-200 hover:border-[--color-fg]/35",
+        "inline-flex items-center gap-0.5 rounded-full border border-[--color-border-strong] bg-[--color-bg-tint] p-0.5 backdrop-blur-sm transition-colors duration-200 hover:border-[--color-fg]/35",
         className,
       )}
     >

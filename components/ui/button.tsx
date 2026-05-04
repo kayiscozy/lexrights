@@ -12,58 +12,64 @@ const buttonVariants = cva(
     "focus-visible:ring-offset-2 focus-visible:ring-offset-[--color-bg]",
     "disabled:pointer-events-none disabled:opacity-50",
     "[&_svg]:size-4 [&_svg]:shrink-0",
-    "active:scale-[0.97] select-none",
+    "active:scale-[0.98] select-none",
   ].join(" "),
   {
     variants: {
       variant: {
-        // PRIMARY — Maximum-emphasis CTA. Vibrant brand-blue with strong glow.
-        // Hover: noticeably brighter (brand-glow #2E5BFF) + larger lift + intensified glow
+        // PRIMARY — Solid navy, classic premium law firm
         primary: [
-          "relative overflow-hidden border border-[--color-brand-electric]",
-          "bg-[--color-brand-electric] text-white",
-          "shadow-[0_0_0_1px_rgba(4,58,253,0.5),0_8px_24px_-6px_rgba(4,58,253,0.6),inset_0_1px_0_0_rgba(255,255,255,0.18)]",
+          "border border-[--color-brand-navy] bg-[--color-brand-navy] text-white",
+          "shadow-[0_2px_4px_rgba(1,20,68,0.10),0_1px_2px_rgba(1,20,68,0.06)]",
+          "hover:bg-[#001033] hover:border-[#001033]",
+          "hover:shadow-[0_8px_20px_-4px_rgba(1,20,68,0.25),0_2px_4px_rgba(1,20,68,0.10)]",
+          "hover:-translate-y-px",
+        ].join(" "),
+
+        // BRAND — Electric blue, secondary CTA emphasis
+        brand: [
+          "border border-[--color-brand-electric] bg-[--color-brand-electric] text-white",
+          "shadow-[0_2px_4px_rgba(4,58,253,0.18),0_1px_2px_rgba(4,58,253,0.10)]",
           "hover:bg-[--color-brand-glow] hover:border-[--color-brand-glow]",
-          "hover:shadow-[0_0_0_1px_rgba(46,91,255,0.6),0_18px_44px_-8px_rgba(46,91,255,0.85),inset_0_1px_0_0_rgba(255,255,255,0.30)]",
-          "hover:-translate-y-0.5",
+          "hover:shadow-[0_8px_20px_-4px_rgba(4,58,253,0.35),0_2px_4px_rgba(4,58,253,0.15)]",
+          "hover:-translate-y-px",
         ].join(" "),
 
-        // SECONDARY — Substantial glass surface. Clearly visible default.
-        // Hover: brighter glass + brand-electric border + brand-tinted glow
+        // SECONDARY — White with subtle border, navy text
         secondary: [
-          "border border-[--color-fg]/25 bg-[--color-fg]/[0.08] text-[--color-fg] backdrop-blur-md",
-          "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.10)]",
-          "hover:border-[--color-brand-electric] hover:bg-[--color-fg]/[0.14]",
-          "hover:text-white hover:-translate-y-0.5",
-          "hover:shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_10px_28px_-8px_rgba(4,58,253,0.5),inset_0_1px_0_0_rgba(255,255,255,0.16)]",
+          "border border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg]",
+          "shadow-[0_1px_2px_rgba(1,20,68,0.04)]",
+          "hover:border-[--color-brand-navy] hover:bg-[--color-bg-tint]",
+          "hover:shadow-[0_4px_8px_rgba(1,20,68,0.06)]",
+          "hover:-translate-y-px",
         ].join(" "),
 
-        // OUTLINE — Clear stroke, transparent fill. Full color-flip on hover.
+        // OUTLINE — Transparent with navy border, full color-flip on hover
         outline: [
-          "border border-[--color-fg]/30 bg-[--color-fg]/[0.02] text-[--color-fg]",
-          "hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.16]",
-          "hover:text-white hover:-translate-y-0.5",
-          "hover:shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_10px_28px_-10px_rgba(4,58,253,0.55)]",
+          "border border-[--color-brand-navy]/40 bg-transparent text-[--color-fg]",
+          "hover:border-[--color-brand-navy] hover:bg-[--color-brand-navy] hover:text-white",
+          "hover:-translate-y-px",
+          "hover:shadow-[0_4px_10px_rgba(1,20,68,0.18)]",
         ].join(" "),
 
-        // GHOST — Minimal weight but clearly responsive on hover
+        // GHOST — Minimal, navy hover tint
         ghost: [
           "text-[--color-fg-muted]",
-          "hover:bg-[--color-brand-electric]/[0.14] hover:text-white",
+          "hover:bg-[--color-bg-tint] hover:text-[--color-fg]",
         ].join(" "),
 
-        // LINK — Inline-text style with animated underline
+        // LINK — Inline-text style
         link: [
-          "text-[--color-brand-glow] underline-offset-4 px-0 h-auto font-medium",
-          "hover:text-white hover:underline",
+          "text-[--color-brand-electric] underline-offset-4 px-0 h-auto font-medium",
+          "hover:text-[--color-brand-electric] hover:underline",
         ].join(" "),
 
         // DESTRUCTIVE
         destructive: [
-          "border border-[--color-error] bg-[--color-error]/90 text-white",
-          "shadow-[0_8px_24px_-8px_rgba(248,113,113,0.45)]",
-          "hover:bg-[--color-error] hover:-translate-y-0.5",
-          "hover:shadow-[0_14px_36px_-8px_rgba(248,113,113,0.65)]",
+          "border border-[--color-error] bg-[--color-error] text-white",
+          "shadow-[0_2px_4px_rgba(220,38,38,0.20)]",
+          "hover:bg-[#b91c1c] hover:border-[#b91c1c]",
+          "hover:-translate-y-px hover:shadow-[0_6px_14px_rgba(220,38,38,0.28)]",
         ].join(" "),
       },
       size: {

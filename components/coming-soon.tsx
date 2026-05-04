@@ -17,14 +17,14 @@ export function ComingSoon({ namespace }: ComingSoonProps) {
   return (
     <>
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
-        <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
+        <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-3xl px-4 text-center md:px-6"
         >
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
             {tHero("eyebrow")}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -43,18 +43,14 @@ export function ComingSoon({ namespace }: ComingSoonProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative overflow-hidden rounded-3xl border border-[--color-brand-electric]/30 bg-[--color-bg-surface]/60 p-10 text-center md:p-16"
+            className="relative overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-10 text-center shadow-[var(--shadow-md)] md:p-16"
           >
-            <div className="pointer-events-none absolute inset-0 -z-10 opacity-50" aria-hidden>
-              <div className="absolute -left-24 top-0 size-96 rounded-full bg-[--color-brand-electric]/15 blur-3xl" />
-              <div className="absolute -right-24 bottom-0 size-96 rounded-full bg-[--color-brand-glow]/10 blur-3xl" />
-            </div>
             <motion.div
               initial={{ scale: 0, rotate: -45 }}
               whileInView={{ scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="mx-auto inline-flex size-14 items-center justify-center rounded-2xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.10] text-[--color-brand-electric] shadow-[0_0_24px_-4px_rgba(4,58,253,0.5)]"
+              className="mx-auto inline-flex size-14 items-center justify-center rounded-xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric]"
             >
               <Sparkles className="size-6" aria-hidden />
             </motion.div>

@@ -59,11 +59,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer className="relative mt-32 border-t border-[--color-border] bg-[--color-bg]">
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-[--color-brand-electric]/30 to-transparent"
-        aria-hidden
-      />
+    <footer className="relative mt-32 border-t border-[--color-border] bg-[--color-bg-tint]">
 
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
@@ -75,7 +71,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
             >
               <Logo
                 variant="wordmark"
-                className="h-6 w-auto transition-all duration-300 group-hover:[filter:drop-shadow(0_0_12px_rgba(74,123,255,0.4))]"
+                className="h-6 w-auto transition-opacity duration-200 group-hover:opacity-70"
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-[--color-fg-muted]">
@@ -105,7 +101,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
               {trustBadges.map(({ Icon, label }) => (
                 <span
                   key={label}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[--color-border] bg-[--color-bg-surface]/40 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-[--color-fg-muted]"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[--color-border] bg-[--color-bg-surface] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-[--color-fg-muted]"
                 >
                   <Icon className="size-3 text-[--color-brand-electric]" aria-hidden />
                   {label}

@@ -17,24 +17,16 @@ export function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative overflow-hidden rounded-3xl border border-[--color-border-brand] bg-[--color-bg-surface] px-6 py-16 text-center md:px-12 md:py-20 lg:py-24"
+          className="relative overflow-hidden rounded-2xl border border-[--color-brand-navy] bg-[--color-brand-navy] px-6 py-16 text-center md:px-12 md:py-20 lg:py-24"
         >
-          <div
-            className="pointer-events-none absolute inset-0 -z-10 opacity-50"
-            aria-hidden
-          >
-            <div className="absolute -left-24 top-0 size-96 rounded-full bg-[--color-brand-electric]/20 blur-3xl" />
-            <div className="absolute -right-24 bottom-0 size-96 rounded-full bg-[--color-brand-glow]/15 blur-3xl" />
-          </div>
-
-          <h2 className="mx-auto max-w-3xl text-balance text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl lg:text-5xl">
+          <h2 className="mx-auto max-w-3xl text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
             {t("title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-pretty text-base text-white/75 md:text-lg">
             {t("subtitle")}
           </p>
           <div className="mt-10">
-            <Button asChild size="xl">
+            <Button asChild variant="brand" size="xl">
               <Link href="/erstberatung">
                 {t("button")}
                 <ArrowRight className="size-4" />

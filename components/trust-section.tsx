@@ -16,7 +16,7 @@ export function TrustSection() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-px overflow-hidden rounded-2xl border border-[--color-fg]/10 bg-[--color-fg]/10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-5xl gap-px overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-fg]/10 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, idx) => (
             <motion.div
               key={item.title}
@@ -28,7 +28,7 @@ export function TrustSection() {
                 delay: idx * 0.05,
                 ease: "easeOut",
               }}
-              className="group relative bg-[--color-bg-surface]/70 p-6 transition-colors duration-300 hover:bg-[--color-brand-electric]/[0.04] md:p-8"
+              className="group relative bg-[--color-bg-surface] p-6 transition-colors duration-300 hover:bg-[--color-brand-electric]/[0.04] md:p-8"
             >
               <div
                 className="pointer-events-none absolute left-0 top-0 h-px w-full origin-left scale-x-0 bg-gradient-to-r from-transparent via-[--color-brand-electric] to-transparent opacity-0 transition-all duration-500 group-hover:scale-x-100 group-hover:opacity-100"

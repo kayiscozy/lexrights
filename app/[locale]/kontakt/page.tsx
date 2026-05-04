@@ -55,9 +55,9 @@ export default async function ContactPage({
   return (
     <>
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
-        <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
+        <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
             {tHero("eyebrow")}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -82,7 +82,7 @@ export default async function ContactPage({
           <div className="grid gap-3 md:grid-cols-2">
             {channels.map(({ Icon, title, value, href, note }) => {
               const card = (
-                <div className={`group flex h-full items-start gap-4 rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6 ${href ? "card-hover" : ""}`}>
+                <div className={`group flex h-full items-start gap-4 rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 ${href ? "card-hover" : ""}`}>
                   <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric] transition-all duration-300 group-hover:bg-[--color-brand-electric]/[0.14] group-hover:shadow-[0_0_20px_-4px_rgba(4,58,253,0.4)]">
                     <Icon className="size-5" aria-hidden />
                   </div>
@@ -115,7 +115,7 @@ export default async function ContactPage({
             })}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6 md:p-8">
+          <div className="mt-12 rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 md:p-8">
             <h2 className="text-xl font-semibold tracking-tight text-[--color-fg]">
               {tOf("title")}
             </h2>

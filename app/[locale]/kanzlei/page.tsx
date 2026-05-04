@@ -44,9 +44,9 @@ export default async function FirmPage({
       ))}
 
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
-        <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
+        <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
             {tHero("eyebrow")}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -67,7 +67,7 @@ export default async function FirmPage({
             {values.map((v) => (
               <div
                 key={v.title}
-                className="card-hover rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6"
+                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6"
               >
                 <h3 className="text-lg font-semibold text-[--color-fg]">
                   {v.title}
@@ -97,7 +97,7 @@ export default async function FirmPage({
               <article
                 key={m.id}
                 id={m.id}
-                className="card-hover group relative overflow-hidden rounded-3xl border border-[--color-fg]/10 bg-[--color-bg-surface]/50 p-6 md:p-8"
+                className="card-hover group relative overflow-hidden rounded-3xl border border-[--color-border] bg-[--color-bg-surface] p-6 md:p-8"
               >
                 {/* Avatar Placeholder */}
                 <div
@@ -165,7 +165,7 @@ export default async function FirmPage({
 
                 <a
                   href={`mailto:${m.email}`}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-glow]"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-electric]"
                 >
                   <Mail className="size-4" aria-hidden />
                   {m.email}

@@ -43,8 +43,8 @@ export function PillarsSection() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               className={cn(
-                "card-hover card-glow group relative rounded-2xl border border-[--color-fg]/10",
-                "bg-[--color-bg-surface]/50 p-6 backdrop-blur-sm",
+                "card-hover card-glow group relative rounded-2xl border border-[--color-border]",
+                "bg-[--color-bg-surface] p-6 backdrop-blur-sm",
               )}
             >
               <div

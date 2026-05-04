@@ -37,11 +37,11 @@ export function StickyCta() {
           className="fixed inset-x-0 bottom-0 z-40 lg:hidden"
           style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
         >
-          <div className="mx-3 mb-3 flex items-center gap-2 rounded-2xl border border-[--color-border-strong] bg-[--color-bg-surface]/95 p-2 shadow-2xl backdrop-blur-xl">
+          <div className="mx-3 mb-3 flex items-center gap-2 rounded-2xl border border-[--color-border-strong] bg-[--color-bg-surface] p-2 shadow-[var(--shadow-lg)] backdrop-blur-xl">
             <a
               href={`tel:${env.phone}`}
               aria-label={env.phoneDisplay}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-fg]/20 bg-[--color-fg]/[0.05] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.20] hover:text-white hover:shadow-[0_0_0_3px_rgba(4,58,253,0.20)]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-navy] hover:bg-[--color-brand-navy] hover:text-white"
             >
               <Phone className="size-4" aria-hidden />
             </a>

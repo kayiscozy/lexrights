@@ -45,11 +45,11 @@ export default async function ServicesPage({
 
   return (
     <section className="relative pb-24 pt-32 md:pb-32 md:pt-40">
-      <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
+      <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
 
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
             {locale === "de" ? "Leistungen" : "Services"}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -79,7 +79,7 @@ export default async function ServicesPage({
                         pathname: "/leistungen/[slug]",
                         params: { slug: p.slug[locale] },
                       }}
-                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-5"
+                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-5"
                     >
                       <div className="flex items-start justify-between">
                         <h3 className="text-base font-semibold text-[--color-fg]">
@@ -104,7 +104,7 @@ export default async function ServicesPage({
           )}
         </div>
 
-        <div className="mt-24 rounded-2xl border border-[--color-border-brand] bg-[--color-bg-surface]/60 p-8 text-center md:p-12">
+        <div className="mt-24 rounded-2xl border border-[--color-border-brand] bg-[--color-bg-surface] p-8 text-center md:p-12">
           <h2 className="text-balance text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
             {locale === "de"
               ? "Ihre Plattform nicht dabei?"

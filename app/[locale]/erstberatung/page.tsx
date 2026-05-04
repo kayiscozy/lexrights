@@ -26,11 +26,11 @@ export default async function ConsultationPage({
 
   return (
     <section className="relative pb-24 pt-32 md:pb-32 md:pt-40">
-      <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
+      <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
 
       <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
         <div className="text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
             {t("eyebrow")}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">

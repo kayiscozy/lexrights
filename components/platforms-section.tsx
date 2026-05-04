@@ -52,10 +52,10 @@ export function PlatformsSection() {
                   pathname: "/leistungen/[slug]",
                   params: { slug: platform.slug[locale] },
                 }}
-                className="card-hover card-glow group relative flex h-full flex-col rounded-xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-5"
+                className="card-hover card-glow group relative flex h-full flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-5"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
                     {platformCategories[platform.category][locale]}
                   </span>
                   <ArrowUpRight
@@ -77,7 +77,7 @@ export function PlatformsSection() {
         <div className="mt-12 text-center">
           <Link
             href="/leistungen"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-glow]"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-electric]"
           >
             {t("viewAll")}
             <ArrowUpRight className="size-4" aria-hidden />

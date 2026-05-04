@@ -63,7 +63,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
           scrolled
-            ? "border-b border-[--color-border] bg-[--color-bg]/85 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)] backdrop-blur-xl"
+            ? "border-b border-[--color-border] bg-[--color-bg]/90 shadow-[0_2px_8px_-2px_rgba(1,20,68,0.06)] backdrop-blur-xl"
             : "border-b border-transparent bg-transparent",
         )}
       >
@@ -75,14 +75,14 @@ export function Header({ locale: _locale }: { locale: Locale }) {
           >
             <Logo
               variant="wordmark"
-              className="h-5 w-auto transition-all duration-300 group-hover:[filter:drop-shadow(0_0_12px_rgba(74,123,255,0.5))]"
+              className="h-5 w-auto transition-opacity duration-200 group-hover:opacity-80"
               priority
             />
           </Link>
 
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-0.5 rounded-full border border-[--color-fg]/20 bg-[--color-bg-surface]/60 p-1 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] backdrop-blur-md lg:flex"
+            className="hidden items-center gap-1 lg:flex"
           >
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
@@ -91,20 +91,20 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-200 active:scale-95",
+                    "relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
                     active
-                      ? "text-white"
-                      : "text-[--color-fg-muted] hover:bg-[--color-brand-electric]/[0.18] hover:text-white",
+                      ? "text-[--color-fg]"
+                      : "text-[--color-fg-muted] hover:bg-[--color-bg-tint] hover:text-[--color-fg]",
                   )}
                 >
+                  {t(link.labelKey)}
                   {active && (
                     <motion.span
-                      layoutId="active-nav-bg"
-                      className="absolute inset-0 -z-10 rounded-full border border-[--color-brand-electric] bg-[--color-brand-electric] shadow-[0_0_0_1px_rgba(4,58,253,0.5),0_8px_24px_-6px_rgba(4,58,253,0.7),inset_0_1px_0_0_rgba(255,255,255,0.18)]"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      layoutId="active-nav-indicator"
+                      className="absolute inset-x-3 -bottom-1 h-0.5 rounded-full bg-[--color-brand-electric]"
+                      transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
-                  <span className="relative">{t(link.labelKey)}</span>
                 </Link>
               );
             })}
@@ -126,8 +126,8 @@ export function Header({ locale: _locale }: { locale: Locale }) {
               className={cn(
                 "relative inline-flex size-10 items-center justify-center rounded-lg border transition-all duration-200 active:scale-95 lg:hidden",
                 open
-                  ? "border-[--color-brand-electric] bg-[--color-brand-electric] text-white shadow-[0_0_0_2px_rgba(4,58,253,0.4),0_8px_20px_-4px_rgba(4,58,253,0.6)]"
-                  : "border-[--color-fg]/20 bg-[--color-fg]/[0.05] text-[--color-fg] hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.20] hover:text-white hover:shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
+                  ? "border-[--color-brand-navy] bg-[--color-brand-navy] text-white"
+                  : "border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg] hover:border-[--color-brand-navy] hover:bg-[--color-bg-tint]",
               )}
               aria-expanded={open}
               aria-label={open ? t("close") : t("menu")}
@@ -194,15 +194,15 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                     <Link
                       href={link.href}
                       className={cn(
-                        "flex items-center justify-between rounded-xl border px-4 py-3.5 text-lg font-semibold transition-all duration-200 active:scale-[0.98]",
+                        "flex items-center justify-between rounded-lg border px-4 py-3.5 text-lg font-medium transition-all duration-200 active:scale-[0.98]",
                         active
-                          ? "border-[--color-brand-electric] bg-[--color-brand-electric] text-white shadow-[0_0_0_2px_rgba(4,58,253,0.5),0_10px_28px_-6px_rgba(4,58,253,0.7),inset_0_1px_0_0_rgba(255,255,255,0.18)]"
-                          : "border-[--color-fg]/15 bg-[--color-fg]/[0.04] text-[--color-fg] hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.18] hover:text-white hover:shadow-[0_0_0_2px_rgba(4,58,253,0.18)]",
+                          ? "border-[--color-brand-navy] bg-[--color-brand-navy] text-white"
+                          : "border-[--color-border] bg-[--color-bg-surface] text-[--color-fg] hover:border-[--color-brand-navy] hover:bg-[--color-bg-tint]",
                       )}
                     >
                       <span>{t(link.labelKey)}</span>
                       {active && (
-                        <span className="size-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" aria-hidden />
+                        <span className="size-2 rounded-full bg-[--color-brand-electric]" aria-hidden />
                       )}
                     </Link>
                   </motion.div>

@@ -8,12 +8,7 @@ interface LogoProps {
 }
 
 const sources = {
-  wordmark: {
-    src: "/logos/wordmark-dark.svg",
-    w: 500,
-    h: 44,
-    alt: "LexRights",
-  },
+  wordmark: { src: "/logos/wordmark.svg", w: 500, h: 44, alt: "LexRights" },
   mark: { src: "/logos/mark.svg", w: 187, h: 165, alt: "LexRights" },
   combined: {
     src: "/logos/combined.svg",
