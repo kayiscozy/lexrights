@@ -48,5 +48,15 @@
     "tailwindcss": "^4.2.4",
     "typescript": "^5.7.3",
     "wrangler": "^4.87.0"
-  }
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
+  },
+  "packageManager": "pnpm@10.20.0"
 }
