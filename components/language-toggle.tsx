@@ -45,8 +45,8 @@ export function LanguageToggle({ className }: { className?: string }) {
             "h-7 min-w-[2.5rem] rounded-full px-3 text-xs font-semibold uppercase tracking-wide transition-all duration-200",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-brand-electric) focus-visible:ring-offset-1 focus-visible:ring-offset-(--color-bg)",
             locale === lng
-              ? "bg-(--color-brand-navy) text-white shadow-[0_2px_6px_-1px_rgba(1,20,68,0.20)]"
-              : "text-(--color-fg-muted) hover:bg-(--color-bg-tint) hover:text-(--color-brand-navy)",
+              ? "bg-(--color-brand-electric) text-white shadow-[0_2px_6px_-1px_rgba(4,58,253,0.30)]"
+              : "text-(--color-fg-muted) hover:bg-(--color-bg-tint) hover:text-(--color-brand-electric)",
           )}
         >
           {lng}
