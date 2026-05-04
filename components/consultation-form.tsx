@@ -377,10 +377,10 @@ function Step1({ form, update, errors, touched, markTouched }: StepProps) {
               <label
                 key={opt}
                 className={cn(
-                  "cursor-pointer rounded-lg border px-4 py-3 text-sm transition-all duration-200",
+                  "cursor-pointer rounded-lg border px-4 py-3 text-sm font-medium transition-all duration-200",
                   form.issue === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/10 text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                    : "border-[--color-border] bg-[--color-bg]/40 text-[--color-fg-muted] hover:border-[--color-border-strong] hover:bg-[--color-bg]/60 hover:text-[--color-fg]",
+                    ? "border-[--color-fg] bg-[--color-fg] text-[--color-brand-navy] shadow-[0_4px_16px_-4px_rgba(245,247,255,0.3)]"
+                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg-muted] hover:border-[--color-fg]/35 hover:bg-[--color-fg]/[0.07] hover:text-[--color-fg]",
                 )}
               >
                 <input
@@ -453,10 +453,10 @@ function Step2({ form, update, errors, touched, markTouched }: StepProps) {
               <label
                 key={opt}
                 className={cn(
-                  "cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm transition-all duration-200",
+                  "cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-medium transition-all duration-200",
                   form.timing === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/10 text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                    : "border-[--color-border] bg-[--color-bg]/40 text-[--color-fg-muted] hover:border-[--color-border-strong] hover:bg-[--color-bg]/60 hover:text-[--color-fg]",
+                    ? "border-[--color-fg] bg-[--color-fg] text-[--color-brand-navy] shadow-[0_4px_16px_-4px_rgba(245,247,255,0.3)]"
+                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg-muted] hover:border-[--color-fg]/35 hover:bg-[--color-fg]/[0.07] hover:text-[--color-fg]",
                 )}
               >
                 <input
@@ -497,10 +497,10 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
             <label
               key={opt}
               className={cn(
-                "flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3.5 text-sm transition-all duration-200",
+                "flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3.5 text-sm font-medium transition-all duration-200",
                 form.value === opt
-                  ? "border-[--color-brand-electric] bg-[--color-brand-electric]/10 text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                  : "border-[--color-border] bg-[--color-bg]/40 text-[--color-fg-muted] hover:border-[--color-border-strong] hover:bg-[--color-bg]/60 hover:text-[--color-fg]",
+                  ? "border-[--color-fg] bg-[--color-fg] text-[--color-brand-navy] shadow-[0_4px_16px_-4px_rgba(245,247,255,0.3)]"
+                  : "border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg-muted] hover:border-[--color-fg]/35 hover:bg-[--color-fg]/[0.07] hover:text-[--color-fg]",
               )}
             >
               <input
@@ -518,8 +518,8 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
                 className={cn(
                   "size-4 shrink-0 rounded-full border-2 transition-colors",
                   form.value === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]"
-                    : "border-[--color-border-strong]",
+                    ? "border-[--color-brand-navy] bg-[--color-brand-electric]"
+                    : "border-[--color-fg]/30",
                 )}
                 aria-hidden
               />

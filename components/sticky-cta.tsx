@@ -58,7 +58,7 @@ export function StickyCta() {
             )}
             <Link
               href="/erstberatung"
-              className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[--color-brand-electric] px-4 text-sm font-medium text-white shadow-[0_4px_12px_-2px_rgba(4,58,253,0.5)] transition-all duration-200 active:scale-[0.98] hover:bg-[--color-brand-glow]"
+              className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[--color-fg] px-4 text-sm font-semibold text-[--color-brand-navy] shadow-[0_4px_16px_-4px_rgba(245,247,255,0.3)] transition-all duration-200 active:scale-[0.98] hover:bg-white"
             >
               {t("consultationCta")}
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

@@ -101,7 +101,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   {active && (
                     <motion.span
                       layoutId="active-nav-indicator"
-                      className="absolute inset-x-3 -bottom-px h-px bg-[--color-brand-electric]"
+                      className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-[--color-fg]"
                       transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
@@ -189,15 +189,15 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                     <Link
                       href={link.href}
                       className={cn(
-                        "flex items-center justify-between rounded-xl px-4 py-3.5 text-lg font-medium transition-colors",
+                        "flex items-center justify-between rounded-xl px-4 py-3.5 text-lg font-medium transition-all duration-200",
                         active
-                          ? "bg-[--color-brand-electric]/10 text-[--color-fg]"
-                          : "text-[--color-fg]/90 hover:bg-[--color-bg-surface]",
+                          ? "bg-[--color-fg]/[0.08] text-[--color-fg] shadow-[inset_0_0_0_1px_rgba(245,247,255,0.15)]"
+                          : "text-[--color-fg]/80 hover:bg-[--color-fg]/[0.05] hover:text-[--color-fg]",
                       )}
                     >
                       <span>{t(link.labelKey)}</span>
                       {active && (
-                        <span className="size-1.5 rounded-full bg-[--color-brand-electric]" aria-hidden />
+                        <span className="size-1.5 rounded-full bg-[--color-fg]" aria-hidden />
                       )}
                     </Link>
                   </motion.div>
