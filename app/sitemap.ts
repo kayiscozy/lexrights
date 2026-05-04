@@ -11,7 +11,7 @@ const STATIC_PATHS: { de: string; en: string; priority: number; freq: MetadataRo
   { de: "/de/kanzlei", en: "/en/firm", priority: 0.7, freq: "monthly" },
   { de: "/de/wissen", en: "/en/insights", priority: 0.6, freq: "weekly" },
   { de: "/de/faelle", en: "/en/cases", priority: 0.6, freq: "monthly" },
-  { de: "/de/kontakt", en: "/en/contact", priority: 0.6, freq: "yearly" },
+  { de: "/de/contact", en: "/en/contact", priority: 0.6, freq: "yearly" },
   { de: "/de/impressum", en: "/en/legal-notice", priority: 0.2, freq: "yearly" },
   { de: "/de/datenschutz", en: "/en/privacy", priority: 0.2, freq: "yearly" },
 ];

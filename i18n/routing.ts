@@ -31,7 +31,7 @@ export const routing = defineRouting({
       en: "/cases",
     },
     "/kontakt": {
-      de: "/kontakt",
+      de: "/contact",
       en: "/contact",
     },
     "/impressum": {
