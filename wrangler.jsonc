@@ -53,8 +53,7 @@
     "NEXT_PUBLIC_ADDRESS_COUNTRY": "Deutschland",
     "NEXT_PUBLIC_PHONE": "+493055508242",
     "NEXT_PUBLIC_PHONE_DISPLAY": "+49 30 5550 8242",
-    "NEXT_PUBLIC_WHATSAPP": "491735508242",
-    "NEXT_PUBLIC_EMAIL": "kontakt@lexrights.com",
+    "NEXT_PUBLIC_EMAIL": "contact@lexrights.com",
     "NEXT_PUBLIC_EMAIL_MANDATE": "mandate@lexrights.com",
     "NEXT_PUBLIC_VAT_ID": "DE329884712",
     "NEXT_PUBLIC_REGISTER": "Amtsgericht Charlottenburg, PR 2024 B",
@@ -63,7 +62,7 @@
     "NEXT_PUBLIC_INSURANCE_SUM": "5.000.000 €",
     "NEXT_PUBLIC_BAR_NAME": "Rechtsanwaltskammer Berlin",
     "NEXT_PUBLIC_BAR_URL": "https://www.rak-berlin.de",
-    "RESEND_FROM": "kontakt@lexrights.com",
+    "RESEND_FROM": "contact@lexrights.com",
     "RESEND_TO": "mandate@lexrights.com"
   }
 }

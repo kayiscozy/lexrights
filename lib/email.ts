@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import type { ConsultationInput } from "./consultation-schema";
 
 const apiKey = process.env.RESEND_API_KEY;
-const from = process.env.RESEND_FROM ?? "kontakt@lexrights.com";
+const from = process.env.RESEND_FROM ?? "contact@lexrights.com";
 const to = process.env.RESEND_TO ?? "mandate@lexrights.com";
 
 const issueLabels: Record<string, { de: string; en: string }> = {

@@ -115,7 +115,7 @@ Deutschland
 |-------|------|---------|
 | **Telefon** | +49 30 5550 8242 | PLATZHALTER (555-Demo-Bereich, nicht vergeben) — vor Launch echte Sipgate-/Telekom-Nummer |
 | **WhatsApp Business** | +49 173 5508 242 | PLATZHALTER (frei wählbar) |
-| **E-Mail allgemein** | kontakt@lexrights.com | wird mit Domain-Setup eingerichtet |
+| **E-Mail allgemein** | contact@lexrights.com | wird mit Domain-Setup eingerichtet |
 | **E-Mail Mandate** | mandate@lexrights.com | wird mit Domain-Setup eingerichtet |
 | **E-Mail Presse** | presse@lexrights.com | wird mit Domain-Setup eingerichtet |
 | **beA** | nicht öffentlich | für Anwaltskommunikation, intern |
@@ -180,7 +180,7 @@ Sophie Vogel, Rechtsanwältin
 ## Kontakt
 
 Telefon: +49 30 5550 8242
-E-Mail: kontakt@lexrights.com
+E-Mail: contact@lexrights.com
 
 ## Berufsbezeichnung und Anwaltskammer
 
@@ -230,7 +230,7 @@ Online-Streitbeilegung bereit: https://ec.europa.eu/consumers/odr
 
 ```
 LexRights Rechtsanwälte PartG mbB · Charlottenstraße 65 · 10117 Berlin
-Telefon +49 30 5550 8242 · kontakt@lexrights.com
+Telefon +49 30 5550 8242 · contact@lexrights.com
 Eingetragen AG Charlottenburg PR 2024 B
 ```
 
@@ -255,7 +255,7 @@ NEXT_PUBLIC_ADDRESS_COUNTRY="Deutschland"
 NEXT_PUBLIC_PHONE="+493055508242"
 NEXT_PUBLIC_PHONE_DISPLAY="+49 30 5550 8242"
 NEXT_PUBLIC_WHATSAPP="+491735508242"
-NEXT_PUBLIC_EMAIL="kontakt@lexrights.com"
+NEXT_PUBLIC_EMAIL="contact@lexrights.com"
 NEXT_PUBLIC_EMAIL_MANDATE="mandate@lexrights.com"
 NEXT_PUBLIC_EMAIL_PRESSE="presse@lexrights.com"
 
