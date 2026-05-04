@@ -41,7 +41,7 @@ export function StickyCta() {
             <a
               href={`tel:${env.phone}`}
               aria-label={env.phoneDisplay}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-border] bg-[--color-bg-elevated] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-border-brand] hover:text-[--color-brand-electric]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.08] hover:text-[--color-brand-electric] hover:shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
             >
               <Phone className="size-4" aria-hidden />
             </a>
@@ -51,14 +51,14 @@ export function StickyCta() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-border] bg-[--color-bg-elevated] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-border-brand] hover:text-[--color-brand-electric]"
+                className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.08] hover:text-[--color-brand-electric] hover:shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
               >
                 <MessageCircle className="size-4" aria-hidden />
               </a>
             )}
             <Link
               href="/erstberatung"
-              className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[--color-fg] px-4 text-sm font-semibold text-[--color-brand-navy] shadow-[0_4px_16px_-4px_rgba(245,247,255,0.3)] transition-all duration-200 active:scale-[0.98] hover:bg-white"
+              className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-[--color-brand-electric] bg-[--color-brand-electric] px-4 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(4,58,253,0.3),0_8px_24px_-8px_rgba(4,58,253,0.6)] transition-all duration-200 active:scale-[0.98] hover:bg-[--color-brand-glow] hover:border-[--color-brand-glow]"
             >
               {t("consultationCta")}
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

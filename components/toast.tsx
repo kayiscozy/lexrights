@@ -79,21 +79,24 @@ function ToastViewport({
 
 const variantStyles: Record<
   ToastVariant,
-  { Icon: React.ElementType; ring: string; iconColor: string }
+  { Icon: React.ElementType; ring: string; iconColor: string; border: string }
 > = {
   success: {
     Icon: CheckCircle2,
-    ring: "ring-[--color-success]/30 shadow-[0_8px_28px_-8px_rgba(74,222,128,0.4)]",
+    border: "border-[--color-success]/40",
+    ring: "shadow-[0_0_0_1px_rgba(74,222,128,0.18),0_12px_32px_-10px_rgba(74,222,128,0.4)]",
     iconColor: "text-[--color-success]",
   },
   error: {
     Icon: AlertCircle,
-    ring: "ring-[--color-error]/30 shadow-[0_8px_28px_-8px_rgba(248,113,113,0.4)]",
+    border: "border-[--color-error]/40",
+    ring: "shadow-[0_0_0_1px_rgba(248,113,113,0.18),0_12px_32px_-10px_rgba(248,113,113,0.4)]",
     iconColor: "text-[--color-error]",
   },
   info: {
     Icon: CheckCircle2,
-    ring: "ring-[--color-brand-electric]/30 shadow-[0_8px_28px_-8px_rgba(4,58,253,0.4)]",
+    border: "border-[--color-brand-electric]/40",
+    ring: "shadow-[0_0_0_1px_rgba(4,58,253,0.2),0_12px_32px_-10px_rgba(4,58,253,0.45)]",
     iconColor: "text-[--color-brand-electric]",
   },
 };
@@ -105,7 +108,7 @@ function ToastCard({
   toast: Toast;
   onDismiss: () => void;
 }) {
-  const { Icon, ring, iconColor } = variantStyles[toast.variant];
+  const { Icon, ring, iconColor, border } = variantStyles[toast.variant];
 
   return (
     <motion.div
@@ -116,7 +119,8 @@ function ToastCard({
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       role="status"
       className={cn(
-        "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border border-[--color-border-strong] bg-[--color-bg-elevated]/95 p-4 ring-1 backdrop-blur-xl",
+        "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border bg-[--color-bg-elevated]/95 p-4 backdrop-blur-xl",
+        border,
         ring,
       )}
     >

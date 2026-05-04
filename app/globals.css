@@ -168,10 +168,12 @@
       box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1);
   }
   .card-hover:hover {
-    border-color: var(--color-border-brand);
-    background-color: rgba(15, 26, 64, 0.55);
+    border-color: rgba(4, 58, 253, 0.55);
+    background-color: rgba(4, 58, 253, 0.04);
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px -16px rgba(4, 58, 253, 0.4);
+    box-shadow:
+      0 0 0 3px rgba(4, 58, 253, 0.08),
+      0 14px 36px -18px rgba(4, 58, 253, 0.5);
   }
 
   /* Subtle inner gradient on hover for premium feel */

@@ -101,7 +101,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   {active && (
                     <motion.span
                       layoutId="active-nav-indicator"
-                      className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-[--color-fg]"
+                      className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-[--color-brand-electric] shadow-[0_0_8px_rgba(4,58,253,0.6)]"
                       transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
@@ -191,13 +191,13 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                       className={cn(
                         "flex items-center justify-between rounded-xl px-4 py-3.5 text-lg font-medium transition-all duration-200",
                         active
-                          ? "bg-[--color-fg]/[0.08] text-[--color-fg] shadow-[inset_0_0_0_1px_rgba(245,247,255,0.15)]"
-                          : "text-[--color-fg]/80 hover:bg-[--color-fg]/[0.05] hover:text-[--color-fg]",
+                          ? "border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-[--color-fg] shadow-[0_0_24px_-8px_rgba(4,58,253,0.5)]"
+                          : "border border-transparent text-[--color-fg]/80 hover:border-[--color-brand-electric]/30 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
                       )}
                     >
                       <span>{t(link.labelKey)}</span>
                       {active && (
-                        <span className="size-1.5 rounded-full bg-[--color-fg]" aria-hidden />
+                        <span className="size-1.5 rounded-full bg-[--color-brand-electric] shadow-[0_0_8px_rgba(4,58,253,0.8)]" aria-hidden />
                       )}
                     </Link>
                   </motion.div>
