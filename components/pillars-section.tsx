@@ -43,12 +43,12 @@ export function PillarsSection() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               className={cn(
-                "card-hover card-glow group relative rounded-2xl border border-[--color-border]",
+                "card-hover card-glow group relative rounded-2xl border border-[--color-fg]/10",
                 "bg-[--color-bg-surface]/50 p-6 backdrop-blur-sm",
               )}
             >
               <div
-                className="relative inline-flex size-11 items-center justify-center rounded-xl border border-[--color-border-brand] bg-[--color-brand-electric]/10 text-[--color-brand-electric] transition-all duration-300 group-hover:scale-105 group-hover:bg-[--color-brand-electric]/15"
+                className="relative inline-flex size-11 items-center justify-center rounded-xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.10] text-[--color-brand-electric] transition-all duration-300 group-hover:scale-105 group-hover:border-[--color-brand-electric]/70 group-hover:bg-[--color-brand-electric]/[0.15] group-hover:shadow-[0_0_20px_-4px_rgba(4,58,253,0.5)]"
                 aria-hidden
               >
                 <Icon className="size-5" />

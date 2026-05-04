@@ -83,7 +83,7 @@ export default async function PillarPage({
     return (
       <section className="relative pb-24 pt-32 md:pt-40">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
             {platformCategories[platform.category][locale]}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
@@ -130,7 +130,7 @@ export default async function PillarPage({
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="aurora-bg absolute inset-0 -z-10" aria-hidden />
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
             {content.hero.eyebrow}
           </p>
           <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -171,7 +171,7 @@ export default async function PillarPage({
             {content.problems.items.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-3 rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-4 text-sm text-[--color-fg-muted]"
+                className="flex items-start gap-3 rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-4 text-sm text-[--color-fg-muted] transition-colors duration-200 hover:border-[--color-error]/40 hover:bg-[--color-error]/[0.03]"
               >
                 <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[--color-error]" aria-hidden />
                 <span>{item}</span>
@@ -202,9 +202,9 @@ export default async function PillarPage({
             {content.legal.arguments.map((arg) => (
               <div
                 key={arg.paragraph}
-                className="rounded-2xl border border-[--color-border] bg-[--color-bg-surface]/40 p-6"
+                className="card-hover rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6"
               >
-                <p className="font-mono text-xs font-medium tracking-wide text-[--color-brand-electric]">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
                   {arg.paragraph}
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-[--color-fg]">
@@ -229,9 +229,9 @@ export default async function PillarPage({
             {content.process.steps.map((step, idx) => (
               <li
                 key={step.title}
-                className="rounded-2xl border border-[--color-border] bg-[--color-bg-surface]/40 p-6 md:p-7"
+                className="card-hover rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6 md:p-7"
               >
-                <span className="font-mono text-xs tracking-wide text-[--color-brand-electric]">
+                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
                   0{idx + 1}
                 </span>
                 <h3 className="mt-3 text-lg font-semibold text-[--color-fg]">
@@ -252,18 +252,21 @@ export default async function PillarPage({
           <h2 className="text-center text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
             {content.faq.title}
           </h2>
-          <div className="mt-12 divide-y divide-[--color-border] overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface]/40">
+          <div className="mt-12 divide-y divide-[--color-fg]/10 overflow-hidden rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40">
             {content.faq.items.map((item, i) => (
-              <details key={i} className="group">
-                <summary className="flex cursor-pointer items-start justify-between gap-4 p-5 md:p-6">
-                  <span className="text-base font-medium text-[--color-fg]">
+              <details
+                key={i}
+                className="group transition-colors duration-200 open:bg-[--color-brand-electric]/[0.04] hover:bg-[--color-brand-electric]/[0.03]"
+              >
+                <summary className="flex cursor-pointer items-start justify-between gap-4 p-5 transition-colors md:p-6 [&::-webkit-details-marker]:hidden">
+                  <span className="text-base font-medium text-[--color-fg] group-hover:text-[--color-fg] group-open:text-[--color-fg]">
                     {item.q}
                   </span>
                   <span
-                    className="mt-1 inline-block size-5 shrink-0 text-[--color-fg-subtle] transition-transform group-open:rotate-45"
+                    className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-[--color-fg]/15 text-[--color-fg-subtle] transition-all duration-200 group-hover:border-[--color-brand-electric]/55 group-hover:bg-[--color-brand-electric]/[0.08] group-hover:text-[--color-brand-electric] group-open:rotate-45 group-open:border-[--color-brand-electric] group-open:bg-[--color-brand-electric]/[0.10] group-open:text-[--color-brand-electric]"
                     aria-hidden
                   >
-                    <svg viewBox="0 0 20 20" fill="currentColor">
+                    <svg className="size-3" viewBox="0 0 20 20" fill="none">
                       <path d="M10 4v12M4 10h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                   </span>

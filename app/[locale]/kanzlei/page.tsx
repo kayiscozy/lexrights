@@ -46,7 +46,7 @@ export default async function FirmPage({
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
             {tHero("eyebrow")}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -67,7 +67,7 @@ export default async function FirmPage({
             {values.map((v) => (
               <div
                 key={v.title}
-                className="rounded-2xl border border-[--color-border] bg-[--color-bg-surface]/40 p-6"
+                className="card-hover rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6"
               >
                 <h3 className="text-lg font-semibold text-[--color-fg]">
                   {v.title}
@@ -97,7 +97,7 @@ export default async function FirmPage({
               <article
                 key={m.id}
                 id={m.id}
-                className="group relative overflow-hidden rounded-3xl border border-[--color-border] bg-[--color-bg-surface]/50 p-6 transition-colors hover:border-[--color-border-brand] md:p-8"
+                className="card-hover group relative overflow-hidden rounded-3xl border border-[--color-fg]/10 bg-[--color-bg-surface]/50 p-6 md:p-8"
               >
                 {/* Avatar Placeholder */}
                 <div

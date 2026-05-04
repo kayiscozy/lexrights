@@ -52,10 +52,10 @@ export function PlatformsSection() {
                   pathname: "/leistungen/[slug]",
                   params: { slug: platform.slug[locale] },
                 }}
-                className="card-hover card-glow group relative flex h-full flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-5"
+                className="card-hover card-glow group relative flex h-full flex-col rounded-xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-5"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <span className="text-xs font-medium uppercase tracking-wide text-[--color-brand-electric]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
                     {platformCategories[platform.category][locale]}
                   </span>
                   <ArrowUpRight

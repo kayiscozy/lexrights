@@ -49,7 +49,7 @@ export default async function ServicesPage({
 
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
             {locale === "de" ? "Leistungen" : "Services"}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
@@ -79,7 +79,7 @@ export default async function ServicesPage({
                         pathname: "/leistungen/[slug]",
                         params: { slug: p.slug[locale] },
                       }}
-                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-5"
+                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-5"
                     >
                       <div className="flex items-start justify-between">
                         <h3 className="text-base font-semibold text-[--color-fg]">

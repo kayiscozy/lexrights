@@ -31,10 +31,10 @@ export function ProcessSection() {
                 delay: idx * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="card-hover relative rounded-2xl border border-[--color-border] bg-[--color-bg-surface]/40 p-6 backdrop-blur-sm md:p-8"
+              className="card-hover relative rounded-2xl border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-6 backdrop-blur-sm md:p-8"
             >
               <span
-                className="font-mono text-xs font-medium tracking-wide text-[--color-brand-electric]"
+                className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]"
                 aria-hidden
               >
                 0{idx + 1}

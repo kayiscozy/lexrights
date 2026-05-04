@@ -61,25 +61,25 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-[--color-fg-muted]"
+            className="mt-12 flex flex-wrap items-center justify-center gap-2 text-sm text-[--color-fg-muted]"
           >
-            <span className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-fg]/10 bg-[--color-bg-surface]/40 px-3 py-1.5 backdrop-blur-sm">
               <ShieldCheck
-                className="size-4 text-[--color-brand-electric]"
+                className="size-3.5 text-[--color-brand-electric]"
                 aria-hidden
               />
               {t("trust.badge1")}
             </span>
-            <span className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-fg]/10 bg-[--color-bg-surface]/40 px-3 py-1.5 backdrop-blur-sm">
               <Globe2
-                className="size-4 text-[--color-brand-electric]"
+                className="size-3.5 text-[--color-brand-electric]"
                 aria-hidden
               />
               {t("trust.badge2")}
             </span>
-            <span className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-fg]/10 bg-[--color-bg-surface]/40 px-3 py-1.5 backdrop-blur-sm">
               <Sparkles
-                className="size-4 text-[--color-brand-electric]"
+                className="size-3.5 text-[--color-brand-electric]"
                 aria-hidden
               />
               {t("trust.badge3")}

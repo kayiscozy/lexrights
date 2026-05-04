@@ -17,10 +17,10 @@
   --color-fg-muted: #8b95b8;
   --color-fg-subtle: #5b6594;
 
-  /* ── Borders ───────────────────────────────────────────── */
-  --color-border: rgba(139, 149, 184, 0.12);
-  --color-border-strong: rgba(139, 149, 184, 0.2);
-  --color-border-brand: rgba(4, 58, 253, 0.3);
+  /* ── Borders (white-tinted for cleaner premium look) ─────── */
+  --color-border: rgba(245, 247, 255, 0.10);
+  --color-border-strong: rgba(245, 247, 255, 0.18);
+  --color-border-brand: rgba(4, 58, 253, 0.45);
 
   /* ── Accents ───────────────────────────────────────────── */
   --color-accent: #043afd;
