@@ -3,7 +3,7 @@
 import { useState, useTransition, useId } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, ArrowLeft, CheckCircle2, AlertCircle } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, AlertCircle, Check } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "@/i18n/navigation";
 import { submitConsultation, type ActionState } from "@/lib/actions";
@@ -203,22 +203,45 @@ export function ConsultationForm({
     >
       <input type="text" name="hp" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
-      <div className="flex items-center justify-between">
-        <p className="font-mono text-xs tracking-wide text-[--color-brand-electric]">
+      <div className="flex items-center justify-between gap-4">
+        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-glow]">
           {t("steps.step", { current: step, total: TOTAL_STEPS })}
         </p>
-        <div className="flex flex-1 items-center gap-1.5 px-6">
-          {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
-            <div
-              key={i}
-              className={cn(
-                "h-1 flex-1 rounded-full transition-all duration-500",
-                i + 1 < step && "bg-[--color-brand-electric]/70",
-                i + 1 === step && "bg-[--color-brand-electric]",
-                i + 1 > step && "bg-[--color-bg-elevated]",
-              )}
-            />
-          ))}
+        <div className="flex flex-1 items-center gap-2">
+          {Array.from({ length: TOTAL_STEPS }).map((_, i) => {
+            const stepNum = i + 1;
+            const isComplete = stepNum < step;
+            const isCurrent = stepNum === step;
+            return (
+              <div key={i} className="flex flex-1 items-center gap-2">
+                <motion.div
+                  animate={{
+                    scale: isCurrent ? 1 : 0.85,
+                    opacity: isComplete || isCurrent ? 1 : 0.4,
+                  }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className={cn(
+                    "flex size-6 shrink-0 items-center justify-center rounded-full border-2 text-[10px] font-bold transition-colors duration-300",
+                    isComplete && "border-[--color-brand-electric] bg-[--color-brand-electric] text-white",
+                    isCurrent && "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.15] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
+                    !isComplete && !isCurrent && "border-[--color-fg]/20 bg-transparent text-[--color-fg-subtle]",
+                  )}
+                >
+                  {isComplete ? <Check className="size-3" aria-hidden /> : stepNum}
+                </motion.div>
+                {i < TOTAL_STEPS - 1 && (
+                  <div
+                    className={cn(
+                      "h-0.5 flex-1 rounded-full transition-colors duration-500",
+                      isComplete
+                        ? "bg-[--color-brand-electric]"
+                        : "bg-[--color-fg]/15",
+                    )}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -373,30 +396,47 @@ function Step1({ form, update, errors, touched, markTouched }: StepProps) {
       <div className="mt-8 space-y-6">
         <Field label={tHero("issueLabel")} htmlFor="issue-group" required error={issueErr}>
           <div id="issue-group" className="grid gap-2 sm:grid-cols-2">
-            {issueOptions.map((opt) => (
-              <label
-                key={opt}
-                className={cn(
-                  "cursor-pointer rounded-lg border px-4 py-3 text-sm font-medium transition-all duration-200",
-                  form.issue === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
-                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
-                )}
-              >
-                <input
-                  type="radio"
-                  name="issue"
-                  value={opt}
-                  checked={form.issue === opt}
-                  onChange={() => {
-                    update("issue", opt);
-                    markTouched("issue");
-                  }}
-                  className="sr-only"
-                />
-                {tHero(`issues.${opt}`)}
-              </label>
-            ))}
+            {issueOptions.map((opt) => {
+              const selected = form.issue === opt;
+              return (
+                <label
+                  key={opt}
+                  className={cn(
+                    "group relative cursor-pointer rounded-lg border px-4 py-3 pr-9 text-sm font-medium transition-all duration-200 active:scale-[0.99]",
+                    selected
+                      ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
+                      : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
+                  )}
+                >
+                  <input
+                    type="radio"
+                    name="issue"
+                    value={opt}
+                    checked={selected}
+                    onChange={() => {
+                      update("issue", opt);
+                      markTouched("issue");
+                    }}
+                    className="sr-only"
+                  />
+                  <span>{tHero(`issues.${opt}`)}</span>
+                  <AnimatePresence>
+                    {selected && (
+                      <motion.span
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                        className="absolute right-2.5 top-1/2 inline-flex size-5 -translate-y-1/2 items-center justify-center rounded-full bg-[--color-brand-electric] text-white shadow-[0_0_8px_rgba(4,58,253,0.6)]"
+                        aria-hidden
+                      >
+                        <Check className="size-3" />
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </label>
+              );
+            })}
           </div>
         </Field>
 
@@ -453,7 +493,7 @@ function Step2({ form, update, errors, touched, markTouched }: StepProps) {
               <label
                 key={opt}
                 className={cn(
-                  "cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-medium transition-all duration-200",
+                  "cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-medium transition-all duration-200 active:scale-[0.97]",
                   form.timing === opt
                     ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
                     : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
@@ -493,39 +533,44 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
 
       <Field label="" htmlFor="value-group" required error={valueErr}>
         <div id="value-group" className="mt-8 space-y-2">
-          {valueOptions.map((opt) => (
-            <label
-              key={opt}
-              className={cn(
-                "flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3.5 text-sm font-medium transition-all duration-200",
-                form.value === opt
-                  ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
-                  : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
-              )}
-            >
-              <input
-                type="radio"
-                name="value"
-                value={opt}
-                checked={form.value === opt}
-                onChange={() => {
-                  update("value", opt);
-                  markTouched("value");
-                }}
-                className="sr-only"
-              />
-              <span
+          {valueOptions.map((opt) => {
+            const selected = form.value === opt;
+            return (
+              <label
+                key={opt}
                 className={cn(
-                  "size-4 shrink-0 rounded-full border-2 transition-colors",
-                  form.value === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]"
-                    : "border-[--color-fg]/30",
+                  "flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3.5 text-sm font-medium transition-all duration-200 active:scale-[0.99]",
+                  selected
+                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
+                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
                 )}
-                aria-hidden
-              />
-              {t(`step3.value.${opt}`)}
-            </label>
-          ))}
+              >
+                <input
+                  type="radio"
+                  name="value"
+                  value={opt}
+                  checked={selected}
+                  onChange={() => {
+                    update("value", opt);
+                    markTouched("value");
+                  }}
+                  className="sr-only"
+                />
+                <span
+                  className={cn(
+                    "flex size-5 shrink-0 items-center justify-center rounded-full border-2 transition-all duration-200",
+                    selected
+                      ? "border-[--color-brand-electric] bg-[--color-brand-electric] shadow-[0_0_8px_rgba(4,58,253,0.5)]"
+                      : "border-[--color-fg]/30",
+                  )}
+                  aria-hidden
+                >
+                  {selected && <Check className="size-3 text-white" />}
+                </span>
+                <span className="flex-1">{t(`step3.value.${opt}`)}</span>
+              </label>
+            );
+          })}
         </div>
       </Field>
     </motion.div>
