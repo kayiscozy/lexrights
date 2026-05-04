@@ -1,4 +1,4 @@
-# Deploy Anleitung — LexRights auf Cloudflare
+# Deploy Anleitung - LexRights auf Cloudflare
 
 ## Status
 
@@ -6,13 +6,13 @@
 ✅ Local preview funktioniert (`npm run cf:preview`)
 ✅ Worker bundle: `.open-next/worker.js`
 ✅ Static assets: `.open-next/assets/`
-⚠️ Auto-Deploy via Token: **blockiert** — Token braucht Account-Scope (siehe unten)
+⚠️ Auto-Deploy via Token: **blockiert** - Token braucht Account-Scope (siehe unten)
 
 ---
 
 ## Token-Problem & Lösung
 
-Der aktuelle Token ist **Zone-scoped auf lexrights.com** — Workers Scripts API ist aber **Account-scoped**. Symptome:
+Der aktuelle Token ist **Zone-scoped auf lexrights.com** - Workers Scripts API ist aber **Account-scoped**. Symptome:
 
 ```
 GET /accounts/{id}/workers/scripts  → 10000 Authentication error
@@ -67,7 +67,7 @@ npm run cf:tail
 ```bash
 # 1. Token in .env.local ersetzen (s.o.)
 
-# 2. (Optional) KV-Namespace für ISR-Cache anlegen — bringt Performance-Boost,
+# 2. (Optional) KV-Namespace für ISR-Cache anlegen - bringt Performance-Boost,
 #    Free-Tier hat 1 GB Storage und 100k Reads/Tag
 npx wrangler kv namespace create NEXT_INC_CACHE_KV
 # → Binding-ID in wrangler.jsonc unter "kv_namespaces" eintragen

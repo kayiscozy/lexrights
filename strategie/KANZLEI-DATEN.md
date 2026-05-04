@@ -1,13 +1,13 @@
 # Kanzlei-Daten — LexRights
 
-> ⚠️ **PLATZHALTER-DATEN — VOR LIVE-SCHALTUNG ERSETZEN**
+> ⚠️ **PLATZHALTER-DATEN - VOR LIVE-SCHALTUNG ERSETZEN**
 >
 > Diese Daten sind realistische Demo-Daten für die Entwicklungs- und Staging-Phase, damit die Website echt wirkt.
 > **Anwaltsnamen, Adresse und Telefonnummer müssen vor dem Go-Live durch die echten Kanzlei-Daten ersetzt werden** —
 > sonst Verstoß gegen § 5 TMG, § 27 BRAO und (bei Telefon-/Adresse-Übereinstimmung) Persönlichkeitsrechte Dritter.
 >
 > Die Demo-Telefonnummer liegt im 555-Bereich (für Demo/Film reserviert, nicht vergeben).
-> Die Adresse ist eine realistische Anwalts-Gegend in Berlin Mitte — vor Launch zwingend prüfen, ob real.
+> Die Adresse ist eine realistische Anwalts-Gegend in Berlin Mitte - vor Launch zwingend prüfen, ob real.
 
 ---
 
@@ -18,7 +18,7 @@
 | Marken-/Außenname | **LexRights** |
 | Rechtliche Firmierung | **LexRights Rechtsanwälte PartG mbB** |
 | Rechtsform | Partnerschaftsgesellschaft mit beschränkter Berufshaftung |
-| Partnerschaftsregister | AG Charlottenburg, PR 2024 B (PLATZHALTER — wird bei Gründung vergeben) |
+| Partnerschaftsregister | AG Charlottenburg, PR 2024 B (PLATZHALTER - wird bei Gründung vergeben) |
 | USt-IdNr. | DE329884712 (PLATZHALTER) |
 | Gründungsjahr | 2024 |
 | Tagline DE | Ihre digitalen Rechte. Durchgesetzt. |
@@ -39,7 +39,7 @@ Deutschland
 
 **Begründung des Standorts:**
 - Berlin-Mitte, nahe Gendarmenmarkt
-- Klassische Anwalts-Gegend (Charlottenstraße, Französische Straße, Markgrafenstraße — viele Kanzleien hier)
+- Klassische Anwalts-Gegend (Charlottenstraße, Französische Straße, Markgrafenstraße - viele Kanzleien hier)
 - 5 Min Fußweg zu BGH-Berliner Senat, Kammergericht, Bundes­ministerien
 - Internationale Konnotation passend zu EU-Strategie
 - Wird auf der Website **nicht** prominent inszeniert (digital-first), nur im Impressum
@@ -50,7 +50,7 @@ Deutschland
 
 ## 3. ANWÄLTE / TEAM
 
-### Partner 1 — Dr. Nikolas Hartmann (Geschäftsführender Partner)
+### Partner 1 - Dr. Nikolas Hartmann (Geschäftsführender Partner)
 
 | Feld | Wert |
 |------|------|
@@ -64,7 +64,7 @@ Deutschland
 | Sprachen | Deutsch · Englisch · Französisch (Verhandlungssicher) |
 | E-Mail | n.hartmann@lexrights.com |
 
-### Partner 2 — Sophie Vogel (Partnerin)
+### Partner 2 - Sophie Vogel (Partnerin)
 
 | Feld | Wert |
 |------|------|
@@ -101,7 +101,7 @@ Deutschland
 |------|------|
 | Versicherer | HDI Versicherung AG |
 | Anschrift | HDI-Platz 1, 30659 Hannover |
-| Versicherungssumme | mindestens 2.500.000 € (PartG mbB Pflicht­untergrenze) — gewählt: 5.000.000 € |
+| Versicherungssumme | mindestens 2.500.000 € (PartG mbB Pflicht­untergrenze) - gewählt: 5.000.000 € |
 | Geltungsbereich | räumlich: Mitgliedstaaten der Europäischen Union sowie Vereinigtes Königreich, Schweiz, Norwegen, Island, Liechtenstein |
 | Sachlich | gemäß § 51 BRAO und § 8 PartGG |
 
@@ -113,7 +113,7 @@ Deutschland
 
 | Kanal | Wert | Hinweis |
 |-------|------|---------|
-| **Telefon** | +49 30 5550 8242 | PLATZHALTER (555-Demo-Bereich, nicht vergeben) — vor Launch echte Sipgate-/Telekom-Nummer |
+| **Telefon** | +49 30 5550 8242 | PLATZHALTER (555-Demo-Bereich, nicht vergeben) - vor Launch echte Sipgate-/Telekom-Nummer |
 | **WhatsApp Business** | +49 173 5508 242 | PLATZHALTER (frei wählbar) |
 | **E-Mail allgemein** | contact@lexrights.com | wird mit Domain-Setup eingerichtet |
 | **E-Mail Mandate** | mandate@lexrights.com | wird mit Domain-Setup eingerichtet |
@@ -123,7 +123,7 @@ Deutschland
 
 ### Kommunikations-SLA (öffentlich kommunizierbar)
 - E-Mail-Erstkontakt: Antwort binnen 24 h (Werktage)
-- Telefon: Mo–Fr 09:00–18:00 (CET) — bei Anrufaufkommen Rückruf-Service
+- Telefon: Mo–Fr 09:00–18:00 (CET) - bei Anrufaufkommen Rückruf-Service
 - Erstgespräch: Video-Call (Whereby/Cal.com) oder Telefon, kostenlos, max. 30 Min
 
 ---
@@ -147,7 +147,7 @@ Deutschland
 |------|------|
 | Primary Domain | **lexrights.com** |
 | DNS | Cloudflare |
-| Hosting | Vercel (Region: `fra1` — Frankfurt) |
+| Hosting | Vercel (Region: `fra1` -Frankfurt) |
 | Mail-Hosting | TODO (Empfehlung: Fastmail, Mailbox.org oder Google Workspace EU) |
 | Subdomain Studio | studio.lexrights.com (Sanity CMS) |
 | Subdomain Status | status.lexrights.com (optional, BetterStack/Statuspage) |
@@ -293,4 +293,4 @@ Vor dem Go-Live muss zwingend ersetzt werden:
 - [ ] Social-Profile (Punkt 7) anlegen oder Links entfernen
 - [ ] Foto­material (siehe SCHEMA): durch echte Anwaltsfotos ersetzen
 
-— Ende Kanzlei-Daten v1.0 (Platzhalter) —
+-Ende Kanzlei-Daten v1.0 (Platzhalter) —

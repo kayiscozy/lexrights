@@ -8,12 +8,12 @@ interface PageHeroProps {
   eyebrow: string;
   title: string;
   subtitle?: string;
-  /** Inverse the overlay — light overlay on dark image (default) or dark overlay on light bg */
+  /** Inverse the overlay -light overlay on dark image (default) or dark overlay on light bg */
   variant?: "image" | "subtle";
   /** Optional CTA section under hero */
   children?: React.ReactNode;
   className?: string;
-  /** Hero height — default lg (~480px), use sm for inner pages */
+  /** Hero height -default lg (~480px), use sm for inner pages */
   size?: "sm" | "md" | "lg";
 }
 
@@ -56,14 +56,14 @@ export function PageHero({
         className="object-cover"
       />
 
-      {/* Brand-tinted overlay — minimal so the image stays visible */}
+      {/* Brand-tinted overlay — clearly visible image */}
       <div
-        className="absolute inset-0 bg-(--color-brand-navy)/55"
+        className="absolute inset-0 bg-(--color-brand-navy)/30"
         aria-hidden
       />
-      {/* Bottom-weighted gradient for text legibility on the lower portion */}
+      {/* Bottom-weighted gradient: only bottom darkens for text legibility */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-(--color-brand-navy)/20 via-(--color-brand-navy)/45 to-(--color-brand-navy)/80"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-(--color-brand-navy)/30 to-(--color-brand-navy)/85"
         aria-hidden
       />
       {/* Subtle electric-blue accent line at bottom */}

@@ -83,7 +83,7 @@ export async function submitHeroQuick(
     name: parsed.data.email.split("@")[0],
     email: parsed.data.email,
     phone: "",
-    message: "Quick lead submitted from hero — please follow up to gather details.",
+    message: "Quick lead submitted from hero -please follow up to gather details.",
     consent: "on",
     locale: parsed.data.locale,
     source: "hero_quick",

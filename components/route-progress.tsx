@@ -18,7 +18,7 @@ export function RouteProgress() {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const interval = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Listen to all internal anchor clicks — show bar immediately
+  // Listen to all internal anchor clicks -show bar immediately
   useEffect(() => {
     function onClick(e: MouseEvent) {
       const target = e.target as HTMLElement | null;

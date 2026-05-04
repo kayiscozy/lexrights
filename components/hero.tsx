@@ -22,13 +22,13 @@ export function Hero() {
         sizes="100vw"
         className="-z-20 object-cover object-center"
       />
-      {/* Editorial overlay — image stays visible, content area readable */}
+      {/* Editorial overlay — image clearly visible, text crisp */}
       <div
-        className="absolute inset-0 -z-10 bg-(--color-bg)/82 backdrop-blur-[2px]"
+        className="absolute inset-0 -z-10 bg-(--color-bg)/65 backdrop-blur-[1px]"
         aria-hidden
       />
       <div
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-(--color-bg)/55 via-(--color-bg)/82 to-(--color-bg)"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-(--color-bg)/30 via-(--color-bg)/65 to-(--color-bg)"
         aria-hidden
       />
 

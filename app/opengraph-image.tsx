@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "LexRights — Your digital rights. Enforced.";
+export const alt = "LexRights -Your digital rights. Enforced.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -61,7 +61,7 @@ export default async function OG() {
               lineHeight: 1.4,
             }}
           >
-            Platform suspensions · DSA · GDPR · Digital consumer rights — across the EU.
+            Platform suspensions · DSA · GDPR · Digital consumer rights -across the EU.
           </p>
         </div>
 

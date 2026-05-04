@@ -44,7 +44,7 @@ function renderHtml(data: ConsultationInput): string {
       : "";
 
   return `<!doctype html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#fff;padding:24px;color:#0a0a0a">
-  <h2 style="color:#011444;margin:0 0 8px">LexRights — ${
+  <h2 style="color:#011444;margin:0 0 8px">LexRights -${
     loc === "de" ? "Neue Erstberatungs-Anfrage" : "New Consultation Request"
   }</h2>
   <p style="color:#6b7280;margin:0 0 24px">Source: ${data.source} · Locale: ${loc}</p>
@@ -70,7 +70,7 @@ function renderHtml(data: ConsultationInput): string {
 function renderText(data: ConsultationInput): string {
   const loc = data.locale;
   return [
-    `LexRights — ${loc === "de" ? "Neue Erstberatungs-Anfrage" : "New Consultation Request"}`,
+    `LexRights -${loc === "de" ? "Neue Erstberatungs-Anfrage" : "New Consultation Request"}`,
     `Source: ${data.source}`,
     "",
     `Topic: ${issueLabels[data.issue]?.[loc] ?? data.issue}`,
@@ -89,7 +89,7 @@ function renderText(data: ConsultationInput): string {
 export async function sendConsultationEmail(data: ConsultationInput) {
   if (!apiKey) {
     console.warn(
-      "[lexrights] RESEND_API_KEY not set — logging instead of sending.",
+      "[lexrights] RESEND_API_KEY not set -logging instead of sending.",
     );
     console.warn(JSON.stringify({ to, from, subject: "consultation", data }, null, 2));
     return { ok: true as const, dev: true as const };
@@ -98,8 +98,8 @@ export async function sendConsultationEmail(data: ConsultationInput) {
   const resend = new Resend(apiKey);
   const subject =
     data.locale === "de"
-      ? `Neue Anfrage: ${data.platform} — ${data.name}`
-      : `New request: ${data.platform} — ${data.name}`;
+      ? `Neue Anfrage: ${data.platform} -${data.name}`
+      : `New request: ${data.platform} -${data.name}`;
 
   try {
     const result = await resend.emails.send({

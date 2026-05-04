@@ -57,6 +57,20 @@ export function Header({ locale: _locale }: { locale: Locale }) {
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
 
+  // Pages with a dark hero image at top (white text on hero)
+  // Homepage uses light overlay → dark text always.
+  // Legal pages have no hero → dark text always.
+  const isLightHeroPage =
+    pathname === "/" ||
+    pathname === "" ||
+    pathname.startsWith("/impressum") ||
+    pathname.startsWith("/datenschutz") ||
+    pathname.startsWith("/legal-notice") ||
+    pathname.startsWith("/privacy");
+
+  // True when nav sits on top of a dark hero image (sub-pages, not scrolled)
+  const onDarkHero = !scrolled && !isLightHeroPage;
+
   return (
     <>
       <header
@@ -74,7 +88,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
             aria-label="LexRights — Home"
           >
             <Logo
-              variant="wordmark"
+              variant={onDarkHero ? "wordmarkDark" : "wordmark"}
               className="h-5 w-auto transition-opacity duration-200 group-hover:opacity-80"
               priority
             />
@@ -92,9 +106,13 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   href={link.href}
                   className={cn(
                     "group relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
-                    active
-                      ? "text-(--color-brand-navy)"
-                      : "text-(--color-fg-muted) hover:bg-(--color-bg-tint) hover:text-(--color-brand-navy)",
+                    onDarkHero
+                      ? active
+                        ? "text-white"
+                        : "text-white/75 hover:bg-white/10 hover:text-white"
+                      : active
+                        ? "text-(--color-brand-navy)"
+                        : "text-(--color-fg-muted) hover:bg-(--color-bg-tint) hover:text-(--color-brand-navy)",
                   )}
                 >
                   {t(link.labelKey)}
@@ -131,7 +149,9 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                 "relative inline-flex size-10 items-center justify-center rounded-lg border transition-all duration-200 active:scale-95 lg:hidden",
                 open
                   ? "border-(--color-brand-navy) bg-(--color-brand-navy) text-white"
-                  : "border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg) hover:border-(--color-brand-navy) hover:bg-(--color-bg-tint)",
+                  : onDarkHero
+                    ? "border-white/30 bg-white/10 text-white backdrop-blur hover:border-white/60 hover:bg-white/20"
+                    : "border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg) hover:border-(--color-brand-navy) hover:bg-(--color-bg-tint)",
               )}
               aria-expanded={open}
               aria-label={open ? t("close") : t("menu")}

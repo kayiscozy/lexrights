@@ -55,8 +55,8 @@ export const cases: CaseStudy[] = [
       en: "EasyAntiCheat permanently suspended the account with a vague 'cheating' allegation. Save-the-World account, V-Bucks purchases and rare skins would have been lost. Parents as contracting party.",
     },
     strategy: {
-      de: "DSGVO Art. 15 Auskunft erzwang Offenlegung der EAC-Logs — keine konkreten Cheat-Beweise, nur Heuristik. Anwaltsschreiben unter DSA Art. 17 (Begründungspflicht) + DSGVO Art. 22 (Verbot rein automatisierter Entscheidungen) + § 327 BGB. Frist 14 Tage.",
-      en: "GDPR Art. 15 request forced disclosure of EAC logs — no concrete cheat evidence, just heuristics. Formal letter under DSA Art. 17, GDPR Art. 22 and § 327 BGB. 14-day deadline.",
+      de: "DSGVO Art. 15 Auskunft erzwang Offenlegung der EAC-Logs - keine konkreten Cheat-Beweise, nur Heuristik. Anwaltsschreiben unter DSA Art. 17 (Begründungspflicht) + DSGVO Art. 22 (Verbot rein automatisierter Entscheidungen) + § 327 BGB. Frist 14 Tage.",
+      en: "GDPR Art. 15 request forced disclosure of EAC logs - no concrete cheat evidence, just heuristics. Formal letter under DSA Art. 17, GDPR Art. 22 and § 327 BGB. 14-day deadline.",
     },
     outcomeText: {
       de: "Account vollständig wiederhergestellt, alle V-Bucks und Skins erhalten. Außergerichtlich.",
@@ -120,8 +120,8 @@ export const cases: CaseStudy[] = [
       en: "Account in use since 2008, deactivated without concrete reason. 14 years of photo memorabilia, contacts, group memberships affected. ID verification rejected.",
     },
     strategy: {
-      de: "Anwaltsschreiben gestützt auf BGH III ZR 179/20 — die „Verfahrenstrias\" (Information, Anhörung, Neuentscheidung). Hinweis auf DSA Art. 17 als VLOP-Pflicht und einstweilige Verfügung als nächster Schritt.",
-      en: "Formal letter based on BGH III ZR 179/20 — the 'procedural triad' (notice, hearing, redecision). Reference to DSA Art. 17 as VLOP duty and interim injunction as next step.",
+      de: "Anwaltsschreiben gestützt auf BGH III ZR 179/20 - die „Verfahrenstrias\" (Information, Anhörung, Neuentscheidung). Hinweis auf DSA Art. 17 als VLOP-Pflicht und einstweilige Verfügung als nächster Schritt.",
+      en: "Formal letter based on BGH III ZR 179/20 - the 'procedural triad' (notice, hearing, redecision). Reference to DSA Art. 17 as VLOP duty and interim injunction as next step.",
     },
     outcomeText: {
       de: "Konto innerhalb von 7 Tagen nach Eingang des Anwaltsschreibens reaktiviert. Alle Inhalte intakt.",
@@ -150,8 +150,8 @@ export const cases: CaseStudy[] = [
       en: "Amazon Seller suspension with €47,300 funds hold",
     },
     problem: {
-      de: "Seller Account ohne Vorwarnung gesperrt. Plan-of-Action eingereicht — abgelehnt. 47.300 € Auszahlungen wurden 90 Tage zurückgehalten, Lagerbestand ebenfalls blockiert. Existenz­bedrohung.",
-      en: "Seller account suspended without warning. Plan of Action submitted — rejected. €47,300 in payouts held for 90 days, inventory also blocked. Existential threat.",
+      de: "Seller Account ohne Vorwarnung gesperrt. Plan-of-Action eingereicht - abgelehnt. 47.300 € Auszahlungen wurden 90 Tage zurückgehalten, Lagerbestand ebenfalls blockiert. Existenz­bedrohung.",
+      en: "Seller account suspended without warning. Plan of Action submitted - rejected. €47,300 in payouts held for 90 days, inventory also blocked. Existential threat.",
     },
     strategy: {
       de: "Antrag auf einstweilige Verfügung am LG Hamburg gestützt auf P2B-VO Art. 4 (zwingende 30-Tage-Vorwarnung bei Beendigung) + Art. 11 P2B-VO (internes Beschwerdesystem). Eilbedürftigkeit durch laufende Lagerkosten begründet.",
@@ -180,8 +180,8 @@ export const cases: CaseStudy[] = [
       en: "Client T., 31 years, online merchant",
     },
     headline: {
-      de: "PayPal-Konto eingefroren — 14.800 € im 180-Tage-Hold",
-      en: "PayPal account frozen — €14,800 in 180-day hold",
+      de: "PayPal-Konto eingefroren -14.800 € im 180-Tage-Hold",
+      en: "PayPal account frozen -€14,800 in 180-day hold",
     },
     problem: {
       de: "Konto „eingeschränkt\" mit 180-Tage-Reservebetrag von 14.800 €. PayPal-Begründung: „Verdacht auf erhöhtes Risiko\". Keine konkrete Tatsachen, kein Beschwerdeweg.",
@@ -192,8 +192,8 @@ export const cases: CaseStudy[] = [
       en: "Parallel BaFin complaint (PayPal as ZAG payment institution) + formal letter referencing OLG Bamberg 2023 decision on reserve amounts. Disclosure claim under § 675f BGB + § 27 ZAG.",
     },
     outcomeText: {
-      de: "Vollständige Auszahlung der 14.800 € nach 6 Wochen — vor Ablauf der 180 Tage. Account-Schließung mit ordnungs­gemäßer Abrechnung.",
-      en: "Full payout of €14,800 after 6 weeks — before the 180-day expiry. Account closed with proper final accounting.",
+      de: "Vollständige Auszahlung der 14.800 € nach 6 Wochen - vor Ablauf der 180 Tage. Account-Schließung mit ordnungs­gemäßer Abrechnung.",
+      en: "Full payout of €14,800 after 6 weeks - before the 180-day expiry. Account closed with proper final accounting.",
     },
     legalBasis: ["§ 675f BGB", "§ 27 ZAG", "BaFin-Aufsicht"],
   },
@@ -244,12 +244,12 @@ export const cases: CaseStudy[] = [
       en: "PSN console ban after parental chargeback",
     },
     problem: {
-      de: "16-jähriger Bruder hatte ohne Erlaubnis FUT-Punkte für 380 € gekauft. Eltern führten Chargeback durch — Sony reagierte mit Console-Ban (Hardware-bezogen) und Permaban des PSN-Kontos. Bibliothek von ca. 4.200 € verloren.",
-      en: "16-year-old brother had purchased FUT points worth €380 without permission. Parents performed chargeback — Sony responded with console ban (hardware-tied) and permaban of PSN account. ~€4,200 library lost.",
+      de: "16-jähriger Bruder hatte ohne Erlaubnis FUT-Punkte für 380 € gekauft. Eltern führten Chargeback durch - Sony reagierte mit Console-Ban (Hardware-bezogen) und Permaban des PSN-Kontos. Bibliothek von ca. 4.200 € verloren.",
+      en: "16-year-old brother had purchased FUT points worth €380 without permission. Parents performed chargeback - Sony responded with console ban (hardware-tied) and permaban of PSN account. ~€4,200 library lost.",
     },
     strategy: {
-      de: "§ 110 BGB (Taschen­geld­paragraph) — Käufe Minder­jähriger ohne Eltern­einwilligung sind schwebend unwirksam. Rück­buchung daher legitim — Sperre als Reaktion darauf rechts­widrig (§ 242 BGB Treu und Glauben). Anwalts­schreiben mit Frist­setzung.",
-      en: "§ 110 BGB (allowance provision) — minors' purchases without parental consent are voidable. Chargeback therefore legitimate — ban in response unlawful (§ 242 BGB good faith). Formal letter with deadline.",
+      de: "§ 110 BGB (Taschen­geld­paragraph) - Käufe Minder­jähriger ohne Eltern­einwilligung sind schwebend unwirksam. Rück­buchung daher legitim - Sperre als Reaktion darauf rechts­widrig (§ 242 BGB Treu und Glauben). Anwalts­schreiben mit Frist­setzung.",
+      en: "§ 110 BGB (allowance provision) - minors' purchases without parental consent are voidable. Chargeback therefore legitimate - ban in response unlawful (§ 242 BGB good faith). Formal letter with deadline.",
     },
     outcomeText: {
       de: "Console-Ban und PSN-Sperre nach 28 Tagen aufgehoben, Bibliothek vollständig wieder­hergestellt.",
@@ -278,8 +278,8 @@ export const cases: CaseStudy[] = [
       en: "HWID ban hit the family PC, also excluding flatmates. Skins and Battle Pass (Elderflame bundle) worth €2,100 locked. Riot's position: HWID bans are 'permanent'.",
     },
     strategy: {
-      de: "DSGVO Art. 22 — Vanguard-Erkennung ist rein automatisiert ohne menschliche Letzt­prüfung. EuGH C-634/21 (SCHUFA): solche Entscheidungen sind „erheblich beeinträchtigend\" und ohne menschliche Kontrolle rechts­widrig. Plus: Stör­erhaftung greift nicht (Mitnutzer).",
-      en: "GDPR Art. 22 — Vanguard detection is fully automated without human review. ECJ C-634/21 (SCHUFA): such decisions are 'significantly affecting' and unlawful without human oversight. Plus: 'Störerhaftung' (interference liability) doesn't apply (cohabitants).",
+      de: "DSGVO Art. 22 -Vanguard-Erkennung ist rein automatisiert ohne menschliche Letzt­prüfung. EuGH C-634/21 (SCHUFA): solche Entscheidungen sind „erheblich beeinträchtigend\" und ohne menschliche Kontrolle rechts­widrig. Plus: Stör­erhaftung greift nicht (Mitnutzer).",
+      en: "GDPR Art. 22 - Vanguard detection is fully automated without human review. ECJ C-634/21 (SCHUFA): such decisions are 'significantly affecting' and unlawful without human oversight. Plus: 'Störerhaftung' (interference liability) doesn't apply (cohabitants).",
     },
     outcomeText: {
       de: "Riot hob HWID-Ban nach 6 Wochen auf, Account wieder­hergestellt, alle Skins erhalten.",
@@ -304,8 +304,8 @@ export const cases: CaseStudy[] = [
       en: "YouTube channel termination of education creator",
     },
     problem: {
-      de: "Channel mit 240.000 Abonnenten plötzlich beendet. Begründung: „Wieder­holte Verstöße gegen Community-Richt­linien\" — keine konkreten Videos benannt. Einnahmen­verlust ~6.500 €/Monat. Sponsoren­verträge mit Vertrags­strafen­drohung.",
-      en: "Channel with 240,000 subscribers suddenly terminated. Reason: 'repeated violations of Community Guidelines' — no specific videos cited. Revenue loss ~ €6,500/month. Sponsor contracts with penalty clauses.",
+      de: "Channel mit 240.000 Abonnenten plötzlich beendet. Begründung: „Wieder­holte Verstöße gegen Community-Richt­linien\" - keine konkreten Videos benannt. Einnahmen­verlust ~6.500 €/Monat. Sponsoren­verträge mit Vertrags­strafen­drohung.",
+      en: "Channel with 240,000 subscribers suddenly terminated. Reason: 'repeated violations of Community Guidelines' - no specific videos cited. Revenue loss ~ €6,500/month. Sponsor contracts with penalty clauses.",
     },
     strategy: {
       de: "Eilantrag auf einstweilige Verfügung am LG Köln. Argumentation: DSA Art. 17 (Begründungs­pflicht) + Art. 22 DSGVO. Eil­bedürftigkeit über laufende Sponsoren­verträge und Reichweiten­verlust dargelegt.",
@@ -334,8 +334,8 @@ export const cases: CaseStudy[] = [
       en: "eBay seller suspension + €5,800 hold",
     },
     problem: {
-      de: "Verkäufer­konto nach 6 Jahren mit Top-Rated-Status gesperrt. 5.800 € in Managed Payments einbehalten. eBay-Begründung: „Verdacht auf nicht autorisierte Konto­nutzung\" — Mandant war jedoch nachweislich der einzige Nutzer.",
-      en: "Seller account suspended after 6 years with Top-Rated status. €5,800 held in Managed Payments. eBay's reasoning: 'suspected unauthorized account use' — yet client was demonstrably the sole user.",
+      de: "Verkäufer­konto nach 6 Jahren mit Top-Rated-Status gesperrt. 5.800 € in Managed Payments einbehalten. eBay-Begründung: „Verdacht auf nicht autorisierte Konto­nutzung\" - Mandant war jedoch nachweislich der einzige Nutzer.",
+      en: "Seller account suspended after 6 years with Top-Rated status. €5,800 held in Managed Payments. eBay's reasoning: 'suspected unauthorized account use' - yet client was demonstrably the sole user.",
     },
     strategy: {
       de: "Anwalts­schreiben gestützt auf BGH VIII ZR 244/10 (eBay darf nur bei wichtigem Grund sperren) und P2B-VO Art. 4 (Begründung + Beschwerde­recht). Sicherheits-Logs als Beweis: keine Fremd­zugriffe.",
@@ -364,8 +364,8 @@ export const cases: CaseStudy[] = [
       en: "Roblox account of a minor deleted without hearing",
     },
     problem: {
-      de: "Account eines 12-Jährigen wegen vermeintlichem „Filter-Bypass\" gelöscht — automatisierte Moderation, keine menschliche Prüfung. Limited UGC-Items (u.a. ein Dominus) und 4.500 Robux im Wert von ca. 1.250 € verloren. Zwei Jahre Spielfortschritt weg.",
-      en: "12-year-old's account deleted over alleged 'filter bypass' — automated moderation, no human review. Limited UGC items (incl. a Dominus) and 4,500 Robux worth ~ €1,250 lost. Two years of progress gone.",
+      de: "Account eines 12-Jährigen wegen vermeintlichem „Filter-Bypass\" gelöscht - automatisierte Moderation, keine menschliche Prüfung. Limited UGC-Items (u.a. ein Dominus) und 4.500 Robux im Wert von ca. 1.250 € verloren. Zwei Jahre Spielfortschritt weg.",
+      en: "12-year-old's account deleted over alleged 'filter bypass' - automated moderation, no human review. Limited UGC items (incl. a Dominus) and 4,500 Robux worth ~ €1,250 lost. Two years of progress gone.",
     },
     strategy: {
       de: "DSGVO Art. 22 + Anwendung auf Minder­jährigen-Konten besonders streng (Erwägungs­grund 38 DSGVO). Plus: § 110 BGB für Robux-Käufe. Anwalts­schreiben an Roblox Corporation in San Mateo (Verbraucher­gerichts­stand am Wohnsitz).",

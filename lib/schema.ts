@@ -11,7 +11,7 @@ export const team = [
     education: [
       { de: "Studium der Rechts­wissen­schaften, Universität Bonn", en: "Law studies, University of Bonn" },
       { de: "Magister iuris (M.Jur.), University of Oxford (2015)", en: "Magister iuris (M.Jur.), University of Oxford (2015)" },
-      { de: "Promotion zum Dr. iur., Universität Bonn (2014) — Plattformhaftung im europäischen Binnenmarkt", en: "PhD in Law, University of Bonn (2014) — Platform liability in the European single market" },
+      { de: "Promotion zum Dr. iur., Universität Bonn (2014) -Plattformhaftung im europäischen Binnenmarkt", en: "PhD in Law, University of Bonn (2014) -Platform liability in the European single market" },
     ],
     focus: {
       de: ["Digital Services Act", "Plattformrecht", "IT-Vertragsrecht", "Digital Compliance"],

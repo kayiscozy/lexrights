@@ -1,21 +1,21 @@
-# LexRights — Strategie & Implementierungs-Plan
+# LexRights - Strategie & Implementierungs-Plan
 
 > **Brand:** LexRights
 > **Domain:** lexrights.com (Cloudflare)
 > **Markt:** EU-weit (Primär: DACH | Sekundär: BeNeLux + skandinavisch via EN)
 > **Sprachen:** DE + EN
-> **Status:** v1.0 — Strategie konsolidiert aus 6 Research-Agents (5 Mai 2026)
+> **Status:** v1.0 - Strategie konsolidiert aus 6 Research-Agents (5 Mai 2026)
 
 ---
 
 ## 1. POSITIONIERUNG & USP
 
 ### Brand-Positionierung
-> **„LexRights — The European Boutique for Digital Rights."**
+> **„LexRights - The European Boutique for Digital Rights."**
 
 **LexRights** ist eine **kanzlei­geführte Marke** (kein Personal Brand). Im Vorder­grund steht die Kanzlei, nicht eine einzelne Person. Das schützt vor Single-Point-of-Failure-Effekten und ist langfristig skalierbar.
 
-Wir sind die erste pan-europäische Boutique-Kanzlei, die sich konsequent auf **digitale Rechte** spezialisiert — die Lücke zwischen den DACH-Generalisten (WBS, WVR) und den B2B-Großkanzleien (Bird&Bird, Sheridans).
+Wir sind die erste pan-europäische Boutique-Kanzlei, die sich konsequent auf **digitale Rechte** spezialisiert - die Lücke zwischen den DACH-Generalisten (WBS, WVR) und den B2B-Großkanzleien (Bird&Bird, Sheridans).
 
 ### Vier Säulen unter dem Dach „Digitale Rechte"
 
@@ -50,11 +50,11 @@ Untertitel-Variante (Hero, Action-orientiert):
 
 ### 5 USPs (Differenzierung gegenüber EU-Wettbewerb)
 
-1. **„Digitale Rechte" als Brand-Dach** — Ein Anlaufpunkt für alle Plattform-, DSA-, DSGVO- und Digital-Content-Themen; keine fragmentierte Spezialkanzlei für 1 Plattform, kein Generalist für „alles".
-2. **DSA-Native** — Erste Kanzlei mit explizitem DSA-Workflow (Art. 17/20/21): Statement-of-Reasons-Analyse, interne Beschwerde, Verweisung an Appeals Centre Europe.
-3. **DE+EN aus einer Hand** — Pan-EU-Reach ohne Korrespondenzkanzlei-Aufwand; öffnet NL, IRL, Skandinavien, Malta sowie internationale Mandanten.
-4. **Tiefen-Content je Plattform & Thema** — Eigene Pillar-Page pro Plattform UND pro Rechtsthema; weder das oberflächliche WVR-Massenmodell noch der unspezifische WBS-Buffet.
-5. **Tech-getrieben** — Mandanten-Dashboard, KI-Vorprüfung („Erfolgseinschätzung in 60 Sekunden"), DSGVO-Auskunfts-Generator als Lead-Magnet — die „Stripe der digitalen Rechte".
+1. **„Digitale Rechte" als Brand-Dach** - Ein Anlaufpunkt für alle Plattform-, DSA-, DSGVO- und Digital-Content-Themen; keine fragmentierte Spezialkanzlei für 1 Plattform, kein Generalist für „alles".
+2. **DSA-Native** - Erste Kanzlei mit explizitem DSA-Workflow (Art. 17/20/21): Statement-of-Reasons-Analyse, interne Beschwerde, Verweisung an Appeals Centre Europe.
+3. **DE+EN aus einer Hand** -Pan-EU-Reach ohne Korrespondenzkanzlei-Aufwand; öffnet NL, IRL, Skandinavien, Malta sowie internationale Mandanten.
+4. **Tiefen-Content je Plattform & Thema** - Eigene Pillar-Page pro Plattform UND pro Rechtsthema; weder das oberflächliche WVR-Massenmodell noch der unspezifische WBS-Buffet.
+5. **Tech-getrieben** -Mandanten-Dashboard, KI-Vorprüfung („Erfolgseinschätzung in 60 Sekunden"), DSGVO-Auskunfts-Generator als Lead-Magnet - die „Stripe der digitalen Rechte".
 
 ### Alleinstellung pro Land
 - **DE:** Spezialisierungs-Tiefe (gegen WBS-Generalisten)
@@ -64,11 +64,11 @@ Untertitel-Variante (Hero, Action-orientiert):
 
 ### Operating-Modell: Digital-First Kanzlei
 
-LexRights wird konsequent als **digital-first / standortlose Kanzlei** vermarktet — kein Local-SEO, kein „Standort"-Branding, keine physische Mandanten­empfangs­halle.
+LexRights wird konsequent als **digital-first / standortlose Kanzlei** vermarktet - kein Local-SEO, kein „Standort"-Branding, keine physische Mandanten­empfangs­halle.
 
 **Was öffentlich kommuniziert wird:**
 - „Bundesweit & EU-weit für Sie tätig"
-- „100 % digitale Mandats­abwicklung — Video-Call, beA, sichere Online-Akte"
+- „100 % digitale Mandats­abwicklung -Video-Call, beA, sichere Online-Akte"
 - Kein „Wir in Stadt X"-Header, kein Google Business Profile auf Stadt
 - Keine Öffnungszeiten-Anzeige, keine Adresse im Hero/Header
 
@@ -79,12 +79,12 @@ LexRights wird konsequent als **digital-first / standortlose Kanzlei** vermarkte
 
 **Empfohlene Adress-Lösung** (falls noch keine Kanzlei­adresse vorhanden):
 - Wohnsitz des Anwalts (häufige Praxis)
-- Coworking/Business-Center (Regus, Mindspace, WeWork) — typisch 50–300 €/Monat
+- Coworking/Business-Center (Regus, Mindspace, WeWork) - typisch 50–300 €/Monat
 - Virtuelles Office mit Postdienst & Konferenzraum-Nutzung on-demand
 
 **Mandanten-Workflow (digital-first):**
 1. Online-Formular oder Calendly für Erstgespräch
-2. Video-Call (Whereby / Cal.com Embedded — DSGVO-konform, EU-Server) oder Telefon
+2. Video-Call (Whereby / Cal.com Embedded -DSGVO-konform, EU-Server) oder Telefon
 3. Mandats­annahme via DocuSign/EU-Pendant oder qualifizierter elektronischer Signatur
 4. Mandanten-Dashboard für Status, Dokumente, Korrespondenz
 5. Schriftverkehr mit Plattformen + Gerichten via beA
@@ -101,29 +101,29 @@ LexRights wird konsequent als **digital-first / standortlose Kanzlei** vermarkte
 | 2 | **DSA Art. 20** | Internes Beschwerdesystem 6 Monate, kostenlos, **nicht rein automatisiert** | VO (EU) 2022/2065 |
 | 3 | **DSA Art. 21** | Verweis an zertifizierte ADR-Body (Appeals Centre Europe, User Rights gGmbH) | VO (EU) 2022/2065 |
 | 4 | **DSA Art. 54** | Eigenständiger Schadensersatz bei DSA-Verstoß | VO (EU) 2022/2065 |
-| 5 | **DSGVO Art. 15** | Auskunftsrecht — entlarvt automatisierte Entscheidungen, liefert Beweise | VO (EU) 2016/679 |
+| 5 | **DSGVO Art. 15** | Auskunftsrecht - entlarvt automatisierte Entscheidungen, liefert Beweise | VO (EU) 2016/679 |
 | 6 | **DSGVO Art. 22** | Verbot rein automatisierter Entscheidungen → tödlich für Vanguard, VAC, EAC, Ricochet | VO (EU) 2016/679 |
 | 7 | **DSGVO Art. 82** | Schadensersatz auch immateriell (EuGH C-300/21 Österreichische Post) | VO (EU) 2016/679 |
 | 8 | **§ 307 BGB / RL 93/13/EWG** | „Sole-discretion"-Klauseln in Plattform-AGB unwirksam | nationales Recht |
 | 9 | **§§ 327ff BGB** (RL 2019/770) | Digitale Inhalte (Skins, V-Bucks): kein Verlust ohne Entschädigung | nationales Recht |
-| 10 | **Brüssel-Ia Art. 17/18** | Verbraucher klagt am eigenen Wohnsitz — gegen Epic/Valve/Sony in DE | VO (EU) 1215/2012 |
+| 10 | **Brüssel-Ia Art. 17/18** | Verbraucher klagt am eigenen Wohnsitz - gegen Epic/Valve/Sony in DE | VO (EU) 1215/2012 |
 | 11 | **Rom-I Art. 6** | Schutzland-Recht zwingend; US-Rechtswahlklauseln wirkungslos | VO (EU) 593/2008 |
 | 12 | **§ 110 BGB (Taschengeld)** | Minderjährige: In-Game-Käufe ohne Elternwissen rückforderbar | BGB |
 | 13 | **P2B-VO Art. 4** | B2B (Streamer, Verkäufer): 30-Tage-Vorwarnung bei Beendigung | VO (EU) 2019/1150 |
 
 ### Landmark-Urteile (Kern-Munition)
 
-- **BGH III ZR 179/20 + 192/20** (29.07.2021, Facebook) — „Verfahrenstrias": Information + Anhörung + Neuentscheidung
-- **EuGH C-300/21** Österreichische Post (4.5.2023) — DSGVO-Schaden auch immateriell
-- **EuGH C-634/21** SCHUFA (7.12.2023) — Automatisierte Entscheidung = Art. 22 DSGVO
-- **OGH (AT) 6 Ob 195/22y** — BGH-Linie nach AT übernommen
-- **Cassazione (IT) 6443/2021** — PayPal-Sperrung: Beweislast bei Plattform
-- **OLG Karlsruhe 14 U 351/22** — Steam-Account-Sperrung & § 327 BGB
+- **BGH III ZR 179/20 + 192/20** (29.07.2021, Facebook) -„Verfahrenstrias": Information + Anhörung + Neuentscheidung
+- **EuGH C-300/21** Österreichische Post (4.5.2023) -DSGVO-Schaden auch immateriell
+- **EuGH C-634/21** SCHUFA (7.12.2023) - Automatisierte Entscheidung = Art. 22 DSGVO
+- **OGH (AT) 6 Ob 195/22y** -BGH-Linie nach AT übernommen
+- **Cassazione (IT) 6443/2021** -PayPal-Sperrung: Beweislast bei Plattform
+- **OLG Karlsruhe 14 U 351/22** -Steam-Account-Sperrung & § 327 BGB
 
 ### Top-3 Argumente für Mandanten-Kommunikation
-1. *„Plattformen müssen Sperrungen seit DSA Art. 17 konkret begründen — pauschale Verweise auf Community-Guidelines reichen nicht."*
+1. *„Plattformen müssen Sperrungen seit DSA Art. 17 konkret begründen - pauschale Verweise auf Community-Guidelines reichen nicht."*
 2. *„Vollautomatische Anti-Cheat-Sperren ohne menschliche Prüfung sind nach Art. 22 DSGVO rechtswidrig."*
-3. *„Sie können am eigenen Wohnsitz klagen — egal wo Epic, Valve oder Sony sitzen."*
+3. *„Sie können am eigenen Wohnsitz klagen - egal wo Epic, Valve oder Sony sitzen."*
 
 ---
 
@@ -131,26 +131,26 @@ LexRights wird konsequent als **digital-first / standortlose Kanzlei** vermarkte
 
 Priorisierung nach: **hohe Suche × schwacher Wettbewerb × klarer Streitwert**
 
-### Phase 1 — Launch-Pillars (Monat 1–3)
-1. **Fortnite / Epic Games** — hohe Suche, junge Zielgruppe, Skin-Streitwerte 500–5000 €
-2. **TikTok** — Creator-Boom, Shadow-Ban-Thema fast leer, hohe Streitwerte bei Mid-Tier-Creators
-3. **Steam / Valve** — CS2-Inventare 5-stellig, VAC-Ban-Klausel rechtlich angreifbar
-4. **Meta (Facebook + Instagram)** — gesättigter Markt aber hoher Suchvolumen + BGH-Linie
-5. **PayPal** — direkt liquider Streitwert, klare BGH-/OLG-Linie
+### Phase 1 -Launch-Pillars (Monat 1–3)
+1. **Fortnite / Epic Games** - hohe Suche, junge Zielgruppe, Skin-Streitwerte 500–5000 €
+2. **TikTok** -Creator-Boom, Shadow-Ban-Thema fast leer, hohe Streitwerte bei Mid-Tier-Creators
+3. **Steam / Valve** -CS2-Inventare 5-stellig, VAC-Ban-Klausel rechtlich angreifbar
+4. **Meta (Facebook + Instagram)** - gesättigter Markt aber hoher Suchvolumen + BGH-Linie
+5. **PayPal** - direkt liquider Streitwert, klare BGH-/OLG-Linie
 
-### Phase 2 — Skalierung (Monat 4–6)
-6. **PSN (PlayStation)** — Console-Ban als Eigentumsthema
-7. **Riot (Valorant + LoL)** — Vanguard-HWID-Ban, schwacher Wettbewerb
-8. **YouTube / Google** — Channel-Termination, Creator-Streitwerte
-9. **Roblox** — Eltern als Mandanten (Goldgrube)
-10. **Discord** — Server-Bans, fast leerer Markt
+### Phase 2 - Skalierung (Monat 4–6)
+6. **PSN (PlayStation)** -Console-Ban als Eigentumsthema
+7. **Riot (Valorant + LoL)** -Vanguard-HWID-Ban, schwacher Wettbewerb
+8. **YouTube / Google** -Channel-Termination, Creator-Streitwerte
+9. **Roblox** - Eltern als Mandanten (Goldgrube)
+10. **Discord** -Server-Bans, fast leerer Markt
 
-### Phase 3 — Premium-Streitwerte (Monat 6–9)
-11. **Amazon Seller Central** — P2B-VO, 5–6-stellige Streitwerte
-12. **Coinbase / Binance** — Crypto, sehr hohe Einzelstreitwerte
-13. **eBay** — BGH-Linie klar, mittlere Streitwerte, hohe Fallzahl
-14. **Xbox Live** — Microsoft Ireland, klare DSA-Anwendung
-15. **Twitch** — DMCA, Creator-Verluste
+### Phase 3 -Premium-Streitwerte (Monat 6–9)
+11. **Amazon Seller Central** -P2B-VO, 5–6-stellige Streitwerte
+12. **Coinbase / Binance** - Crypto, sehr hohe Einzelstreitwerte
+13. **eBay** -BGH-Linie klar, mittlere Streitwerte, hohe Fallzahl
+14. **Xbox Live** - Microsoft Ireland, klare DSA-Anwendung
+15. **Twitch** - DMCA, Creator-Verluste
 
 ---
 
@@ -167,12 +167,12 @@ CMS            Sanity v3 (embedded Studio at /studio)
 i18n           next-intl v3 (DE / EN, /de & /en path-based, Geo-Auto-Detect)
 Forms          React Hook Form + Zod + Server Actions
 Email          Resend (EU region) + React Email
-Analytics      Plausible Cloud (EU) — KEIN GA4 (Schrems II)
+Analytics      Plausible Cloud (EU) - KEIN GA4 (Schrems II)
 Cookie-Banner  ENTFÄLLT bei reiner Plausible-Nutzung
-Hosting        Vercel (fra1 = Frankfurt) — DSGVO-konform
-DNS            Cloudflare (vorhanden — perfekt)
+Hosting        Vercel (fra1 = Frankfurt) -DSGVO-konform
+DNS            Cloudflare (vorhanden -perfekt)
 Domain         lexrights.com (root)
-              de.lexrights.com / en.lexrights.com OPTIONAL — wir nutzen Subfolders
+              de.lexrights.com / en.lexrights.com OPTIONAL - wir nutzen Subfolders
 Fonts          Geist Sans + Geist Mono (self-hosted, kein Google CDN)
 Icons          Lucide React
 ```
@@ -313,7 +313,7 @@ lexrights.com/                   307 → /de oder /en (Geo-Detect)
 │
 ├── /erstberatung               Multi-Step-Form (kostenlose Ersteinschätzung)
 │
-│   (keine /preise-Seite — Marktstandard, Preise nur nach Erstgespräch)
+│   (keine /preise-Seite - Marktstandard, Preise nur nach Erstgespräch)
 │
 ├── /kanzlei                    Über uns / Anwaltsprofil(e)
 │   └── /team
@@ -358,24 +358,24 @@ Beim Wechsel: gleiche Page in anderer Sprache laden (via Slug-Mapping in Sanity-
 
 **Struktur jeder Plattform-Page:**
 
-1. **Hero** — H1 + Subline + 3-Felder-Inline-Form
-2. **Pain-Section** — „Das Problem: Sperrung ohne Begründung, verlorene Skins, Support antwortet nicht"
-3. **Rechtliche Hebel** — DSA Art. 17, DSGVO Art. 22, BGH-Urteil
-4. **Vorgehensweise** — 5-Schritte-Plan: Beweissicherung → DSGVO-Anfrage → DSA-Beschwerde → Anwaltsschreiben → Klage
-5. **Festpreis-Box** — „Pauschal X € — kein Erfolg, kein Honorar (oder: 50% zurück)"
-6. **Anonymisierte Fall-Story** — „Mandant M., 19 J., Steam-Account mit 7.000 € Inventar — nach 21 Tagen wieder freigeschaltet"
+1. **Hero** -H1 + Subline + 3-Felder-Inline-Form
+2. **Pain-Section** -„Das Problem: Sperrung ohne Begründung, verlorene Skins, Support antwortet nicht"
+3. **Rechtliche Hebel** - DSA Art. 17, DSGVO Art. 22, BGH-Urteil
+4. **Vorgehensweise** -5-Schritte-Plan: Beweissicherung → DSGVO-Anfrage → DSA-Beschwerde → Anwaltsschreiben → Klage
+5. **Festpreis-Box** -„Pauschal X € - kein Erfolg, kein Honorar (oder: 50% zurück)"
+6. **Anonymisierte Fall-Story** -„Mandant M., 19 J., Steam-Account mit 7.000 € Inventar - nach 21 Tagen wieder freigeschaltet"
 7. **FAQ** (8–12 Fragen, FAQPage-Schema)
-8. **Trust-Strip** — Logos, Bewertungen, Mitgliedschaften
-9. **CTA-Repetition** — „Jetzt kostenlose Ersteinschätzung"
+8. **Trust-Strip** - Logos, Bewertungen, Mitgliedschaften
+9. **CTA-Repetition** -„Jetzt kostenlose Ersteinschätzung"
 
 ### Cluster-Content pro Pillar (5–10 Blog-Artikel)
 
 Beispiel Fortnite-Cluster:
 - „Fortnite-Account gesperrt: Die 7 häufigsten Gründe und wie Sie reagieren sollten"
-- „V-Bucks zurückfordern nach Account-Sperre — geht das?"
+- „V-Bucks zurückfordern nach Account-Sperre - geht das?"
 - „Hardware-Ban (HWID) bei Fortnite: Ist das überhaupt zulässig?"
-- „Epic Games antwortet nicht auf meinen Appeal — was nun?"
-- „Fortnite-Sperre wegen Cheating-Verdacht — Beweislast liegt bei Epic"
+- „Epic Games antwortet nicht auf meinen Appeal - was nun?"
+- „Fortnite-Sperre wegen Cheating-Verdacht - Beweislast liegt bei Epic"
 
 ---
 
@@ -407,9 +407,9 @@ DSA dispute lawyer
 **Woche 1–2 (Foundation)**
 - [ ] Tech-Setup: Next.js 15 + Tailwind v4 + shadcn + Sanity + i18n
 - [ ] Domain DNS via Cloudflare → Vercel fra1
-- [ ] Schema-Markup: LegalService, Attorney, FAQPage, BreadcrumbList (NICHT LocalBusiness — digital-first!)
+- [ ] Schema-Markup: LegalService, Attorney, FAQPage, BreadcrumbList (NICHT LocalBusiness -digital-first!)
 - [ ] GSC + Bing Webmaster Tools
-- [ ] (KEIN Google Business Profile — digital-first, kein Local-SEO)
+- [ ] (KEIN Google Business Profile -digital-first, kein Local-SEO)
 - [ ] DSGVO-Foundation (Impressum mit Anschrift, Datenschutz, AVVs)
 
 **Woche 3–6 (Core Content)**
@@ -431,7 +431,7 @@ DSA dispute lawyer
 - [ ] Lead-Magnet-Tools live (DSGVO-Generator, Sperr-Check)
 - [ ] Erste B2B-Pillar (Amazon Seller, P2B-VO)
 - [ ] A/B-Tests Hero-CTA, Conversion-Funnel
-- [ ] (KEIN Local SEO — digital-first; stattdessen: EN-Version voll ausbauen für EU-Reichweite)
+- [ ] (KEIN Local SEO -digital-first; stattdessen: EN-Version voll ausbauen für EU-Reichweite)
 
 ---
 
@@ -502,7 +502,7 @@ Anwaltskanzleien zeigen typischerweise **keine** konkreten Preistabellen auf ihr
 - **§ 4 RVG**: Vergütungs­vereinbarungen müssen schriftlich im Einzelfall erfolgen
 - **Mandate sind individuell**: Streitwert, Komplexität, Verfahrens­stand variieren stark
 - **Bindungs­wirkung**: Konkrete Preis­vorgaben auf der Website können als verbindliches Angebot interpretiert werden
-- **Marktstandard**: WBS, Hahn, Hild, Solmecke und ~95 % aller deutschen Kanzleien zeigen keine Preise. Werdermann von Rüden ist die Ausnahme — und arbeitet im Massen­abwicklungs-Stil, der unsere Premium-Position verwässern würde.
+- **Marktstandard**: WBS, Hahn, Hild, Solmecke und ~95 % aller deutschen Kanzleien zeigen keine Preise. Werdermann von Rüden ist die Ausnahme - und arbeitet im Massen­abwicklungs-Stil, der unsere Premium-Position verwässern würde.
 
 ### Stattdessen: Trust-Element ohne Zahlen
 
@@ -513,7 +513,7 @@ Trust-Box auf jeder Pillar-Page + Homepage:
 
   ✓ Kostenlose Ersteinschätzung in 24 h
   ✓ Transparente Festpreise nach individueller Prüfung
-  ✓ Keine versteckten Kosten — Honorar­vereinbarung vor Mandats­annahme
+  ✓ Keine versteckten Kosten -Honorar­vereinbarung vor Mandats­annahme
   ✓ Bei Rechts­schutz­versicherung: Direkt­abrechnung möglich
 ```
 
@@ -573,7 +573,7 @@ Statt „Festpreis 399 €" auf Buttons:
 
 ## 12. IMPLEMENTIERUNGS-ROADMAP (Code)
 
-### Sprint 0 — Setup (Tag 1–3)
+### Sprint 0 - Setup (Tag 1–3)
 ```
 ✅ Repo init, Vercel verbinden, Domain → Vercel fra1
 ✅ Next.js 15 + TS + Tailwind v4 + shadcn init
@@ -584,16 +584,16 @@ Statt „Festpreis 399 €" auf Buttons:
 ✅ Basis-Layout mit Header/Footer/Theme
 ```
 
-### Sprint 1 — Foundation (Tag 4–10)
+### Sprint 1 - Foundation (Tag 4–10)
 ```
 ✅ Design-System: Geist Fonts self-hosted, Tailwind @theme mit Color-Tokens
 ✅ Component-Lib: Button, Card, Input, Form, Hero, Section, Footer, Header
 ✅ i18n-Setup: messages/de.json, messages/en.json
 ✅ Schema-Markup-Helper (LegalService, Attorney, FAQPage)
-✅ Cookie-Banner (entfällt mit Plausible — nur Datenschutz-Hinweis)
+✅ Cookie-Banner (entfällt mit Plausible - nur Datenschutz-Hinweis)
 ```
 
-### Sprint 2 — Pages (Tag 11–25)
+### Sprint 2 - Pages (Tag 11–25)
 ```
 ✅ Homepage (DE + EN)
 ✅ 5 Pillar-Pages (Fortnite, TikTok, Steam, Meta, PayPal)
@@ -603,7 +603,7 @@ Statt „Festpreis 399 €" auf Buttons:
 ✅ /impressum + /datenschutz + /agb
 ```
 
-### Sprint 3 — CMS + Blog (Tag 26–35)
+### Sprint 3 - CMS + Blog (Tag 26–35)
 ```
 ✅ Sanity-Schemas: BlogPost, CaseStudy, Lawyer, Platform, Testimonial
 ✅ Blog mit ISR (revalidate 3600)
@@ -611,16 +611,16 @@ Statt „Festpreis 399 €" auf Buttons:
 ✅ Erste 5 Blog-Artikel
 ```
 
-### Sprint 4 — Tools + Polish (Tag 36–45)
+### Sprint 4 - Tools + Polish (Tag 36–45)
 ```
 ✅ DSGVO-Auskunfts-Generator (Lead-Magnet)
-✅ Sperr-Check (KI-Vorprüfung — optional Anthropic Claude API)
+✅ Sperr-Check (KI-Vorprüfung - optional Anthropic Claude API)
 ✅ A11y-Audit (axe + Lighthouse 95+)
 ✅ Performance-Audit (LCP <2s, INP <150ms)
 ✅ Mobile-Optimierung (Sticky CTA, WhatsApp)
 ```
 
-### Sprint 5 — Launch (Tag 46–50)
+### Sprint 5 - Launch (Tag 46–50)
 ```
 ✅ GSC + Bing Webmaster Tools
 ✅ Google Business Profile
@@ -657,31 +657,31 @@ Bestätigt:
 
 Bevor ich Sprint 0 (Setup) starten kann, brauche ich:
 
-1. **Kanzleiname laut Briefkopf** — exakter Name für Impressum (z. B. „Mustermann Rechtsanwälte" oder gleich „LexRights Rechtsanwaltsgesellschaft mbH"?)
-2. **Anwaltsname(n)** — wer steht im Impressum als verantwortlicher Anwalt?
-3. **Kanzleisitz / Adresse** — für Impressum + Local-SEO
+1. **Kanzleiname laut Briefkopf** - exakter Name für Impressum (z. B. „Mustermann Rechtsanwälte" oder gleich „LexRights Rechtsanwaltsgesellschaft mbH"?)
+2. **Anwaltsname(n)** - wer steht im Impressum als verantwortlicher Anwalt?
+3. **Kanzleisitz / Adresse** - für Impressum + Local-SEO
 4. **Anwaltskammer** + Zulassungsjahr
-5. **Berufshaftpflicht** — Versicherer + Adresse + Geltungsbereich
+5. **Berufshaftpflicht** - Versicherer + Adresse + Geltungsbereich
 6. **USt-ID** falls vorhanden
-7. **Telefonnummer** — Kanzlei-Festnetz für Click-to-Call
-8. **WhatsApp-Business-Nummer** — gewünscht für Bottom-CTA?
-9. **Erfolgsfälle** — bereits anonymisierbare Mandate als Case Studies?
-10. **Logo / CI** — vorhanden, oder soll ich Logo-Konzepte vorschlagen?
+7. **Telefonnummer** -Kanzlei-Festnetz für Click-to-Call
+8. **WhatsApp-Business-Nummer** - gewünscht für Bottom-CTA?
+9. **Erfolgsfälle** - bereits anonymisierbare Mandate als Case Studies?
+10. **Logo / CI** - vorhanden, oder soll ich Logo-Konzepte vorschlagen?
 
 **Minimal-Set zum Implementations-Start:** 1 + 2 + 3 + 4 + 5 + 7 (Punkte 6, 8, 9, 10 können nachgereicht werden).
 
-Falls einige Punkte noch nicht final sind, können Platzhalter verwendet werden — alles ist später per Sanity-CMS pflegbar.
+Falls einige Punkte noch nicht final sind, können Platzhalter verwendet werden - alles ist später per Sanity-CMS pflegbar.
 
 ---
 
-## 15. ANHANG — ALLE 6 RESEARCH-OUTPUTS
+## 15. ANHANG - ALLE 6 RESEARCH-OUTPUTS
 
 Die vollständigen Reports der Research-Agents:
-- `research-1-recht-de-eu.md` — DE+EU Rechtslage
-- `research-2-konkurrenz-eu.md` — EU-weite Konkurrenz-Analyse
-- `research-3-plattform-cases.md` — 21 Plattform-Steckbriefe
-- `research-4-seo-conversion.md` — SEO + Conversion-Strategie
-- `research-5-design-tech.md` — Design-System + Tech-Stack
-- `research-6-eu-recht-detail.md` — EU-Recht Detail (DSA Art. 17/20/21, P2B-VO, Brüssel-Ia)
+- `research-1-recht-de-eu.md` -DE+EU Rechtslage
+- `research-2-konkurrenz-eu.md` -EU-weite Konkurrenz-Analyse
+- `research-3-plattform-cases.md` -21 Plattform-Steckbriefe
+- `research-4-seo-conversion.md` - SEO + Conversion-Strategie
+- `research-5-design-tech.md` -Design-System + Tech-Stack
+- `research-6-eu-recht-detail.md` -EU-Recht Detail (DSA Art. 17/20/21, P2B-VO, Brüssel-Ia)
 
-— Ende Strategie-Dokument v1.0 —
+-Ende Strategie-Dokument v1.0 —

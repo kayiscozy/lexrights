@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "LexRights — Ihre digitalen Rechte. Durchgesetzt.",
+    "title": "LexRights - Ihre digitalen Rechte. Durchgesetzt.",
     "titleTemplate": "%s | LexRights",
     "description": "Spezialisierte Boutique-Kanzlei für digitale Rechte in Europa. Account-Sperrungen, DSA-Beschwerden, DSGVO-Schadensersatz, Verbraucherschutz für digitale Inhalte. Kostenlose Ersteinschätzung in 24 h."
   },
@@ -35,7 +35,7 @@
       "emailPlaceholder": "ihre@email.de",
       "submit": "Jetzt prüfen lassen",
       "submitting": "Wird gesendet…",
-      "success": "Vielen Dank — wir melden uns binnen 24 Stunden.",
+      "success": "Vielen Dank - wir melden uns binnen 24 Stunden.",
       "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
       "consent": "Mit dem Absenden stimmen Sie unserer <privacyLink>Datenschutzerklärung</privacyLink> zu."
     },
@@ -62,7 +62,7 @@
     },
     "consumer": {
       "title": "Digital Consumer Rights",
-      "desc": "Verbraucher­schutz bei digitalen Inhalten und Diensten: In-Game-Käufe, Streaming, App-Stores, Cloud-Dienste — nach §§ 327 ff. BGB / RL 2019/770."
+      "desc": "Verbraucher­schutz bei digitalen Inhalten und Diensten: In-Game-Käufe, Streaming, App-Stores, Cloud-Dienste - nach §§ 327 ff. BGB / RL 2019/770."
     }
   },
   "platforms": {
@@ -76,11 +76,11 @@
     "steps": [
       {
         "title": "Kostenlose Ersteinschätzung",
-        "desc": "Sie schildern uns Ihren Fall. Wir prüfen die Erfolgs­aussichten binnen 24 Stunden — ohne Kosten, ohne Bindung."
+        "desc": "Sie schildern uns Ihren Fall. Wir prüfen die Erfolgs­aussichten binnen 24 Stunden - ohne Kosten, ohne Bindung."
       },
       {
         "title": "Strategie & Honorar­vereinbarung",
-        "desc": "Bei Mandats­annahme erhalten Sie einen klaren Strategie­plan und transparente Honorar­vereinbarung — Festpreis wo möglich."
+        "desc": "Bei Mandats­annahme erhalten Sie einen klaren Strategie­plan und transparente Honorar­vereinbarung - Festpreis wo möglich."
       },
       {
         "title": "Außer­gerichtliche Durchsetzung",
@@ -117,13 +117,13 @@
       },
       {
         "title": "Spezialisten-Team",
-        "desc": "Promovierter Plattform­rechtler mit Oxford-Hintergrund + Datenschutz-Spezialistin mit Tilburg LL.M. — komplementäre Tiefe."
+        "desc": "Promovierter Plattform­rechtler mit Oxford-Hintergrund + Datenschutz-Spezialistin mit Tilburg LL.M. - komplementäre Tiefe."
       }
     ]
   },
   "cta": {
     "title": "Ihr Account ist gesperrt? Sie haben digitale Rechte.",
-    "subtitle": "Wir prüfen Ihren Fall in 24 Stunden — kostenlos und unverbindlich.",
+    "subtitle": "Wir prüfen Ihren Fall in 24 Stunden - kostenlos und unverbindlich.",
     "button": "Kostenlose Ersteinschätzung anfragen"
   },
   "firm": {
@@ -134,7 +134,7 @@
     "hero": {
       "eyebrow": "Kanzlei",
       "title": "Eine Kanzlei für eine neue Rechtswirklichkeit.",
-      "sub": "LexRights wurde mit einem klaren Auftrag gegründet: Verbrauchern und Unternehmen in Europa Zugang zu spezialisiertem Rechts­schutz im digitalen Raum zu geben — auf Augen­höhe mit den großen Plattformen."
+      "sub": "LexRights wurde mit einem klaren Auftrag gegründet: Verbrauchern und Unternehmen in Europa Zugang zu spezialisiertem Rechts­schutz im digitalen Raum zu geben - auf Augen­höhe mit den großen Plattformen."
     },
     "values": {
       "title": "Unsere Prinzipien",
@@ -149,7 +149,7 @@
         },
         {
           "title": "EU-weit aus einer Hand",
-          "desc": "Verbrauchergerichtsstand am Wohnsitz nach Brüssel-Ia. Wir vertreten Sie in DACH und EU-weit auf Deutsch und Englisch — ohne Korrespondenz­anwalt-Aufschlag."
+          "desc": "Verbrauchergerichtsstand am Wohnsitz nach Brüssel-Ia. Wir vertreten Sie in DACH und EU-weit auf Deutsch und Englisch - ohne Korrespondenz­anwalt-Aufschlag."
         },
         {
           "title": "Digital-first",
@@ -169,7 +169,7 @@
   "contact": {
     "meta": {
       "title": "Kontakt",
-      "description": "Kontaktieren Sie LexRights — Boutique-Kanzlei für digitale Rechte. Kostenlose Ersteinschätzung in 24 Stunden."
+      "description": "Kontaktieren Sie LexRights -Boutique-Kanzlei für digitale Rechte. Kostenlose Ersteinschätzung in 24 Stunden."
     },
     "hero": {
       "eyebrow": "Kontakt",
@@ -197,7 +197,7 @@
     "hero": {
       "eyebrow": "Wissen",
       "title": "Tiefen-Analyse digitaler Rechte.",
-      "sub": "Hintergründe zum Digital Services Act, zur DSGVO, zu BGH- und EuGH-Entscheidungen, zu Plattform-Sperrungen — geschrieben für Mandanten, nicht für Suchmaschinen."
+      "sub": "Hintergründe zum Digital Services Act, zur DSGVO, zu BGH- und EuGH-Entscheidungen, zu Plattform-Sperrungen - geschrieben für Mandanten, nicht für Suchmaschinen."
     },
     "comingSoon": {
       "title": "Inhalte in Vorbereitung",
@@ -208,12 +208,12 @@
   "faelle": {
     "meta": {
       "title": "Fälle",
-      "description": "Anonymisierte Fall-Studien aus unserer Praxis. Was funktioniert hat — und warum."
+      "description": "Anonymisierte Fall-Studien aus unserer Praxis. Was funktioniert hat - und warum."
     },
     "hero": {
       "eyebrow": "Fälle",
       "title": "Echte Fälle. Echte Ergebnisse.",
-      "sub": "Eine Auswahl anonymisierter Fall-Studien aus unserer Praxis. Streitwerte, Strategien, Outcomes — transparent dokumentiert."
+      "sub": "Eine Auswahl anonymisierter Fall-Studien aus unserer Praxis. Streitwerte, Strategien, Outcomes - transparent dokumentiert."
     },
     "stats": {
       "casesShown": "Dokumentierte Fälle",
@@ -286,12 +286,12 @@
   "consultation": {
     "meta": {
       "title": "Kostenlose Ersteinschätzung",
-      "description": "Schildern Sie uns Ihren Fall. Wir prüfen die Erfolgs­aussichten binnen 24 Stunden — kostenlos und unverbindlich."
+      "description": "Schildern Sie uns Ihren Fall. Wir prüfen die Erfolgs­aussichten binnen 24 Stunden - kostenlos und unverbindlich."
     },
     "intro": {
       "eyebrow": "Kostenlose Ersteinschätzung",
       "title": "Erzählen Sie uns von Ihrem Fall.",
-      "sub": "Vier kurze Schritte. Antwort innerhalb von 24 Stunden — kostenlos und unverbindlich."
+      "sub": "Vier kurze Schritte. Antwort innerhalb von 24 Stunden - kostenlos und unverbindlich."
     },
     "steps": {
       "step": "Schritt {current} / {total}",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "LexRights — Your digital rights. Enforced.",
+    "title": "LexRights - Your digital rights. Enforced.",
     "titleTemplate": "%s | LexRights",
     "description": "Europe's specialized boutique law firm for digital rights. Platform suspensions, DSA complaints, GDPR damages, consumer protection for digital content. Free first assessment within 24h."
   },
@@ -35,7 +35,7 @@
       "emailPlaceholder": "your@email.com",
       "submit": "Get free assessment",
       "submitting": "Sending…",
-      "success": "Thank you — we'll respond within 24 hours.",
+      "success": "Thank you - we'll respond within 24 hours.",
       "error": "Something went wrong. Please try again.",
       "consent": "By submitting you accept our <privacyLink>privacy policy</privacyLink>."
     },
@@ -47,7 +47,7 @@
   },
   "pillars": {
     "title": "Four pillars under one roof",
-    "subtitle": "We combine platform specialization with European legal expertise. Each pillar with deep, specific content — never generic legal advice.",
+    "subtitle": "We combine platform specialization with European legal expertise. Each pillar with deep, specific content - never generic legal advice.",
     "platforms": {
       "title": "Platform suspensions",
       "desc": "Account bans on gaming, social, marketplace, payment and crypto platforms. We enforce your reinstatement and damages claims."
@@ -62,12 +62,12 @@
     },
     "consumer": {
       "title": "Digital consumer rights",
-      "desc": "Consumer protection for digital content and services: in-game purchases, streaming, app stores, cloud — under § 327 et seq. BGB / Directive 2019/770."
+      "desc": "Consumer protection for digital content and services: in-game purchases, streaming, app stores, cloud - under § 327 et seq. BGB / Directive 2019/770."
     }
   },
   "platforms": {
     "title": "Specialized for every platform",
-    "subtitle": "Dedicated deep-content pages per platform — not one-size-fits-all. We know the ToS, anti-cheat systems, complaint paths and case law.",
+    "subtitle": "Dedicated deep-content pages per platform - not one-size-fits-all. We know the ToS, anti-cheat systems, complaint paths and case law.",
     "viewAll": "See all platforms"
   },
   "process": {
@@ -76,11 +76,11 @@
     "steps": [
       {
         "title": "Free first assessment",
-        "desc": "You describe your case. We assess the chances within 24 hours — at no cost, no commitment."
+        "desc": "You describe your case. We assess the chances within 24 hours - at no cost, no commitment."
       },
       {
         "title": "Strategy & fee agreement",
-        "desc": "On engagement you receive a clear strategic plan and transparent fee agreement — fixed fee where possible."
+        "desc": "On engagement you receive a clear strategic plan and transparent fee agreement - fixed fee where possible."
       },
       {
         "title": "Out-of-court enforcement",
@@ -117,13 +117,13 @@
       },
       {
         "title": "Specialist team",
-        "desc": "PhD platform-law expert with Oxford background + privacy specialist with Tilburg LL.M. — complementary depth."
+        "desc": "PhD platform-law expert with Oxford background + privacy specialist with Tilburg LL.M. - complementary depth."
       }
     ]
   },
   "cta": {
     "title": "Your account suspended? You have digital rights.",
-    "subtitle": "We assess your case in 24 hours — free and without commitment.",
+    "subtitle": "We assess your case in 24 hours - free and without commitment.",
     "button": "Request free assessment"
   },
   "firm": {
@@ -134,7 +134,7 @@
     "hero": {
       "eyebrow": "Firm",
       "title": "A law firm for a new legal reality.",
-      "sub": "LexRights was founded with a clear mission: give consumers and businesses across Europe access to specialized legal protection in the digital space — at eye level with the major platforms."
+      "sub": "LexRights was founded with a clear mission: give consumers and businesses across Europe access to specialized legal protection in the digital space - at eye level with the major platforms."
     },
     "values": {
       "title": "Our principles",
@@ -149,7 +149,7 @@
         },
         {
           "title": "EU-wide single source",
-          "desc": "Consumer's home venue under Brussels Ia. We represent you across DACH and the EU in German and English — no correspondent lawyer surcharge."
+          "desc": "Consumer's home venue under Brussels Ia. We represent you across DACH and the EU in German and English - no correspondent lawyer surcharge."
         },
         {
           "title": "Digital-first",
@@ -169,7 +169,7 @@
   "contact": {
     "meta": {
       "title": "Contact",
-      "description": "Contact LexRights — boutique law firm for digital rights. Free first assessment within 24 hours."
+      "description": "Contact LexRights - boutique law firm for digital rights. Free first assessment within 24 hours."
     },
     "hero": {
       "eyebrow": "Contact",
@@ -197,7 +197,7 @@
     "hero": {
       "eyebrow": "Insights",
       "title": "Deep analysis of digital rights.",
-      "sub": "Background on the Digital Services Act, GDPR, BGH and ECJ rulings, platform suspensions — written for clients, not for search engines."
+      "sub": "Background on the Digital Services Act, GDPR, BGH and ECJ rulings, platform suspensions - written for clients, not for search engines."
     },
     "comingSoon": {
       "title": "Content in preparation",
@@ -208,12 +208,12 @@
   "faelle": {
     "meta": {
       "title": "Cases",
-      "description": "Anonymized case studies from our practice. What worked — and why."
+      "description": "Anonymized case studies from our practice. What worked - and why."
     },
     "hero": {
       "eyebrow": "Cases",
       "title": "Real cases. Real outcomes.",
-      "sub": "A selection of anonymized case studies from our practice. Values at stake, strategies, outcomes — transparently documented."
+      "sub": "A selection of anonymized case studies from our practice. Values at stake, strategies, outcomes - transparently documented."
     },
     "stats": {
       "casesShown": "Documented cases",
@@ -286,12 +286,12 @@
   "consultation": {
     "meta": {
       "title": "Free first assessment",
-      "description": "Tell us about your case. We assess your chances within 24 hours — free, no commitment."
+      "description": "Tell us about your case. We assess your chances within 24 hours - free, no commitment."
     },
     "intro": {
       "eyebrow": "Free first assessment",
       "title": "Tell us about your case.",
-      "sub": "Four short steps. Reply within 24 hours — free and without commitment."
+      "sub": "Four short steps. Reply within 24 hours - free and without commitment."
     },
     "steps": {
       "step": "Step {current} of {total}",

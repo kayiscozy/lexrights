@@ -66,7 +66,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
           <div className="lg:col-span-4">
             <Link
               href="/"
-              aria-label="LexRights — Home"
+              aria-label="LexRights -Home"
               className="group inline-block"
             >
               <Logo

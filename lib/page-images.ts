@@ -13,7 +13,7 @@ export interface PageImage {
 export const pageImages = {
   home: {
     src: "/images/heroes/home.jpg",
-    alt: "Moderne Architektur — Symbol für klare Rechtsdurchsetzung",
+    alt: "Moderne Architektur - Symbol für klare Rechtsdurchsetzung",
   },
   firm: {
     src: "/images/heroes/firm.jpg",
@@ -25,7 +25,7 @@ export const pageImages = {
   },
   insights: {
     src: "/images/heroes/insights.jpg",
-    alt: "Aufgeschlagenes Buch — Symbol für Wissen und Tiefe",
+    alt: "Aufgeschlagenes Buch - Symbol für Wissen und Tiefe",
   },
   cases: {
     src: "/images/heroes/cases.jpg",
@@ -33,7 +33,7 @@ export const pageImages = {
   },
   contact: {
     src: "/images/heroes/contact.jpg",
-    alt: "Berlin Architektur — Sitz unserer Kanzlei",
+    alt: "Berlin Architektur - Sitz unserer Kanzlei",
   },
   consultation: {
     src: "/images/heroes/consultation.jpg",

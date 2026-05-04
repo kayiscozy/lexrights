@@ -13,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === "de" ? "Leistungen — Plattformen & Themen" : "Services — Platforms & Topics",
+    title: locale === "de" ? "Leistungen -Plattformen & Themen" : "Services -Platforms & Topics",
     description:
       locale === "de"
         ? "Alle Plattformen und Rechtsthemen, auf die LexRights spezialisiert ist. Tiefen-Content statt Allgemeinplätze."
@@ -57,7 +57,7 @@ export default async function ServicesPage({
         subtitle={
           locale === "de"
             ? "Eigene Tiefen-Pages pro Plattform statt generischer Übersicht. Wir kennen die AGB, die Anti-Cheat-Systeme, die Beschwerde­wege und die einschlägige Rechts­prechung."
-            : "Dedicated deep-content pages per platform — not a generic summary. We know the ToS, the anti-cheat systems, the complaint paths and the relevant case law."
+            : "Dedicated deep-content pages per platform -not a generic summary. We know the ToS, the anti-cheat systems, the complaint paths and the relevant case law."
         }
       />
       <section className="relative pb-24 pt-16 md:pb-32 md:pt-20">
@@ -109,8 +109,8 @@ export default async function ServicesPage({
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-(--color-fg-muted)">
             {locale === "de"
-              ? "Wir vertreten Sie auch bei kleineren oder neuen Plattformen — solange digitale Rechte betroffen sind."
-              : "We also represent you for smaller or newer platforms — as long as digital rights are at stake."}
+              ? "Wir vertreten Sie auch bei kleineren oder neuen Plattformen -solange digitale Rechte betroffen sind."
+              : "We also represent you for smaller or newer platforms -as long as digital rights are at stake."}
           </p>
           <Link
             href="/erstberatung"

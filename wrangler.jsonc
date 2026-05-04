@@ -17,7 +17,7 @@
     "binding": "ASSETS"
   },
 
-  // Observability — Free tier includes 100k events/day
+  // Observability -Free tier includes 100k events/day
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1
@@ -30,19 +30,19 @@
   //   { "binding": "NEXT_INC_CACHE_KV", "id": "<your-kv-namespace-id>" }
   // ],
 
-  // R2 bucket (optional — for media uploads, asset storage)
+  // R2 bucket (optional -for media uploads, asset storage)
   // "r2_buckets": [
   //   { "binding": "MEDIA", "bucket_name": "lexrights-media" }
   // ],
 
-  // Custom domain — Cloudflare will provision SSL automatically
+  // Custom domain -Cloudflare will provision SSL automatically
   // Configure via dashboard or `wrangler deploy --routes` after first deploy.
   // "routes": [
   //   { "pattern": "lexrights.com/*", "custom_domain": true },
   //   { "pattern": "www.lexrights.com/*", "custom_domain": true }
   // ],
 
-  // Environment variables (non-secret) — secrets via `wrangler secret put`
+  // Environment variables (non-secret) -secrets via `wrangler secret put`
   "vars": {
     "NEXT_PUBLIC_BRAND_NAME": "LexRights",
     "NEXT_PUBLIC_LEGAL_NAME": "LexRights Rechtsanwälte PartG mbB",

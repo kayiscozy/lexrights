@@ -2,13 +2,19 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
-  variant?: "wordmark" | "mark" | "combined";
+  variant?: "wordmark" | "wordmarkDark" | "mark" | "combined";
   className?: string;
   priority?: boolean;
 }
 
 const sources = {
   wordmark: { src: "/logos/wordmark.svg", w: 500, h: 44, alt: "LexRights" },
+  wordmarkDark: {
+    src: "/logos/wordmark-dark.svg",
+    w: 500,
+    h: 44,
+    alt: "LexRights",
+  },
   mark: { src: "/logos/mark.svg", w: 187, h: 165, alt: "LexRights" },
   combined: {
     src: "/logos/combined.svg",

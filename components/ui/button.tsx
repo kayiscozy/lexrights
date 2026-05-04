@@ -17,7 +17,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // PRIMARY — Solid navy, classic premium law firm
+        // PRIMARY -Solid navy, classic premium law firm
         primary: [
           "border border-(--color-brand-navy) bg-(--color-brand-navy) text-white",
           "shadow-[0_2px_4px_rgba(1,20,68,0.10),0_1px_2px_rgba(1,20,68,0.06)]",
@@ -26,7 +26,7 @@ const buttonVariants = cva(
           "hover:-translate-y-px",
         ].join(" "),
 
-        // BRAND — Electric blue, secondary CTA emphasis
+        // BRAND -Electric blue, secondary CTA emphasis
         brand: [
           "border border-(--color-brand-electric) bg-(--color-brand-electric) text-white",
           "shadow-[0_2px_4px_rgba(4,58,253,0.18),0_1px_2px_rgba(4,58,253,0.10)]",
@@ -35,7 +35,7 @@ const buttonVariants = cva(
           "hover:-translate-y-px",
         ].join(" "),
 
-        // SECONDARY — White with subtle border, navy text
+        // SECONDARY -White with subtle border, navy text
         secondary: [
           "border border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg)",
           "shadow-[0_1px_2px_rgba(1,20,68,0.04)]",
@@ -44,7 +44,7 @@ const buttonVariants = cva(
           "hover:-translate-y-px",
         ].join(" "),
 
-        // OUTLINE — Transparent with navy border, full color-flip on hover
+        // OUTLINE -Transparent with navy border, full color-flip on hover
         outline: [
           "border border-(--color-brand-navy)/40 bg-transparent text-(--color-fg)",
           "hover:border-(--color-brand-navy) hover:bg-(--color-brand-navy) hover:text-white",
@@ -52,13 +52,13 @@ const buttonVariants = cva(
           "hover:shadow-[0_4px_10px_rgba(1,20,68,0.18)]",
         ].join(" "),
 
-        // GHOST — Minimal, navy hover tint
+        // GHOST -Minimal, navy hover tint
         ghost: [
           "text-(--color-fg-muted)",
           "hover:bg-(--color-bg-tint) hover:text-(--color-fg)",
         ].join(" "),
 
-        // LINK — Inline-text style
+        // LINK -Inline-text style
         link: [
           "text-(--color-brand-electric) underline-offset-4 px-0 h-auto font-medium",
           "hover:text-(--color-brand-electric) hover:underline",
