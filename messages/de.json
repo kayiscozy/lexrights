@@ -215,6 +215,29 @@
       "title": "Echte Fälle. Echte Ergebnisse.",
       "sub": "Eine Auswahl anonymisierter Fall-Studien aus unserer Praxis. Streitwerte, Strategien, Outcomes — transparent dokumentiert."
     },
+    "stats": {
+      "casesShown": "Dokumentierte Fälle",
+      "totalRecovered": "Wieder­hergestellter Wert",
+      "avgDuration": "Durchschnittliche Dauer",
+      "successRate": "EU-weite Mandate"
+    },
+    "filter": {
+      "all": "Alle",
+      "label": "Filter:"
+    },
+    "card": {
+      "platform": "Plattform",
+      "value": "Streitwert",
+      "duration": "Dauer",
+      "outcome": "Ergebnis",
+      "year": "Jahr",
+      "problem": "Problem",
+      "strategy": "Strategie",
+      "result": "Outcome",
+      "legalBasis": "Rechts­grundlagen",
+      "client": "Mandant"
+    },
+    "disclaimer": "Anonymisierte Fall-Studien aus unserer Praxis. Im Einzelfall können Verlauf und Ergebnis abweichen. Erfolg im konkreten Fall hängt von Sach- und Rechtslage ab und kann nicht garantiert werden.",
     "comingSoon": {
       "title": "Fall-Studien in Vorbereitung",
       "sub": "Wir publizieren Fall-Studien erst nach Mandanten-Freigabe. Die ersten anonymisierten Beispiele folgen kurz nach Launch.",

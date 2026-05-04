@@ -215,6 +215,29 @@
       "title": "Real cases. Real outcomes.",
       "sub": "A selection of anonymized case studies from our practice. Values at stake, strategies, outcomes — transparently documented."
     },
+    "stats": {
+      "casesShown": "Documented cases",
+      "totalRecovered": "Value recovered",
+      "avgDuration": "Average duration",
+      "successRate": "EU-wide mandates"
+    },
+    "filter": {
+      "all": "All",
+      "label": "Filter:"
+    },
+    "card": {
+      "platform": "Platform",
+      "value": "Value at stake",
+      "duration": "Duration",
+      "outcome": "Outcome",
+      "year": "Year",
+      "problem": "Problem",
+      "strategy": "Strategy",
+      "result": "Result",
+      "legalBasis": "Legal basis",
+      "client": "Client"
+    },
+    "disclaimer": "Anonymized case studies from our practice. In individual cases, course and result may differ. Success in any specific case depends on the facts and legal situation and cannot be guaranteed.",
     "comingSoon": {
       "title": "Case studies in preparation",
       "sub": "We publish case studies only after client consent. The first anonymized examples will follow shortly after launch.",
