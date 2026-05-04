@@ -79,7 +79,7 @@ export default async function ServicesPage({
                         pathname: "/leistungen/[slug]",
                         params: { slug: p.slug[locale] },
                       }}
-                      className="group relative flex flex-col overflow-hidden rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-5 transition-all duration-300 hover:border-[--color-border-brand] hover:bg-[--color-bg-surface]"
+                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-5"
                     >
                       <div className="flex items-start justify-between">
                         <h3 className="text-base font-semibold text-[--color-fg]">

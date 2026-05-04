@@ -12,9 +12,16 @@ export function Hero() {
     <section className="relative isolate overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40">
       <div className="aurora-bg absolute inset-0 -z-10" aria-hidden />
       <div
-        className="aurora-grid absolute inset-0 -z-10 opacity-60"
+        className="aurora-grid absolute inset-0 -z-10 opacity-50"
         aria-hidden
       />
+
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[600px] w-[1000px] -translate-x-1/2 -translate-y-1/2 opacity-30 blur-3xl"
+        aria-hidden
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[--color-brand-navy] via-[--color-brand-electric]/40 to-[--color-brand-glow]/30" />
+      </div>
 
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-[--color-brand-electric]/40 to-transparent" />
 

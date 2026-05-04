@@ -43,17 +43,12 @@ export function PillarsSection() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               className={cn(
-                "group relative overflow-hidden rounded-2xl border border-[--color-border]",
+                "card-hover card-glow group relative rounded-2xl border border-[--color-border]",
                 "bg-[--color-bg-surface]/50 p-6 backdrop-blur-sm",
-                "transition-all duration-300 hover:border-[--color-border-brand] hover:bg-[--color-bg-surface]",
               )}
             >
               <div
-                className="absolute inset-0 -z-10 bg-gradient-to-br from-[--color-brand-electric]/0 via-transparent to-[--color-brand-electric]/0 opacity-0 transition-opacity duration-500 group-hover:from-[--color-brand-electric]/[0.04] group-hover:to-transparent group-hover:opacity-100"
-                aria-hidden
-              />
-              <div
-                className="inline-flex size-11 items-center justify-center rounded-xl border border-[--color-border-brand] bg-[--color-brand-electric]/10 text-[--color-brand-electric] transition-all duration-300 group-hover:scale-105"
+                className="relative inline-flex size-11 items-center justify-center rounded-xl border border-[--color-border-brand] bg-[--color-brand-electric]/10 text-[--color-brand-electric] transition-all duration-300 group-hover:scale-105 group-hover:bg-[--color-brand-electric]/15"
                 aria-hidden
               >
                 <Icon className="size-5" />

@@ -113,8 +113,25 @@ export function ConsultationForm({
 
   if (result.status === "success") {
     return (
-      <div className="rounded-3xl border border-[--color-border-brand] bg-[--color-bg-surface]/60 p-8 text-center md:p-12">
-        <CheckCircle2 className="mx-auto size-12 text-[--color-success]" aria-hidden />
+      <motion.div
+        initial={{ opacity: 0, y: 12, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className="relative overflow-hidden rounded-3xl border border-[--color-border-brand] bg-[--color-bg-surface]/60 p-8 text-center md:p-12"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 -z-10 opacity-60"
+          aria-hidden
+        >
+          <div className="absolute left-1/2 top-0 size-96 -translate-x-1/2 rounded-full bg-[--color-success]/10 blur-3xl" />
+        </div>
+        <motion.div
+          initial={{ scale: 0, rotate: -180 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <CheckCircle2 className="mx-auto size-14 text-[--color-success]" aria-hidden />
+        </motion.div>
         <h2 className="mt-6 text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
           {t("success.title")}
         </h2>
@@ -124,7 +141,7 @@ export function ConsultationForm({
         <Button asChild variant="outline" className="mt-8">
           <Link href="/">{t("success.back")}</Link>
         </Button>
-      </div>
+      </motion.div>
     );
   }
 
@@ -214,7 +231,8 @@ export function ConsultationForm({
         ) : (
           <Button
             type="submit"
-            disabled={!isStepValid(4) || isPending}
+            loading={isPending}
+            disabled={!isStepValid(4)}
           >
             {isPending ? t("steps.submitting") : t("steps.submit")}
             {!isPending && <ArrowRight className="size-4" />}
@@ -258,7 +276,7 @@ function Field({
 }
 
 const inputCls =
-  "w-full rounded-lg border border-[--color-border] bg-[--color-bg]/40 px-4 py-3 text-sm text-[--color-fg] outline-none transition-colors placeholder:text-[--color-fg-subtle] hover:bg-[--color-bg]/70 focus:border-[--color-brand-electric]";
+  "w-full rounded-lg border border-[--color-border] bg-[--color-bg]/40 px-4 py-3 text-sm text-[--color-fg] outline-none transition-all duration-200 placeholder:text-[--color-fg-subtle] hover:border-[--color-border-strong] hover:bg-[--color-bg]/70 focus:border-[--color-brand-electric] focus:bg-[--color-bg]/80 focus:shadow-[0_0_0_4px_rgba(4,58,253,0.08)]";
 
 function Step1({
   form,

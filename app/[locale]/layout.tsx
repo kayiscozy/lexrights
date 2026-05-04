@@ -5,6 +5,8 @@ import { routing, type Locale } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { StickyCta } from "@/components/sticky-cta";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { env } from "@/lib/utils";
 import { organizationJsonLd } from "@/lib/schema";
 
@@ -71,6 +73,8 @@ export default async function LocaleLayout({
         <main className="flex-1">{children}</main>
         <Footer locale={locale as Locale} />
       </div>
+      <StickyCta />
+      <ScrollToTop />
     </NextIntlClientProvider>
   );
 }
