@@ -1,16 +1,36 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import { ShieldCheck, Globe2, Sparkles } from "lucide-react";
 import { HeroQuickForm } from "./hero-quick-form";
+import { pageImages } from "@/lib/page-images";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const img = pageImages.home;
 
   return (
     <section className="relative isolate overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-44 lg:pb-32">
-      <div className="editorial-bg absolute inset-0 -z-10" aria-hidden />
+      {/* Background image */}
+      <Image
+        src={img.src}
+        alt={img.alt}
+        fill
+        priority
+        sizes="100vw"
+        className="-z-20 object-cover object-center"
+      />
+      {/* Editorial overlay — image stays visible, content area readable */}
+      <div
+        className="absolute inset-0 -z-10 bg-(--color-bg)/82 backdrop-blur-[2px]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-(--color-bg)/55 via-(--color-bg)/82 to-(--color-bg)"
+        aria-hidden
+      />
 
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
