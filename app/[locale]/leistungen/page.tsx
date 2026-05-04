@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { platforms, platformCategories, type PlatformCategory } from "@/lib/platforms";
+import { PageHero } from "@/components/page-hero";
 import type { Locale } from "@/i18n/routing";
 import type { Metadata } from "next";
 
@@ -44,27 +45,23 @@ export default async function ServicesPage({
   }));
 
   return (
-    <section className="relative pb-24 pt-32 md:pb-32 md:pt-40">
-      <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
-
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
-            {locale === "de" ? "Leistungen" : "Services"}
-          </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
-            {locale === "de"
-              ? "Spezialisiert auf jede Plattform."
-              : "Specialized for every platform."}
-          </h1>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
-            {locale === "de"
-              ? `Eigene Tiefen-Pages pro Plattform statt generischer „IT-Recht"-Übersicht. Wir kennen die AGB, die Anti-Cheat-Systeme, die Beschwerde­wege und die einschlägige Rechts­prechung.`
-              : "Dedicated deep-content pages per platform — not a generic 'IT law' summary. We know the ToS, the anti-cheat systems, the complaint paths and the relevant case law."}
-          </p>
-        </div>
-
-        <div className="mt-20 space-y-16">
+    <>
+      <PageHero
+        imageKey="services"
+        eyebrow={locale === "de" ? "Leistungen" : "Services"}
+        title={
+          locale === "de"
+            ? "Spezialisiert auf jede Plattform."
+            : "Specialized for every platform."
+        }
+        subtitle={
+          locale === "de"
+            ? "Eigene Tiefen-Pages pro Plattform statt generischer Übersicht. Wir kennen die AGB, die Anti-Cheat-Systeme, die Beschwerde­wege und die einschlägige Rechts­prechung."
+            : "Dedicated deep-content pages per platform — not a generic summary. We know the ToS, the anti-cheat systems, the complaint paths and the relevant case law."
+        }
+      />
+      <section className="relative pb-24 pt-16 md:pb-32 md:pt-20">
+        <div className="mx-auto max-w-7xl space-y-16 px-4 md:px-6 lg:px-8">
           {grouped.map(({ category, items }) =>
             items.length === 0 ? null : (
               <div key={category}>
@@ -125,7 +122,7 @@ export default async function ServicesPage({
             <ArrowUpRight className="size-4" aria-hidden />
           </Link>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -12,13 +12,25 @@ import {
   platforms,
   platformCategories,
   getPlatformBySlug,
+  type PlatformCategory,
 } from "@/lib/platforms";
 import { getPillarContent } from "@/lib/platform-content";
+import { PageHero } from "@/components/page-hero";
+import type { PageImageKey } from "@/lib/page-images";
 import type { Locale } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { routing } from "@/i18n/routing";
 import { env } from "@/lib/utils";
 import type { Metadata } from "next";
+
+const categoryToImage: Record<PlatformCategory, PageImageKey> = {
+  gaming: "pillarGaming",
+  social: "pillarSocial",
+  marketplace: "pillarMarketplace",
+  payment: "pillarPayment",
+  crypto: "pillarPayment",
+  creator: "pillarCreator",
+};
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -81,30 +93,31 @@ export default async function PillarPage({
 
   if (!content) {
     return (
-      <section className="relative pb-24 pt-32 md:pt-40">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
-            {platformCategories[platform.category][locale]}
-          </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-            {platform.name}
-          </h1>
-          <p className="mt-5 text-base text-(--color-fg-muted) md:text-lg">
-            {platform.shortDesc[locale]}
-          </p>
-          <p className="mt-8 text-sm text-(--color-fg-subtle)">
-            {locale === "de"
-              ? "Detailinhalte zu dieser Plattform sind in Vorbereitung. Für eine kostenlose Ersteinschätzung kontaktieren Sie uns gerne direkt."
-              : "Detailed content for this platform is in preparation. For a free first assessment, contact us directly."}
-          </p>
-          <Button asChild variant="brand" size="lg" className="mt-8">
+      <>
+        <PageHero
+          imageKey={categoryToImage[platform.category]}
+          eyebrow={platformCategories[platform.category][locale]}
+          title={platform.name}
+          subtitle={platform.shortDesc[locale]}
+          size="md"
+        >
+          <Button asChild variant="brand" size="lg">
             <Link href="/erstberatung">
               {tNav("consultationCta")}
               <ArrowRight className="size-4" />
             </Link>
           </Button>
-        </div>
-      </section>
+        </PageHero>
+        <section className="relative py-16">
+          <div className="mx-auto max-w-3xl px-4 text-center">
+            <p className="text-sm text-(--color-fg-subtle)">
+              {locale === "de"
+                ? "Detailinhalte zu dieser Plattform sind in Vorbereitung. Für eine kostenlose Ersteinschätzung kontaktieren Sie uns gerne direkt."
+                : "Detailed content for this platform is in preparation. For a free first assessment, contact us directly."}
+            </p>
+          </div>
+        </section>
+      </>
     );
   }
 
@@ -127,36 +140,34 @@ export default async function PillarPage({
       />
 
       {/* Hero */}
-      <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
-        <div className="editorial-bg absolute inset-0 -z-10" aria-hidden />
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
-            {content.hero.eyebrow}
-          </p>
-          <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
-            {content.hero.headline}
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
-            {content.hero.sub}
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild variant="brand" size="lg">
-              <Link href="/erstberatung">
-                {tNav("consultationCta")}
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/leistungen">
-                {locale === "de" ? "Alle Plattformen" : "All platforms"}
-              </Link>
-            </Button>
-          </div>
-          <p className="mt-8 text-xs text-(--color-fg-subtle)">
-            {platform.vendor} · {platform.jurisdiction}
-          </p>
+      <PageHero
+        imageKey={categoryToImage[platform.category]}
+        eyebrow={content.hero.eyebrow}
+        title={content.hero.headline}
+        subtitle={content.hero.sub}
+        size="lg"
+      >
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Button asChild variant="brand" size="lg">
+            <Link href="/erstberatung">
+              {tNav("consultationCta")}
+              <ArrowRight className="size-4" />
+            </Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="border border-white/30 bg-white/10 text-white backdrop-blur hover:border-white hover:bg-white/20"
+          >
+            <Link href="/leistungen">
+              {locale === "de" ? "Alle Plattformen" : "All platforms"}
+            </Link>
+          </Button>
         </div>
-      </section>
+        <p className="mt-8 text-xs text-white/60">
+          {platform.vendor} · {platform.jurisdiction}
+        </p>
+      </PageHero>
 
       {/* Problems */}
       <section className="relative py-20 md:py-24">

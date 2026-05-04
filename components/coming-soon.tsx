@@ -4,11 +4,18 @@ import { Sparkles, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { PageHero } from "@/components/page-hero";
+import type { PageImageKey } from "@/lib/page-images";
 import { useTranslations } from "next-intl";
 
 interface ComingSoonProps {
   namespace: "wissen" | "faelle";
 }
+
+const imageKey: Record<ComingSoonProps["namespace"], PageImageKey> = {
+  wissen: "insights",
+  faelle: "cases",
+};
 
 export function ComingSoon({ namespace }: ComingSoonProps) {
   const tHero = useTranslations(`${namespace}.hero`);
@@ -16,25 +23,12 @@ export function ComingSoon({ namespace }: ComingSoonProps) {
 
   return (
     <>
-      <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
-        <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto max-w-3xl px-4 text-center md:px-6"
-        >
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
-            {tHero("eyebrow")}
-          </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
-            {tHero("title")}
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
-            {tHero("sub")}
-          </p>
-        </motion.div>
-      </section>
+      <PageHero
+        imageKey={imageKey[namespace]}
+        eyebrow={tHero("eyebrow")}
+        title={tHero("title")}
+        subtitle={tHero("sub")}
+      />
 
       <section className="relative pb-24 pt-8">
         <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">

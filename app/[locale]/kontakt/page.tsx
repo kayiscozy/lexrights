@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { PageHero } from "@/components/page-hero";
 import { env } from "@/lib/utils";
 import type { Metadata } from "next";
 
@@ -54,28 +55,19 @@ export default async function ContactPage({
 
   return (
     <>
-      <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
-        <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
-        <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
-            {tHero("eyebrow")}
-          </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
-            {tHero("title")}
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
-            {tHero("sub")}
-          </p>
-          <div className="mt-10">
-            <Button asChild variant="brand" size="lg">
-              <Link href="/erstberatung">
-                {tNav("consultationCta")}
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        imageKey="contact"
+        eyebrow={tHero("eyebrow")}
+        title={tHero("title")}
+        subtitle={tHero("sub")}
+      >
+        <Button asChild variant="brand" size="lg">
+          <Link href="/erstberatung">
+            {tNav("consultationCta")}
+            <ArrowRight className="size-4" />
+          </Link>
+        </Button>
+      </PageHero>
 
       <section className="relative py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8">
