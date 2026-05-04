@@ -1,10 +1,11 @@
 "use client";
 
-import { useActionState, useEffect, useId } from "react";
+import { useActionState, useEffect, useId, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useToast } from "./toast";
 import { submitHeroQuick, type ActionState } from "@/lib/actions";
 import { issueOptions } from "@/lib/consultation-schema";
 import { Link } from "@/i18n/navigation";
@@ -17,6 +18,8 @@ export function HeroQuickForm() {
   const locale = useLocale();
   const issueId = useId();
   const emailId = useId();
+  const toast = useToast();
+  const lastStatus = useRef<ActionState["status"]>("idle");
 
   const [state, formAction, pending] = useActionState(
     submitHeroQuick,
@@ -24,11 +27,25 @@ export function HeroQuickForm() {
   );
 
   useEffect(() => {
+    if (state.status === lastStatus.current) return;
+    lastStatus.current = state.status;
+
     if (state.status === "success") {
+      toast.show({
+        variant: "success",
+        title: t("success"),
+        duration: 6000,
+      });
       const form = document.getElementById("hero-quick-form") as HTMLFormElement | null;
       form?.reset();
+    } else if (state.status === "error") {
+      toast.show({
+        variant: "error",
+        title: t("error"),
+        duration: 6000,
+      });
     }
-  }, [state.status]);
+  }, [state.status, t, toast]);
 
   return (
     <motion.div
@@ -43,9 +60,7 @@ export function HeroQuickForm() {
         className={cn(
           "flex flex-col gap-2 rounded-2xl border bg-[--color-bg-surface]/70 p-2 backdrop-blur-md sm:flex-row sm:items-stretch",
           "transition-all duration-300",
-          state.status === "error"
-            ? "border-[--color-error]/40"
-            : "border-[--color-border-strong] focus-within:border-[--color-border-brand] focus-within:shadow-[0_0_0_4px_rgba(4,58,253,0.08)]",
+          "border-[--color-border-strong] focus-within:border-[--color-border-brand] focus-within:shadow-[0_0_0_4px_rgba(4,58,253,0.10)]",
         )}
       >
         <input type="text" name="hp" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
@@ -102,40 +117,7 @@ export function HeroQuickForm() {
         </Button>
       </form>
 
-      <div className="mt-3 min-h-[24px] text-center">
-        <AnimatePresence mode="wait">
-          {state.status === "success" && (
-            <motion.p
-              key="success"
-              initial={{ opacity: 0, y: -8, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              role="status"
-              className="inline-flex items-center gap-2 text-sm text-[--color-success]"
-            >
-              <CheckCircle2 className="size-4" aria-hidden />
-              {t("success")}
-            </motion.p>
-          )}
-          {state.status === "error" && (
-            <motion.p
-              key="error"
-              initial={{ opacity: 0, x: -8 }}
-              animate={{ opacity: 1, x: [0, -4, 4, -2, 2, 0] }}
-              exit={{ opacity: 0 }}
-              transition={{ x: { duration: 0.4 } }}
-              role="alert"
-              className="inline-flex items-center gap-2 text-sm text-[--color-error]"
-            >
-              <AlertCircle className="size-4" aria-hidden />
-              {t("error")}
-            </motion.p>
-          )}
-        </AnimatePresence>
-      </div>
-
-      <p className="mt-1 text-center text-xs leading-relaxed text-[--color-fg-subtle]">
+      <p className="mt-3 text-center text-xs leading-relaxed text-[--color-fg-subtle]">
         {t.rich("consent", {
           privacyLink: (chunks) => (
             <Link

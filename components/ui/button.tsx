@@ -12,40 +12,49 @@ const buttonVariants = cva(
     "focus-visible:ring-offset-2 focus-visible:ring-offset-[--color-bg]",
     "disabled:pointer-events-none disabled:opacity-50",
     "[&_svg]:size-4 [&_svg]:shrink-0",
-    "active:scale-[0.98]",
+    "active:scale-[0.98] select-none",
   ].join(" "),
   {
     variants: {
       variant: {
+        // Primary — strong electric blue, brand color, highest visual weight
         primary: [
           "relative overflow-hidden",
           "bg-[--color-brand-electric] text-white",
-          "shadow-[0_8px_24px_-8px_rgba(4,58,253,0.5),inset_0_1px_0_0_rgba(255,255,255,0.15)]",
+          "shadow-[0_8px_24px_-8px_rgba(4,58,253,0.55),inset_0_1px_0_0_rgba(255,255,255,0.18)]",
           "hover:bg-[--color-brand-glow]",
-          "hover:shadow-[0_12px_36px_-8px_rgba(46,91,255,0.65),inset_0_1px_0_0_rgba(255,255,255,0.25)]",
+          "hover:shadow-[0_14px_36px_-8px_rgba(46,91,255,0.7),inset_0_1px_0_0_rgba(255,255,255,0.28)]",
           "hover:-translate-y-0.5",
         ].join(" "),
+        // Secondary — clearly visible, high-contrast surface, NOT subtle
         secondary: [
-          "border border-[--color-border-strong] bg-[--color-bg-elevated]/80",
-          "text-[--color-fg] backdrop-blur-sm",
-          "hover:border-[--color-border-brand] hover:bg-[--color-bg-elevated]",
-          "hover:-translate-y-0.5",
+          "border border-[--color-fg-muted]/30 bg-[--color-fg]/[0.06]",
+          "text-[--color-fg] backdrop-blur-md",
+          "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)]",
+          "hover:border-[--color-fg-muted]/50 hover:bg-[--color-fg]/[0.10]",
+          "hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-8px_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.10)]",
         ].join(" "),
+        // Outline — clearly visible border, transparent fill — for sec. CTAs
         outline: [
-          "border border-[--color-border-strong] bg-transparent text-[--color-fg]",
-          "hover:border-[--color-border-brand] hover:bg-[--color-bg-surface]/60",
-          "hover:-translate-y-0.5",
+          "border border-[--color-fg-muted]/35 bg-transparent text-[--color-fg]",
+          "hover:border-[--color-brand-electric]/60 hover:bg-[--color-brand-electric]/[0.06]",
+          "hover:text-white hover:-translate-y-0.5",
+          "hover:shadow-[0_0_0_3px_rgba(4,58,253,0.08)]",
         ].join(" "),
+        // Ghost — minimum visual weight, for tertiary nav/icon buttons
         ghost: [
           "text-[--color-fg-muted]",
-          "hover:bg-[--color-bg-surface]/70 hover:text-[--color-fg]",
+          "hover:bg-[--color-fg]/[0.06] hover:text-[--color-fg]",
         ].join(" "),
+        // Link — inline-text-style action
         link: [
-          "text-[--color-accent] underline-offset-4",
+          "text-[--color-accent] underline-offset-4 px-0 h-auto",
           "hover:text-[--color-brand-glow] hover:underline",
         ].join(" "),
+        // Destructive — for delete / cancel actions
         destructive: [
           "bg-[--color-error]/90 text-white",
+          "shadow-[0_8px_24px_-8px_rgba(248,113,113,0.45)]",
           "hover:bg-[--color-error] hover:-translate-y-0.5",
         ].join(" "),
       },

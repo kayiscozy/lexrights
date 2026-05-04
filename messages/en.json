@@ -335,7 +335,12 @@
     "validation": {
       "min2": "Please enter at least 2 characters.",
       "invalidEmail": "Please enter a valid email address.",
-      "consentRequired": "Please consent to data processing."
+      "consentRequired": "Please consent to data processing.",
+      "required": "Please fill this field.",
+      "selectIssue": "Please choose a topic.",
+      "selectTiming": "Please choose a timing.",
+      "selectValue": "Please choose an estimated value.",
+      "platformRequired": "Please name the platform."
     }
   },
   "footer": {

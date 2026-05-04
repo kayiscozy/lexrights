@@ -335,7 +335,12 @@
     "validation": {
       "min2": "Bitte mindestens 2 Zeichen.",
       "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-      "consentRequired": "Bitte stimmen Sie der Datenverarbeitung zu."
+      "consentRequired": "Bitte stimmen Sie der Datenverarbeitung zu.",
+      "required": "Bitte ausfüllen.",
+      "selectIssue": "Bitte wählen Sie ein Thema.",
+      "selectTiming": "Bitte wählen Sie einen Zeitpunkt.",
+      "selectValue": "Bitte wählen Sie einen geschätzten Wert.",
+      "platformRequired": "Bitte nennen Sie die Plattform."
     }
   },
   "footer": {

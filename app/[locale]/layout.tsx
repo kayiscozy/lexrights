@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { StickyCta } from "@/components/sticky-cta";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { ToastProvider } from "@/components/toast";
 import { env } from "@/lib/utils";
 import { organizationJsonLd } from "@/lib/schema";
 
@@ -68,13 +69,15 @@ export default async function LocaleLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }}
       />
-      <div className="relative flex min-h-dvh flex-col">
-        <Header locale={locale as Locale} />
-        <main className="flex-1">{children}</main>
-        <Footer locale={locale as Locale} />
-      </div>
-      <StickyCta />
-      <ScrollToTop />
+      <ToastProvider>
+        <div className="relative flex min-h-dvh flex-col">
+          <Header locale={locale as Locale} />
+          <main className="flex-1">{children}</main>
+          <Footer locale={locale as Locale} />
+        </div>
+        <StickyCta />
+        <ScrollToTop />
+      </ToastProvider>
     </NextIntlClientProvider>
   );
 }
