@@ -56,11 +56,20 @@ export const metadata: Metadata = {
     siteName: "LexRights",
     locale: "en_US",
     alternateLocale: ["de_DE"],
+    images: [
+      {
+        url: "/logos/combined.svg",
+        width: 500,
+        height: 165,
+        alt: "LexRights — European Boutique for Digital Rights",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@lexrights",
     creator: "@lexrights",
+    images: ["/logos/combined.svg"],
   },
 };
 
