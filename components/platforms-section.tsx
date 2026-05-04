@@ -48,7 +48,10 @@ export function PlatformsSection() {
               }}
             >
               <Link
-                href={{ pathname: "/leistungen" }}
+                href={{
+                  pathname: "/leistungen/[slug]",
+                  params: { slug: platform.slug[locale] },
+                }}
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-[--color-border] bg-[--color-bg-surface]/40 p-5 transition-all duration-300 hover:border-[--color-border-brand] hover:bg-[--color-bg-surface]"
               >
                 <div className="flex items-start justify-between gap-3">
