@@ -199,7 +199,7 @@ export function ConsultationForm({
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-3xl border border-[--color-border] bg-[--color-bg-surface] p-6 backdrop-blur-sm md:p-10"
+      className="rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-md)] md:p-10"
     >
       <input type="text" name="hp" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
@@ -223,8 +223,8 @@ export function ConsultationForm({
                   className={cn(
                     "flex size-6 shrink-0 items-center justify-center rounded-full border-2 text-[10px] font-bold transition-colors duration-300",
                     isComplete && "border-[--color-brand-electric] bg-[--color-brand-electric] text-white",
-                    isCurrent && "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.15] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
-                    !isComplete && !isCurrent && "border-[--color-border-strong] bg-transparent text-[--color-fg-subtle]",
+                    isCurrent && "border-[--color-brand-electric] bg-[--color-bg-surface] text-[--color-brand-electric] shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
+                    !isComplete && !isCurrent && "border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg-subtle]",
                   )}
                 >
                   {isComplete ? <Check className="size-3" aria-hidden /> : stepNum}
@@ -235,7 +235,7 @@ export function ConsultationForm({
                       "h-0.5 flex-1 rounded-full transition-colors duration-500",
                       isComplete
                         ? "bg-[--color-brand-electric]"
-                        : "bg-[--color-fg]/15",
+                        : "bg-[--color-border-strong]",
                     )}
                   />
                 )}
@@ -373,10 +373,10 @@ function Field({
 
 const inputCls = (hasError: boolean) =>
   cn(
-    "w-full rounded-lg border bg-[--color-bg-surface] px-4 py-3 text-sm text-[--color-fg] outline-none transition-all duration-200 placeholder:text-[--color-fg-subtle]",
+    "w-full rounded-lg border bg-[--color-bg-surface] px-4 py-3 text-sm text-[--color-fg] outline-none transition-all duration-200 placeholder:text-[--color-fg-subtle] shadow-[var(--shadow-xs)]",
     hasError
-      ? "border-[--color-error]/60 focus:border-[--color-error] focus:shadow-[0_0_0_4px_rgba(248,113,113,0.10)]"
-      : "border-[--color-border] hover:border-[--color-border-strong] focus:border-[--color-brand-electric] focus:bg-[--color-bg-surface] focus:shadow-[0_0_0_4px_rgba(4,58,253,0.10)]",
+      ? "border-[--color-error]/60 focus:border-[--color-error] focus:shadow-[0_0_0_4px_rgba(220,38,38,0.12),var(--shadow-xs)]"
+      : "border-[--color-border-strong] hover:border-[--color-brand-navy]/45 focus:border-[--color-brand-electric] focus:shadow-[0_0_0_4px_rgba(4,58,253,0.12),var(--shadow-xs)]",
   );
 
 function Step1({ form, update, errors, touched, markTouched }: StepProps) {

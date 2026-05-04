@@ -58,10 +58,11 @@ export function HeroQuickForm() {
         id="hero-quick-form"
         action={formAction}
         className={cn(
-          "flex flex-col gap-2 rounded-xl border bg-[--color-bg-surface] p-2 shadow-[var(--shadow-md)] sm:flex-row sm:items-stretch",
+          "flex flex-col gap-1 rounded-xl border bg-[--color-bg-surface] p-1.5 shadow-[var(--shadow-md)] sm:flex-row sm:items-stretch",
           "transition-all duration-300",
-          "border-[--color-border-strong] focus-within:border-[--color-brand-electric]",
-          "focus-within:shadow-[0_0_0_3px_rgba(4,58,253,0.10),var(--shadow-md)]",
+          "border-[--color-border-strong] hover:border-[--color-brand-navy]/35",
+          "focus-within:border-[--color-brand-electric]",
+          "focus-within:shadow-[0_0_0_4px_rgba(4,58,253,0.12),var(--shadow-md)]",
         )}
       >
         <input type="text" name="hp" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />

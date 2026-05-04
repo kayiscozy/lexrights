@@ -91,13 +91,17 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
+                    "group relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
                     active
-                      ? "text-[--color-fg]"
-                      : "text-[--color-fg-muted] hover:bg-[--color-bg-tint] hover:text-[--color-fg]",
+                      ? "text-[--color-brand-navy]"
+                      : "text-[--color-fg-muted] hover:bg-[--color-bg-tint] hover:text-[--color-brand-navy]",
                   )}
                 >
                   {t(link.labelKey)}
+                  {/* Hover underline (subtle preview of active state) */}
+                  {!active && (
+                    <span className="pointer-events-none absolute inset-x-3 -bottom-1 h-0.5 origin-left scale-x-0 rounded-full bg-[--color-brand-electric]/40 transition-transform duration-300 group-hover:scale-x-100" />
+                  )}
                   {active && (
                     <motion.span
                       layoutId="active-nav-indicator"
@@ -114,7 +118,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
             <LanguageToggle className="hidden sm:inline-flex" />
             <Button
               asChild
-              variant="primary"
+              variant="brand"
               size="sm"
               className="hidden md:inline-flex"
             >
