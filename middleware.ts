@@ -50,6 +50,14 @@ export default function middleware(request: NextRequest) {
     }
   }
 
+  const detectedLocale = (routing.locales.find(
+    (locale) =>
+      pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
+  ) ?? routing.defaultLocale) as Locale;
+
+  request.headers.set("x-locale", detectedLocale);
+  request.headers.set("x-pathname", pathname);
+
   return intlMiddleware(request);
 }
 

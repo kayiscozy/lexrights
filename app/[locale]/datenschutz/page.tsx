@@ -113,8 +113,8 @@ export default async function PrivacyPage({
           <Section heading={isDe ? "8. Empfänger personenbezogener Daten" : "8. Recipients of personal data"}>
             <p>
               {isDe
-                ? "Wir geben Ihre Daten nicht an Dritte weiter, außer an unsere Auftrags­verarbeiter (Vercel, Cloudflare, Resend, Plausible) und – soweit gesetzlich erforderlich – an Aufsichts­behörden oder Gerichte. Eine Datenübermittlung in Drittländer findet nur in den unter Ziffer 4 und 5 genannten Fällen und unter Standard­vertrags­klauseln (SCC) bzw. EU-DPF statt."
-                : "We do not transfer your data to third parties, except to our processors (Vercel, Cloudflare, Resend, Plausible) and – where legally required – to supervisory authorities or courts. Transfers to third countries occur only as described in sections 4 and 5 above and under Standard Contractual Clauses (SCCs) or EU-DPF."}
+                ? "Wir geben Ihre Daten nicht an Dritte weiter, außer an unsere Auftrags­verarbeiter (Cloudflare, Resend, Plausible) und – soweit gesetzlich erforderlich – an Aufsichts­behörden oder Gerichte. Eine Datenübermittlung in Drittländer findet nur in den unter Ziffer 4 und 5 genannten Fällen und unter Standard­vertrags­klauseln (SCC) bzw. EU-DPF statt."
+                : "We do not transfer your data to third parties, except to our processors (Cloudflare, Resend, Plausible) and – where legally required – to supervisory authorities or courts. Transfers to third countries occur only as described in sections 4 and 5 above and under Standard Contractual Clauses (SCCs) or EU-DPF."}
             </p>
           </Section>
 
