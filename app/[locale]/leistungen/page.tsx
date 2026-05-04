@@ -49,15 +49,15 @@ export default async function ServicesPage({
 
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {locale === "de" ? "Leistungen" : "Services"}
           </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
             {locale === "de"
               ? "Spezialisiert auf jede Plattform."
               : "Specialized for every platform."}
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {locale === "de"
               ? `Eigene Tiefen-Pages pro Plattform statt generischer „IT-Recht"-Übersicht. Wir kennen die AGB, die Anti-Cheat-Systeme, die Beschwerde­wege und die einschlägige Rechts­prechung.`
               : "Dedicated deep-content pages per platform — not a generic 'IT law' summary. We know the ToS, the anti-cheat systems, the complaint paths and the relevant case law."}
@@ -68,7 +68,7 @@ export default async function ServicesPage({
           {grouped.map(({ category, items }) =>
             items.length === 0 ? null : (
               <div key={category}>
-                <h2 className="text-lg font-semibold tracking-tight text-[--color-fg]">
+                <h2 className="text-lg font-semibold tracking-tight text-(--color-fg)">
                   {platformCategories[category][locale]}
                 </h2>
                 <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -79,21 +79,21 @@ export default async function ServicesPage({
                         pathname: "/leistungen/[slug]",
                         params: { slug: p.slug[locale] },
                       }}
-                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-5"
+                      className="card-hover card-glow group relative flex flex-col rounded-xl border border-(--color-border) bg-(--color-bg-surface) p-5"
                     >
                       <div className="flex items-start justify-between">
-                        <h3 className="text-base font-semibold text-[--color-fg]">
+                        <h3 className="text-base font-semibold text-(--color-fg)">
                           {p.name}
                         </h3>
                         <ArrowUpRight
-                          className="size-4 -translate-y-0.5 translate-x-0.5 text-[--color-fg-subtle] transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[--color-brand-electric]"
+                          className="size-4 -translate-y-0.5 translate-x-0.5 text-(--color-fg-subtle) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-(--color-brand-electric)"
                           aria-hidden
                         />
                       </div>
-                      <p className="mt-2 text-sm leading-relaxed text-[--color-fg-muted]">
+                      <p className="mt-2 text-sm leading-relaxed text-(--color-fg-muted)">
                         {p.shortDesc[locale]}
                       </p>
-                      <p className="mt-4 text-xs text-[--color-fg-subtle]">
+                      <p className="mt-4 text-xs text-(--color-fg-subtle)">
                         {p.jurisdiction}
                       </p>
                     </Link>
@@ -104,20 +104,20 @@ export default async function ServicesPage({
           )}
         </div>
 
-        <div className="mt-24 rounded-2xl border border-[--color-border-brand] bg-[--color-bg-surface] p-8 text-center md:p-12">
-          <h2 className="text-balance text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+        <div className="mt-24 rounded-2xl border border-(--color-border-brand) bg-(--color-bg-surface) p-8 text-center md:p-12">
+          <h2 className="text-balance text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
             {locale === "de"
               ? "Ihre Plattform nicht dabei?"
               : "Your platform not listed?"}
           </h2>
-          <p className="mx-auto mt-3 max-w-lg text-[--color-fg-muted]">
+          <p className="mx-auto mt-3 max-w-lg text-(--color-fg-muted)">
             {locale === "de"
               ? "Wir vertreten Sie auch bei kleineren oder neuen Plattformen — solange digitale Rechte betroffen sind."
               : "We also represent you for smaller or newer platforms — as long as digital rights are at stake."}
           </p>
           <Link
             href="/erstberatung"
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-[--color-brand-electric] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[--color-brand-glow]"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-(--color-brand-electric) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-(--color-brand-glow)"
           >
             {locale === "de"
               ? "Kostenlose Ersteinschätzung"

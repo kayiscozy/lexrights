@@ -24,13 +24,13 @@ export function ComingSoon({ namespace }: ComingSoonProps) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-3xl px-4 text-center md:px-6"
         >
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {tHero("eyebrow")}
           </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
             {tHero("title")}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {tHero("sub")}
           </p>
         </motion.div>
@@ -43,21 +43,21 @@ export function ComingSoon({ namespace }: ComingSoonProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-10 text-center shadow-[var(--shadow-md)] md:p-16"
+            className="relative overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-10 text-center shadow-[var(--shadow-md)] md:p-16"
           >
             <motion.div
               initial={{ scale: 0, rotate: -45 }}
               whileInView={{ scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="mx-auto inline-flex size-14 items-center justify-center rounded-xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric]"
+              className="mx-auto inline-flex size-14 items-center justify-center rounded-xl border border-(--color-brand-electric)/40 bg-(--color-brand-electric)/8 text-(--color-brand-electric)"
             >
               <Sparkles className="size-6" aria-hidden />
             </motion.div>
-            <h2 className="mt-6 text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+            <h2 className="mt-6 text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
               {t("title")}
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-pretty text-[--color-fg-muted]">
+            <p className="mx-auto mt-4 max-w-lg text-pretty text-(--color-fg-muted)">
               {t("sub")}
             </p>
             <Button asChild size="lg" className="mt-10">

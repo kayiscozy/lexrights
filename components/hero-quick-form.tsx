@@ -58,10 +58,10 @@ export function HeroQuickForm() {
         id="hero-quick-form"
         action={formAction}
         className={cn(
-          "flex flex-col gap-1 rounded-xl border bg-[--color-bg-surface] p-1.5 shadow-[var(--shadow-md)] sm:flex-row sm:items-stretch",
+          "flex flex-col gap-1 rounded-xl border bg-(--color-bg-surface) p-1.5 shadow-[var(--shadow-md)] sm:flex-row sm:items-stretch",
           "transition-all duration-300",
-          "border-[--color-border-strong] hover:border-[--color-brand-navy]/35",
-          "focus-within:border-[--color-brand-electric]",
+          "border-(--color-border-strong) hover:border-(--color-brand-navy)/35",
+          "focus-within:border-(--color-brand-electric)",
           "focus-within:shadow-[0_0_0_4px_rgba(4,58,253,0.12),var(--shadow-md)]",
         )}
       >
@@ -79,8 +79,8 @@ export function HeroQuickForm() {
             defaultValue=""
             disabled={pending}
             className={cn(
-              "h-12 w-full appearance-none rounded-lg border border-transparent bg-transparent px-4 text-sm font-medium text-[--color-fg] outline-none transition-colors duration-200",
-              "hover:bg-[--color-bg-tint] focus:bg-[--color-bg-tint]",
+              "h-12 w-full appearance-none rounded-lg border border-transparent bg-transparent px-4 text-sm font-medium text-(--color-fg) outline-none transition-colors duration-200",
+              "hover:bg-(--color-bg-tint) focus:bg-(--color-bg-tint)",
               "disabled:opacity-60",
               "[background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236e7894' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>\")] [background-position:right_0.75rem_center] [background-repeat:no-repeat] [background-size:1rem] pr-10",
             )}
@@ -96,7 +96,7 @@ export function HeroQuickForm() {
           </select>
         </div>
 
-        <div className="flex flex-1 sm:border-l sm:border-[--color-border]">
+        <div className="flex flex-1 sm:border-l sm:border-(--color-border)">
           <label htmlFor={emailId} className="sr-only">
             {t("emailLabel")}
           </label>
@@ -109,7 +109,7 @@ export function HeroQuickForm() {
             autoComplete="email"
             inputMode="email"
             disabled={pending}
-            className="h-12 w-full rounded-lg border border-transparent bg-transparent px-4 text-sm text-[--color-fg] outline-none transition-colors duration-200 placeholder:text-[--color-fg-subtle] hover:bg-[--color-bg-tint] focus:bg-[--color-bg-tint] disabled:opacity-60"
+            className="h-12 w-full rounded-lg border border-transparent bg-transparent px-4 text-sm text-(--color-fg) outline-none transition-colors duration-200 placeholder:text-(--color-fg-subtle) hover:bg-(--color-bg-tint) focus:bg-(--color-bg-tint) disabled:opacity-60"
           />
         </div>
 
@@ -119,12 +119,12 @@ export function HeroQuickForm() {
         </Button>
       </form>
 
-      <p className="mt-3 text-center text-xs leading-relaxed text-[--color-fg-subtle]">
+      <p className="mt-3 text-center text-xs leading-relaxed text-(--color-fg-subtle)">
         {t.rich("consent", {
           privacyLink: (chunks) => (
             <Link
               href="/datenschutz"
-              className="link-hover text-[--color-brand-electric] underline-offset-2"
+              className="link-hover text-(--color-brand-electric) underline-offset-2"
             >
               {chunks}
             </Link>

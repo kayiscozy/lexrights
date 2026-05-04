@@ -170,22 +170,22 @@ export function ConsultationForm({
         initial={{ opacity: 0, y: 12, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden rounded-3xl border border-[--color-border-brand] bg-[--color-bg-surface] p-8 text-center md:p-12"
+        className="relative overflow-hidden rounded-3xl border border-(--color-border-brand) bg-(--color-bg-surface) p-8 text-center md:p-12"
       >
         <div className="pointer-events-none absolute inset-0 -z-10 opacity-60" aria-hidden>
-          <div className="absolute left-1/2 top-0 size-96 -translate-x-1/2 rounded-full bg-[--color-success]/10 blur-3xl" />
+          <div className="absolute left-1/2 top-0 size-96 -translate-x-1/2 rounded-full bg-(--color-success)/10 blur-3xl" />
         </div>
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <CheckCircle2 className="mx-auto size-14 text-[--color-success]" aria-hidden />
+          <CheckCircle2 className="mx-auto size-14 text-(--color-success)" aria-hidden />
         </motion.div>
-        <h2 className="mt-6 text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+        <h2 className="mt-6 text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
           {t("success.title")}
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-pretty text-[--color-fg-muted]">
+        <p className="mx-auto mt-3 max-w-md text-pretty text-(--color-fg-muted)">
           {t("success.sub")}
         </p>
         <Button asChild variant="outline" className="mt-8">
@@ -199,12 +199,12 @@ export function ConsultationForm({
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-md)] md:p-10"
+      className="rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 shadow-[var(--shadow-md)] md:p-10"
     >
       <input type="text" name="hp" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
       <div className="flex items-center justify-between gap-4">
-        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
           {t("steps.step", { current: step, total: TOTAL_STEPS })}
         </p>
         <div className="flex flex-1 items-center gap-2">
@@ -222,9 +222,9 @@ export function ConsultationForm({
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className={cn(
                     "flex size-6 shrink-0 items-center justify-center rounded-full border-2 text-[10px] font-bold transition-colors duration-300",
-                    isComplete && "border-[--color-brand-electric] bg-[--color-brand-electric] text-white",
-                    isCurrent && "border-[--color-brand-electric] bg-[--color-bg-surface] text-[--color-brand-electric] shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
-                    !isComplete && !isCurrent && "border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg-subtle]",
+                    isComplete && "border-(--color-brand-electric) bg-(--color-brand-electric) text-white",
+                    isCurrent && "border-(--color-brand-electric) bg-(--color-bg-surface) text-(--color-brand-electric) shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
+                    !isComplete && !isCurrent && "border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg-subtle)",
                   )}
                 >
                   {isComplete ? <Check className="size-3" aria-hidden /> : stepNum}
@@ -234,8 +234,8 @@ export function ConsultationForm({
                     className={cn(
                       "h-0.5 flex-1 rounded-full transition-colors duration-500",
                       isComplete
-                        ? "bg-[--color-brand-electric]"
-                        : "bg-[--color-border-strong]",
+                        ? "bg-(--color-brand-electric)"
+                        : "bg-(--color-border-strong)",
                     )}
                   />
                 )}
@@ -259,16 +259,16 @@ export function ConsultationForm({
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           role="alert"
-          className="mb-4 flex items-start gap-3 rounded-lg border border-[--color-error]/40 bg-[--color-error]/[0.06] p-4 text-sm text-[--color-error]"
+          className="mb-4 flex items-start gap-3 rounded-lg border border-(--color-error)/40 bg-(--color-error)/6 p-4 text-sm text-(--color-error)"
         >
           <AlertCircle className="size-4 mt-0.5 shrink-0" aria-hidden />
           <div>
             <p className="font-medium">{t("error.title")}</p>
-            <p className="mt-1 text-[--color-fg-muted]">
+            <p className="mt-1 text-(--color-fg-muted)">
               {t("error.sub")}{" "}
               <a
                 href={`mailto:${env.email}`}
-                className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
               >
                 {env.email}
               </a>
@@ -277,7 +277,7 @@ export function ConsultationForm({
         </motion.div>
       )}
 
-      <div className="mt-8 flex items-center justify-between gap-3 border-t border-[--color-border] pt-6">
+      <div className="mt-8 flex items-center justify-between gap-3 border-t border-(--color-border) pt-6">
         <Button
           type="button"
           variant="ghost"
@@ -330,7 +330,7 @@ function FieldError({ message }: { message?: string }) {
           exit={{ opacity: 0, y: -4, height: 0 }}
           transition={{ duration: 0.2 }}
           role="alert"
-          className="flex items-center gap-1.5 text-xs text-[--color-error]"
+          className="flex items-center gap-1.5 text-xs text-(--color-error)"
         >
           <AlertCircle className="size-3" aria-hidden />
           {message}
@@ -359,13 +359,13 @@ function Field({
     <div className="space-y-2">
       <label
         htmlFor={htmlFor}
-        className="block text-sm font-medium text-[--color-fg]"
+        className="block text-sm font-medium text-(--color-fg)"
       >
         {label}
-        {required && <span className="ml-1 text-[--color-error]" aria-hidden>*</span>}
+        {required && <span className="ml-1 text-(--color-error)" aria-hidden>*</span>}
       </label>
       {children}
-      {hint && !error && <p className="text-xs text-[--color-fg-subtle]">{hint}</p>}
+      {hint && !error && <p className="text-xs text-(--color-fg-subtle)">{hint}</p>}
       <FieldError message={error} />
     </div>
   );
@@ -373,10 +373,10 @@ function Field({
 
 const inputCls = (hasError: boolean) =>
   cn(
-    "w-full rounded-lg border bg-[--color-bg-surface] px-4 py-3 text-sm text-[--color-fg] outline-none transition-all duration-200 placeholder:text-[--color-fg-subtle] shadow-[var(--shadow-xs)]",
+    "w-full rounded-lg border bg-(--color-bg-surface) px-4 py-3 text-sm text-(--color-fg) outline-none transition-all duration-200 placeholder:text-(--color-fg-subtle) shadow-[var(--shadow-xs)]",
     hasError
-      ? "border-[--color-error]/60 focus:border-[--color-error] focus:shadow-[0_0_0_4px_rgba(220,38,38,0.12),var(--shadow-xs)]"
-      : "border-[--color-border-strong] hover:border-[--color-brand-navy]/45 focus:border-[--color-brand-electric] focus:shadow-[0_0_0_4px_rgba(4,58,253,0.12),var(--shadow-xs)]",
+      ? "border-(--color-error)/60 focus:border-(--color-error) focus:shadow-[0_0_0_4px_rgba(220,38,38,0.12),var(--shadow-xs)]"
+      : "border-(--color-border-strong) hover:border-(--color-brand-navy)/45 focus:border-(--color-brand-electric) focus:shadow-[0_0_0_4px_rgba(4,58,253,0.12),var(--shadow-xs)]",
   );
 
 function Step1({ form, update, errors, touched, markTouched }: StepProps) {
@@ -388,10 +388,10 @@ function Step1({ form, update, errors, touched, markTouched }: StepProps) {
 
   return (
     <motion.div {...stepMotion}>
-      <h2 className="text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+      <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
         {t("step1.title")}
       </h2>
-      <p className="mt-2 text-sm text-[--color-fg-muted]">{t("step1.sub")}</p>
+      <p className="mt-2 text-sm text-(--color-fg-muted)">{t("step1.sub")}</p>
 
       <div className="mt-8 space-y-6">
         <Field label={tHero("issueLabel")} htmlFor="issue-group" required error={issueErr}>
@@ -404,8 +404,8 @@ function Step1({ form, update, errors, touched, markTouched }: StepProps) {
                   className={cn(
                     "group relative cursor-pointer rounded-lg border px-4 py-3 pr-9 text-sm font-medium transition-all duration-200 active:scale-[0.99]",
                     selected
-                      ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                      : "border-[--color-border] bg-[--color-bg-tint] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.06] hover:text-[--color-fg]",
+                      ? "border-(--color-brand-electric) bg-(--color-brand-electric)/8 text-(--color-brand-electric) shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
+                      : "border-(--color-border) bg-(--color-bg-tint) text-(--color-fg-muted) hover:border-(--color-brand-electric)/40 hover:bg-(--color-brand-electric)/6 hover:text-(--color-fg)",
                   )}
                 >
                   <input
@@ -427,7 +427,7 @@ function Step1({ form, update, errors, touched, markTouched }: StepProps) {
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0, opacity: 0 }}
                         transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                        className="absolute right-2.5 top-1/2 inline-flex size-5 -translate-y-1/2 items-center justify-center rounded-full bg-[--color-brand-electric] text-white shadow-[0_0_8px_rgba(4,58,253,0.6)]"
+                        className="absolute right-2.5 top-1/2 inline-flex size-5 -translate-y-1/2 items-center justify-center rounded-full bg-(--color-brand-electric) text-white shadow-[0_0_8px_rgba(4,58,253,0.6)]"
                         aria-hidden
                       >
                         <Check className="size-3" />
@@ -469,10 +469,10 @@ function Step2({ form, update, errors, touched, markTouched }: StepProps) {
 
   return (
     <motion.div {...stepMotion}>
-      <h2 className="text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+      <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
         {t("step2.title")}
       </h2>
-      <p className="mt-2 text-sm text-[--color-fg-muted]">{t("step2.sub")}</p>
+      <p className="mt-2 text-sm text-(--color-fg-muted)">{t("step2.sub")}</p>
 
       <div className="mt-8 space-y-6">
         <Field label={t("step2.reasonLabel")} htmlFor={reasonId}>
@@ -495,8 +495,8 @@ function Step2({ form, update, errors, touched, markTouched }: StepProps) {
                 className={cn(
                   "cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-medium transition-all duration-200 active:scale-[0.97]",
                   form.timing === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                    : "border-[--color-border] bg-[--color-bg-tint] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.06] hover:text-[--color-fg]",
+                    ? "border-(--color-brand-electric) bg-(--color-brand-electric)/8 text-(--color-brand-electric) shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
+                    : "border-(--color-border) bg-(--color-bg-tint) text-(--color-fg-muted) hover:border-(--color-brand-electric)/40 hover:bg-(--color-brand-electric)/6 hover:text-(--color-fg)",
                 )}
               >
                 <input
@@ -526,10 +526,10 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
 
   return (
     <motion.div {...stepMotion}>
-      <h2 className="text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+      <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
         {t("step3.title")}
       </h2>
-      <p className="mt-2 text-sm text-[--color-fg-muted]">{t("step3.sub")}</p>
+      <p className="mt-2 text-sm text-(--color-fg-muted)">{t("step3.sub")}</p>
 
       <Field label="" htmlFor="value-group" required error={valueErr}>
         <div id="value-group" className="mt-8 space-y-2">
@@ -541,8 +541,8 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
                 className={cn(
                   "flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3.5 text-sm font-medium transition-all duration-200 active:scale-[0.99]",
                   selected
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                    : "border-[--color-border] bg-[--color-bg-tint] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.06] hover:text-[--color-fg]",
+                    ? "border-(--color-brand-electric) bg-(--color-brand-electric)/8 text-(--color-brand-electric) shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
+                    : "border-(--color-border) bg-(--color-bg-tint) text-(--color-fg-muted) hover:border-(--color-brand-electric)/40 hover:bg-(--color-brand-electric)/6 hover:text-(--color-fg)",
                 )}
               >
                 <input
@@ -560,8 +560,8 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
                   className={cn(
                     "flex size-5 shrink-0 items-center justify-center rounded-full border-2 transition-all duration-200",
                     selected
-                      ? "border-[--color-brand-electric] bg-[--color-brand-electric] shadow-[0_0_8px_rgba(4,58,253,0.5)]"
-                      : "border-[--color-fg]/30",
+                      ? "border-(--color-brand-electric) bg-(--color-brand-electric) shadow-[0_0_8px_rgba(4,58,253,0.5)]"
+                      : "border-(--color-fg)/30",
                   )}
                   aria-hidden
                 >
@@ -591,10 +591,10 @@ function Step4({ form, update, errors, touched, markTouched }: StepProps) {
 
   return (
     <motion.div {...stepMotion}>
-      <h2 className="text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+      <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
         {t("step4.title")}
       </h2>
-      <p className="mt-2 text-sm text-[--color-fg-muted]">{t("step4.sub")}</p>
+      <p className="mt-2 text-sm text-(--color-fg-muted)">{t("step4.sub")}</p>
 
       <div className="mt-8 space-y-5">
         <div className="grid gap-5 sm:grid-cols-2">
@@ -657,10 +657,10 @@ function Step4({ form, update, errors, touched, markTouched }: StepProps) {
             className={cn(
               "flex cursor-pointer items-start gap-3 rounded-lg border p-4 text-sm transition-all duration-200",
               consentErr
-                ? "border-[--color-error]/40 bg-[--color-error]/[0.04]"
+                ? "border-(--color-error)/40 bg-(--color-error)/4"
                 : form.consent
-                  ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.06] shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
-                  : "border-[--color-border] bg-[--color-bg-tint] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.04]",
+                  ? "border-(--color-brand-electric) bg-(--color-brand-electric)/6 shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
+                  : "border-(--color-border) bg-(--color-bg-tint) hover:border-(--color-brand-electric)/40 hover:bg-(--color-brand-electric)/4",
             )}
           >
             <input
@@ -671,14 +671,14 @@ function Step4({ form, update, errors, touched, markTouched }: StepProps) {
                 update("consent", e.target.checked);
                 markTouched("consent");
               }}
-              className="mt-0.5 size-4 shrink-0 cursor-pointer rounded border-[--color-border-strong] bg-[--color-bg] accent-[--color-brand-electric]"
+              className="mt-0.5 size-4 shrink-0 cursor-pointer rounded border-(--color-border-strong) bg-(--color-bg) accent-(--color-brand-electric)"
             />
-            <span className="text-[--color-fg-muted]">
+            <span className="text-(--color-fg-muted)">
               {t.rich("step4.consent", {
                 privacyLink: (chunks) => (
                   <Link
                     href="/datenschutz"
-                    className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                    className="text-(--color-brand-electric) underline-offset-2 hover:underline"
                   >
                     {chunks}
                   </Link>

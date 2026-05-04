@@ -28,11 +28,11 @@ export default async function ImpressumPage({
   return (
     <article className="relative pb-24 pt-32 md:pt-40">
       <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
-        <h1 className="text-balance text-4xl font-semibold tracking-tight text-[--color-fg] md:text-5xl">
+        <h1 className="text-balance text-4xl font-semibold tracking-tight text-(--color-fg) md:text-5xl">
           {t("title")}
         </h1>
 
-        <div className="prose-content mt-12 space-y-10 text-[--color-fg-muted]">
+        <div className="prose-content mt-12 space-y-10 text-(--color-fg-muted)">
           <Section heading={t("providerHeading")}>
             <address className="not-italic">
               {env.legalName}
@@ -68,7 +68,7 @@ export default async function ImpressumPage({
               {locale === "de" ? "Telefon: " : "Phone: "}
               <a
                 href={`tel:${env.phone}`}
-                className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
               >
                 {env.phoneDisplay}
               </a>
@@ -76,7 +76,7 @@ export default async function ImpressumPage({
               E-Mail:{" "}
               <a
                 href={`mailto:${env.email}`}
-                className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
               >
                 {env.email}
               </a>
@@ -85,20 +85,20 @@ export default async function ImpressumPage({
 
           <Section heading={t("professionHeading")}>
             <p className="text-sm">
-              <strong className="text-[--color-fg]">
+              <strong className="text-(--color-fg)">
                 {t("professionTitle")}:
               </strong>{" "}
               {locale === "de"
                 ? "Rechtsanwalt / Rechtsanwältin"
                 : "Rechtsanwalt / Rechtsanwältin (German Attorney-at-Law)"}
               <br />
-              <strong className="text-[--color-fg]">
+              <strong className="text-(--color-fg)">
                 {t("professionState")}:
               </strong>{" "}
               {t("professionStateValue")}
             </p>
             <p className="mt-3 text-sm">
-              <strong className="text-[--color-fg]">
+              <strong className="text-(--color-fg)">
                 {t("barAuthority")}:
               </strong>
               <br />
@@ -110,7 +110,7 @@ export default async function ImpressumPage({
                 href={env.bar.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
               >
                 {env.bar.url.replace(/^https?:\/\//, "")}
               </a>
@@ -139,12 +139,12 @@ export default async function ImpressumPage({
               {env.insurance.address}
             </p>
             <p className="mt-3 text-sm">
-              <strong className="text-[--color-fg]">
+              <strong className="text-(--color-fg)">
                 {t("insuranceSum")}:
               </strong>{" "}
               {env.insurance.sum}
               <br />
-              <strong className="text-[--color-fg]">
+              <strong className="text-(--color-fg)">
                 {t("insuranceScope")}:
               </strong>{" "}
               {t("insuranceScopeValue")}
@@ -162,7 +162,7 @@ export default async function ImpressumPage({
                 href="https://ec.europa.eu/consumers/odr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
               >
                 https://ec.europa.eu/consumers/odr
               </a>
@@ -195,7 +195,7 @@ function Section({
 }) {
   return (
     <section>
-      <h2 className="text-lg font-semibold tracking-tight text-[--color-fg]">
+      <h2 className="text-lg font-semibold tracking-tight text-(--color-fg)">
         {heading}
       </h2>
       <div className="mt-3">{children}</div>

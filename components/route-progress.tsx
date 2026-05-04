@@ -92,7 +92,7 @@ export function RouteProgress() {
           className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5"
         >
           <div
-            className="h-full bg-gradient-to-r from-[--color-brand-electric] via-[--color-brand-glow] to-[--color-brand-electric] shadow-[0_0_12px_rgba(4,58,253,0.7)]"
+            className="h-full bg-gradient-to-r from-(--color-brand-electric) via-(--color-brand-glow) to-(--color-brand-electric) shadow-[0_0_12px_rgba(4,58,253,0.7)]"
             style={{
               width: `${progress}%`,
               transition: "width 200ms ease-out",

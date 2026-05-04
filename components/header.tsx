@@ -63,7 +63,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
           scrolled
-            ? "border-b border-[--color-border] bg-[--color-bg]/90 shadow-[0_2px_8px_-2px_rgba(1,20,68,0.06)] backdrop-blur-xl"
+            ? "border-b border-(--color-border) bg-(--color-bg)/90 shadow-[0_2px_8px_-2px_rgba(1,20,68,0.06)] backdrop-blur-xl"
             : "border-b border-transparent bg-transparent",
         )}
       >
@@ -93,19 +93,19 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   className={cn(
                     "group relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
                     active
-                      ? "text-[--color-brand-navy]"
-                      : "text-[--color-fg-muted] hover:bg-[--color-bg-tint] hover:text-[--color-brand-navy]",
+                      ? "text-(--color-brand-navy)"
+                      : "text-(--color-fg-muted) hover:bg-(--color-bg-tint) hover:text-(--color-brand-navy)",
                   )}
                 >
                   {t(link.labelKey)}
                   {/* Hover underline (subtle preview of active state) */}
                   {!active && (
-                    <span className="pointer-events-none absolute inset-x-3 -bottom-1 h-0.5 origin-left scale-x-0 rounded-full bg-[--color-brand-electric]/40 transition-transform duration-300 group-hover:scale-x-100" />
+                    <span className="pointer-events-none absolute inset-x-3 -bottom-1 h-0.5 origin-left scale-x-0 rounded-full bg-(--color-brand-electric)/40 transition-transform duration-300 group-hover:scale-x-100" />
                   )}
                   {active && (
                     <motion.span
                       layoutId="active-nav-indicator"
-                      className="absolute inset-x-3 -bottom-1 h-0.5 rounded-full bg-[--color-brand-electric]"
+                      className="absolute inset-x-3 -bottom-1 h-0.5 rounded-full bg-(--color-brand-electric)"
                       transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
@@ -130,8 +130,8 @@ export function Header({ locale: _locale }: { locale: Locale }) {
               className={cn(
                 "relative inline-flex size-10 items-center justify-center rounded-lg border transition-all duration-200 active:scale-95 lg:hidden",
                 open
-                  ? "border-[--color-brand-navy] bg-[--color-brand-navy] text-white"
-                  : "border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg] hover:border-[--color-brand-navy] hover:bg-[--color-bg-tint]",
+                  ? "border-(--color-brand-navy) bg-(--color-brand-navy) text-white"
+                  : "border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg) hover:border-(--color-brand-navy) hover:bg-(--color-bg-tint)",
               )}
               aria-expanded={open}
               aria-label={open ? t("close") : t("menu")}
@@ -175,7 +175,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 top-16 z-40 lg:hidden"
           >
-            <div className="absolute inset-0 bg-[--color-bg]/95 backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-(--color-bg)/95 backdrop-blur-xl" />
             <motion.nav
               aria-label="Mobile"
               className="relative flex h-full flex-col gap-1 px-4 py-8"
@@ -200,13 +200,13 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                       className={cn(
                         "flex items-center justify-between rounded-lg border px-4 py-3.5 text-lg font-medium transition-all duration-200 active:scale-[0.98]",
                         active
-                          ? "border-[--color-brand-navy] bg-[--color-brand-navy] text-white"
-                          : "border-[--color-border] bg-[--color-bg-surface] text-[--color-fg] hover:border-[--color-brand-navy] hover:bg-[--color-bg-tint]",
+                          ? "border-(--color-brand-navy) bg-(--color-brand-navy) text-white"
+                          : "border-(--color-border) bg-(--color-bg-surface) text-(--color-fg) hover:border-(--color-brand-navy) hover:bg-(--color-bg-tint)",
                       )}
                     >
                       <span>{t(link.labelKey)}</span>
                       {active && (
-                        <span className="size-2 rounded-full bg-[--color-brand-electric]" aria-hidden />
+                        <span className="size-2 rounded-full bg-(--color-brand-electric)" aria-hidden />
                       )}
                     </Link>
                   </motion.div>
@@ -217,7 +217,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   hidden: { opacity: 0, y: 16 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className="mt-6 flex flex-col gap-3 border-t border-[--color-border] pt-6"
+                className="mt-6 flex flex-col gap-3 border-t border-(--color-border) pt-6"
               >
                 <LanguageToggle />
                 <Button asChild variant="primary" size="lg" className="w-full">

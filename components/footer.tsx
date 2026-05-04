@@ -59,7 +59,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer className="relative mt-32 border-t border-[--color-border] bg-[--color-bg-tint]">
+    <footer className="relative mt-32 border-t border-(--color-border) bg-(--color-bg-tint)">
 
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
@@ -74,24 +74,24 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
                 className="h-6 w-auto transition-opacity duration-200 group-hover:opacity-70"
               />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[--color-fg-muted]">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-(--color-fg-muted)">
               {t("tagline")}
             </p>
-            <address className="mt-6 not-italic text-xs leading-relaxed text-[--color-fg-subtle]">
+            <address className="mt-6 not-italic text-xs leading-relaxed text-(--color-fg-subtle)">
               {env.legalName}
               <br />
               {env.address.street} · {env.address.zip} {env.address.city}
               <br />
               <a
                 href={`tel:${env.phone}`}
-                className="link-hover transition-colors hover:text-[--color-fg]"
+                className="link-hover transition-colors hover:text-(--color-fg)"
               >
                 {env.phoneDisplay}
               </a>
               {" · "}
               <a
                 href={`mailto:${env.email}`}
-                className="link-hover transition-colors hover:text-[--color-fg]"
+                className="link-hover transition-colors hover:text-(--color-fg)"
               >
                 {env.email}
               </a>
@@ -101,9 +101,9 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
               {trustBadges.map(({ Icon, label }) => (
                 <span
                   key={label}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[--color-border] bg-[--color-bg-surface] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-[--color-fg-muted]"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-(--color-border) bg-(--color-bg-surface) px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-(--color-fg-muted)"
                 >
-                  <Icon className="size-3 text-[--color-brand-electric]" aria-hidden />
+                  <Icon className="size-3 text-(--color-brand-electric)" aria-hidden />
                   {label}
                 </span>
               ))}
@@ -113,7 +113,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
           <div className="grid grid-cols-2 gap-8 lg:col-span-8 lg:grid-cols-3">
             {sections.map((section) => (
               <div key={section.heading}>
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-[--color-fg]">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-(--color-fg)">
                   {section.heading}
                 </h3>
                 <ul className="mt-4 space-y-3">
@@ -121,7 +121,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
                     <li key={`${link.href}-${idx}`}>
                       <Link
                         href={link.href}
-                        className="link-hover text-sm text-[--color-fg-muted] transition-colors hover:text-[--color-fg]"
+                        className="link-hover text-sm text-(--color-fg-muted) transition-colors hover:text-(--color-fg)"
                       >
                         {link.label}
                       </Link>
@@ -133,8 +133,8 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-[--color-border] pt-8 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3 text-xs text-[--color-fg-subtle] sm:flex-row sm:items-center sm:gap-4">
+        <div className="mt-16 flex flex-col gap-4 border-t border-(--color-border) pt-8 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-3 text-xs text-(--color-fg-subtle) sm:flex-row sm:items-center sm:gap-4">
             <p>
               © {year} {env.legalName}.
             </p>

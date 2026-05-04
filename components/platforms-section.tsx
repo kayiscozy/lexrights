@@ -26,10 +26,10 @@ export function PlatformsSection() {
     <section className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl lg:text-5xl">
+          <h2 className="text-balance text-3xl font-semibold tracking-tight text-(--color-fg) md:text-4xl lg:text-5xl">
             {t("title")}
           </h2>
-          <p className="mt-4 text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mt-4 text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {t("subtitle")}
           </p>
         </div>
@@ -52,21 +52,21 @@ export function PlatformsSection() {
                   pathname: "/leistungen/[slug]",
                   params: { slug: platform.slug[locale] },
                 }}
-                className="card-hover group relative flex h-full flex-col rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-5 shadow-[var(--shadow-xs)]"
+                className="card-hover group relative flex h-full flex-col rounded-xl border border-(--color-border) bg-(--color-bg-surface) p-5 shadow-[var(--shadow-xs)]"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
                     {platformCategories[platform.category][locale]}
                   </span>
                   <ArrowUpRight
-                    className="size-4 -translate-y-0.5 translate-x-0.5 text-[--color-fg-subtle] transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[--color-brand-electric]"
+                    className="size-4 -translate-y-0.5 translate-x-0.5 text-(--color-fg-subtle) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-(--color-brand-electric)"
                     aria-hidden
                   />
                 </div>
-                <h3 className="mt-3 text-base font-semibold text-[--color-fg]">
+                <h3 className="mt-3 text-base font-semibold text-(--color-fg)">
                   {platform.name}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-[--color-fg-muted]">
+                <p className="mt-1.5 text-sm leading-relaxed text-(--color-fg-muted)">
                   {platform.shortDesc[locale]}
                 </p>
               </Link>
@@ -77,7 +77,7 @@ export function PlatformsSection() {
         <div className="mt-12 text-center">
           <Link
             href="/leistungen"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-electric]"
+            className="inline-flex items-center gap-2 text-sm font-medium text-(--color-brand-electric) transition-colors hover:text-(--color-brand-electric)"
           >
             {t("viewAll")}
             <ArrowUpRight className="size-4" aria-hidden />

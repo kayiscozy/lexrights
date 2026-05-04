@@ -30,14 +30,14 @@ export default async function PrivacyPage({
   return (
     <article className="relative pb-24 pt-32 md:pt-40">
       <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
-        <h1 className="text-balance text-4xl font-semibold tracking-tight text-[--color-fg] md:text-5xl">
+        <h1 className="text-balance text-4xl font-semibold tracking-tight text-(--color-fg) md:text-5xl">
           {t("title")}
         </h1>
-        <p className="mt-6 text-pretty text-base text-[--color-fg-muted]">
+        <p className="mt-6 text-pretty text-base text-(--color-fg-muted)">
           {t("intro")}
         </p>
 
-        <div className="prose-content mt-12 space-y-10 text-sm leading-relaxed text-[--color-fg-muted]">
+        <div className="prose-content mt-12 space-y-10 text-sm leading-relaxed text-(--color-fg-muted)">
           <Section heading={isDe ? "1. Verantwortlicher" : "1. Controller"}>
             <p>
               {isDe ? "Verantwortlich für die Datenverarbeitung auf dieser Website ist:" : "The controller for data processing on this website is:"}
@@ -50,9 +50,9 @@ export default async function PrivacyPage({
               {env.address.zip} {env.address.city}, {env.address.country}
               <br />
               {isDe ? "Telefon: " : "Phone: "}
-              <a href={`tel:${env.phone}`} className="text-[--color-brand-electric] underline-offset-2 hover:underline">{env.phoneDisplay}</a>
+              <a href={`tel:${env.phone}`} className="text-(--color-brand-electric) underline-offset-2 hover:underline">{env.phoneDisplay}</a>
               <br />
-              E-Mail: <a href={`mailto:${env.email}`} className="text-[--color-brand-electric] underline-offset-2 hover:underline">{env.email}</a>
+              E-Mail: <a href={`mailto:${env.email}`} className="text-(--color-brand-electric) underline-offset-2 hover:underline">{env.email}</a>
             </address>
           </Section>
 
@@ -134,7 +134,7 @@ export default async function PrivacyPage({
               {isDe
                 ? "Zur Geltendmachung Ihrer Rechte genügt eine formlose Mitteilung an "
                 : "To exercise your rights, an informal message to "}
-              <a href={`mailto:${env.email}`} className="text-[--color-brand-electric] underline-offset-2 hover:underline">
+              <a href={`mailto:${env.email}`} className="text-(--color-brand-electric) underline-offset-2 hover:underline">
                 {env.email}
               </a>
               {isDe ? "." : " is sufficient."}
@@ -150,7 +150,7 @@ export default async function PrivacyPage({
                 href="https://www.datenschutz-berlin.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[--color-brand-electric] underline-offset-2 hover:underline"
+                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
               >
                 www.datenschutz-berlin.de
               </a>
@@ -187,7 +187,7 @@ function Section({
 }) {
   return (
     <section>
-      <h2 className="text-lg font-semibold tracking-tight text-[--color-fg]">
+      <h2 className="text-lg font-semibold tracking-tight text-(--color-fg)">
         {heading}
       </h2>
       <div className="mt-3">{children}</div>

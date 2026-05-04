@@ -8,8 +8,8 @@ const buttonVariants = cva(
   [
     "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold",
     "transition-[transform,background,box-shadow,border-color,color] duration-200 ease-out",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-brand-electric]",
-    "focus-visible:ring-offset-2 focus-visible:ring-offset-[--color-bg]",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-brand-electric)",
+    "focus-visible:ring-offset-2 focus-visible:ring-offset-(--color-bg)",
     "disabled:pointer-events-none disabled:opacity-50",
     "[&_svg]:size-4 [&_svg]:shrink-0",
     "active:scale-[0.98] select-none",
@@ -19,7 +19,7 @@ const buttonVariants = cva(
       variant: {
         // PRIMARY — Solid navy, classic premium law firm
         primary: [
-          "border border-[--color-brand-navy] bg-[--color-brand-navy] text-white",
+          "border border-(--color-brand-navy) bg-(--color-brand-navy) text-white",
           "shadow-[0_2px_4px_rgba(1,20,68,0.10),0_1px_2px_rgba(1,20,68,0.06)]",
           "hover:bg-[#001033] hover:border-[#001033]",
           "hover:shadow-[0_8px_20px_-4px_rgba(1,20,68,0.25),0_2px_4px_rgba(1,20,68,0.10)]",
@@ -28,45 +28,45 @@ const buttonVariants = cva(
 
         // BRAND — Electric blue, secondary CTA emphasis
         brand: [
-          "border border-[--color-brand-electric] bg-[--color-brand-electric] text-white",
+          "border border-(--color-brand-electric) bg-(--color-brand-electric) text-white",
           "shadow-[0_2px_4px_rgba(4,58,253,0.18),0_1px_2px_rgba(4,58,253,0.10)]",
-          "hover:bg-[--color-brand-glow] hover:border-[--color-brand-glow]",
+          "hover:bg-(--color-brand-glow) hover:border-(--color-brand-glow)",
           "hover:shadow-[0_8px_20px_-4px_rgba(4,58,253,0.35),0_2px_4px_rgba(4,58,253,0.15)]",
           "hover:-translate-y-px",
         ].join(" "),
 
         // SECONDARY — White with subtle border, navy text
         secondary: [
-          "border border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg]",
+          "border border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg)",
           "shadow-[0_1px_2px_rgba(1,20,68,0.04)]",
-          "hover:border-[--color-brand-navy] hover:bg-[--color-bg-tint]",
+          "hover:border-(--color-brand-navy) hover:bg-(--color-bg-tint)",
           "hover:shadow-[0_4px_8px_rgba(1,20,68,0.06)]",
           "hover:-translate-y-px",
         ].join(" "),
 
         // OUTLINE — Transparent with navy border, full color-flip on hover
         outline: [
-          "border border-[--color-brand-navy]/40 bg-transparent text-[--color-fg]",
-          "hover:border-[--color-brand-navy] hover:bg-[--color-brand-navy] hover:text-white",
+          "border border-(--color-brand-navy)/40 bg-transparent text-(--color-fg)",
+          "hover:border-(--color-brand-navy) hover:bg-(--color-brand-navy) hover:text-white",
           "hover:-translate-y-px",
           "hover:shadow-[0_4px_10px_rgba(1,20,68,0.18)]",
         ].join(" "),
 
         // GHOST — Minimal, navy hover tint
         ghost: [
-          "text-[--color-fg-muted]",
-          "hover:bg-[--color-bg-tint] hover:text-[--color-fg]",
+          "text-(--color-fg-muted)",
+          "hover:bg-(--color-bg-tint) hover:text-(--color-fg)",
         ].join(" "),
 
         // LINK — Inline-text style
         link: [
-          "text-[--color-brand-electric] underline-offset-4 px-0 h-auto font-medium",
-          "hover:text-[--color-brand-electric] hover:underline",
+          "text-(--color-brand-electric) underline-offset-4 px-0 h-auto font-medium",
+          "hover:text-(--color-brand-electric) hover:underline",
         ].join(" "),
 
         // DESTRUCTIVE
         destructive: [
-          "border border-[--color-error] bg-[--color-error] text-white",
+          "border border-(--color-error) bg-(--color-error) text-white",
           "shadow-[0_2px_4px_rgba(220,38,38,0.20)]",
           "hover:bg-[#b91c1c] hover:border-[#b91c1c]",
           "hover:-translate-y-px hover:shadow-[0_6px_14px_rgba(220,38,38,0.28)]",

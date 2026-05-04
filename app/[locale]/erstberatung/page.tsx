@@ -30,13 +30,13 @@ export default async function ConsultationPage({
 
       <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
         <div className="text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {t("eyebrow")}
           </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
             {t("title")}
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {t("sub")}
           </p>
         </div>

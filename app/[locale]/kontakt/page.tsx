@@ -57,13 +57,13 @@ export default async function ContactPage({
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {tHero("eyebrow")}
           </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
             {tHero("title")}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {tHero("sub")}
           </p>
           <div className="mt-10">
@@ -82,18 +82,18 @@ export default async function ContactPage({
           <div className="grid gap-3 md:grid-cols-2">
             {channels.map(({ Icon, title, value, href, note }) => {
               const card = (
-                <div className={`group flex h-full items-start gap-4 rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 ${href ? "card-hover" : ""}`}>
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-[--color-brand-electric] transition-all duration-300 group-hover:bg-[--color-brand-electric]/[0.14] group-hover:shadow-[0_0_20px_-4px_rgba(4,58,253,0.4)]">
+                <div className={`group flex h-full items-start gap-4 rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 ${href ? "card-hover" : ""}`}>
+                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-(--color-brand-electric)/40 bg-(--color-brand-electric)/8 text-(--color-brand-electric) transition-all duration-300 group-hover:bg-(--color-brand-electric)/14 group-hover:shadow-[0_0_20px_-4px_rgba(4,58,253,0.4)]">
                     <Icon className="size-5" aria-hidden />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-(--color-fg-subtle)">
                       {title}
                     </p>
-                    <p className="mt-1 truncate text-base font-medium text-[--color-fg]">
+                    <p className="mt-1 truncate text-base font-medium text-(--color-fg)">
                       {value}
                     </p>
-                    <p className="mt-1 text-xs text-[--color-fg-muted]">
+                    <p className="mt-1 text-xs text-(--color-fg-muted)">
                       {note}
                     </p>
                   </div>
@@ -115,11 +115,11 @@ export default async function ContactPage({
             })}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 md:p-8">
-            <h2 className="text-xl font-semibold tracking-tight text-[--color-fg]">
+          <div className="mt-12 rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 md:p-8">
+            <h2 className="text-xl font-semibold tracking-tight text-(--color-fg)">
               {tOf("title")}
             </h2>
-            <p className="mt-3 text-pretty text-sm leading-relaxed text-[--color-fg-muted] md:text-base">
+            <p className="mt-3 text-pretty text-sm leading-relaxed text-(--color-fg-muted) md:text-base">
               {tOf("desc")}
             </p>
           </div>

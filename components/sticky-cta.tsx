@@ -37,17 +37,17 @@ export function StickyCta() {
           className="fixed inset-x-0 bottom-0 z-40 lg:hidden"
           style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
         >
-          <div className="mx-3 mb-3 flex items-center gap-2 rounded-2xl border border-[--color-border-strong] bg-[--color-bg-surface] p-2 shadow-[var(--shadow-lg)] backdrop-blur-xl">
+          <div className="mx-3 mb-3 flex items-center gap-2 rounded-2xl border border-(--color-border-strong) bg-(--color-bg-surface) p-2 shadow-[var(--shadow-lg)] backdrop-blur-xl">
             <a
               href={`tel:${env.phone}`}
               aria-label={env.phoneDisplay}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-border-strong] bg-[--color-bg-surface] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-navy] hover:bg-[--color-brand-navy] hover:text-white"
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-(--color-border-strong) bg-(--color-bg-surface) text-(--color-fg) transition-all duration-200 active:scale-95 hover:border-(--color-brand-navy) hover:bg-(--color-brand-navy) hover:text-white"
             >
               <Phone className="size-4" aria-hidden />
             </a>
             <Link
               href="/erstberatung"
-              className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-[--color-brand-electric] bg-[--color-brand-electric] px-4 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(4,58,253,0.3),0_8px_24px_-8px_rgba(4,58,253,0.6)] transition-all duration-200 active:scale-[0.98] hover:bg-[--color-brand-glow] hover:border-[--color-brand-glow]"
+              className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-(--color-brand-electric) bg-(--color-brand-electric) px-4 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(4,58,253,0.3),0_8px_24px_-8px_rgba(4,58,253,0.6)] transition-all duration-200 active:scale-[0.98] hover:bg-(--color-brand-glow) hover:border-(--color-brand-glow)"
             >
               {t("consultationCta")}
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

@@ -83,21 +83,21 @@ const variantStyles: Record<
 > = {
   success: {
     Icon: CheckCircle2,
-    border: "border-[--color-success]/40",
+    border: "border-(--color-success)/40",
     ring: "shadow-[0_0_0_1px_rgba(74,222,128,0.18),0_12px_32px_-10px_rgba(74,222,128,0.4)]",
-    iconColor: "text-[--color-success]",
+    iconColor: "text-(--color-success)",
   },
   error: {
     Icon: AlertCircle,
-    border: "border-[--color-error]/40",
+    border: "border-(--color-error)/40",
     ring: "shadow-[0_0_0_1px_rgba(248,113,113,0.18),0_12px_32px_-10px_rgba(248,113,113,0.4)]",
-    iconColor: "text-[--color-error]",
+    iconColor: "text-(--color-error)",
   },
   info: {
     Icon: CheckCircle2,
-    border: "border-[--color-brand-electric]/40",
+    border: "border-(--color-brand-electric)/40",
     ring: "shadow-[0_0_0_1px_rgba(4,58,253,0.2),0_12px_32px_-10px_rgba(4,58,253,0.45)]",
-    iconColor: "text-[--color-brand-electric]",
+    iconColor: "text-(--color-brand-electric)",
   },
 };
 
@@ -119,15 +119,15 @@ function ToastCard({
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       role="status"
       className={cn(
-        "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border bg-[--color-bg-surface] p-4 shadow-[var(--shadow-lg)]",
+        "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border bg-(--color-bg-surface) p-4 shadow-[var(--shadow-lg)]",
         border,
       )}
     >
       <Icon className={cn("size-5 shrink-0 mt-0.5", iconColor)} aria-hidden />
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-semibold text-[--color-fg]">{toast.title}</p>
+        <p className="text-sm font-semibold text-(--color-fg)">{toast.title}</p>
         {toast.description && (
-          <p className="mt-1 text-sm text-[--color-fg-muted]">
+          <p className="mt-1 text-sm text-(--color-fg-muted)">
             {toast.description}
           </p>
         )}
@@ -136,7 +136,7 @@ function ToastCard({
         type="button"
         onClick={onDismiss}
         aria-label="Dismiss"
-        className="-mr-1 -mt-1 inline-flex size-7 items-center justify-center rounded-md text-[--color-fg-subtle] transition-colors hover:bg-[--color-bg-surface] hover:text-[--color-fg]"
+        className="-mr-1 -mt-1 inline-flex size-7 items-center justify-center rounded-md text-(--color-fg-subtle) transition-colors hover:bg-(--color-bg-surface) hover:text-(--color-fg)"
       >
         <X className="size-3.5" aria-hidden />
       </button>

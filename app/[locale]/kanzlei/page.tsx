@@ -46,13 +46,13 @@ export default async function FirmPage({
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="editorial-bg absolute inset-x-0 top-0 -z-10 h-[400px]" aria-hidden />
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {tHero("eyebrow")}
           </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
             {tHero("title")}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {tHero("sub")}
           </p>
         </div>
@@ -60,19 +60,19 @@ export default async function FirmPage({
 
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+          <h2 className="text-center text-3xl font-semibold tracking-tight text-(--color-fg) md:text-4xl">
             {tValues("title")}
           </h2>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {values.map((v) => (
               <div
                 key={v.title}
-                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6"
+                className="card-hover rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6"
               >
-                <h3 className="text-lg font-semibold text-[--color-fg]">
+                <h3 className="text-lg font-semibold text-(--color-fg)">
                   {v.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[--color-fg-muted]">
+                <p className="mt-2 text-sm leading-relaxed text-(--color-fg-muted)">
                   {v.desc}
                 </p>
               </div>
@@ -84,10 +84,10 @@ export default async function FirmPage({
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-(--color-fg) md:text-4xl">
               {tTeam("title")}
             </h2>
-            <p className="mt-4 text-pretty text-base text-[--color-fg-muted] md:text-lg">
+            <p className="mt-4 text-pretty text-base text-(--color-fg-muted) md:text-lg">
               {tTeam("subtitle")}
             </p>
           </div>
@@ -97,11 +97,11 @@ export default async function FirmPage({
               <article
                 key={m.id}
                 id={m.id}
-                className="card-hover group relative overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-xs)] md:p-8"
+                className="card-hover group relative overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 shadow-[var(--shadow-xs)] md:p-8"
               >
                 {/* Avatar Placeholder */}
                 <div
-                  className="mb-6 flex size-20 items-center justify-center rounded-2xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-2xl font-semibold tracking-tight text-[--color-brand-navy]"
+                  className="mb-6 flex size-20 items-center justify-center rounded-2xl border border-(--color-brand-electric)/40 bg-(--color-brand-electric)/8 text-2xl font-semibold tracking-tight text-(--color-brand-navy)"
                   aria-hidden
                 >
                   {m.name
@@ -111,13 +111,13 @@ export default async function FirmPage({
                     .join("")}
                 </div>
 
-                <h3 className="text-2xl font-semibold tracking-tight text-[--color-fg]">
+                <h3 className="text-2xl font-semibold tracking-tight text-(--color-fg)">
                   {m.name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-[--color-brand-electric]">
+                <p className="mt-1 text-sm font-medium text-(--color-brand-electric)">
                   {m.role[locale]}
                 </p>
-                <p className="mt-3 text-sm text-[--color-fg-muted]">
+                <p className="mt-3 text-sm text-(--color-fg-muted)">
                   {m.title[locale]} · {m.bar} ·{" "}
                   {locale === "de" ? "zugelassen seit" : "admitted"}{" "}
                   {m.admittedSince}
@@ -125,11 +125,11 @@ export default async function FirmPage({
 
                 <div className="mt-6 space-y-4">
                   <div>
-                    <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                    <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-(--color-fg-subtle)">
                       <GraduationCap className="size-3.5" aria-hidden />
                       {locale === "de" ? "Vita" : "Education"}
                     </h4>
-                    <ul className="mt-2 space-y-1 text-sm text-[--color-fg-muted]">
+                    <ul className="mt-2 space-y-1 text-sm text-(--color-fg-muted)">
                       {m.education.map((e, i) => (
                         <li key={i}>{e[locale]}</li>
                       ))}
@@ -137,14 +137,14 @@ export default async function FirmPage({
                   </div>
 
                   <div>
-                    <h4 className="text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-(--color-fg-subtle)">
                       {locale === "de" ? "Schwerpunkte" : "Focus areas"}
                     </h4>
                     <div className="mt-2 flex flex-wrap gap-1.5">
                       {m.focus[locale].map((f) => (
                         <span
                           key={f}
-                          className="rounded-md border border-[--color-border] bg-[--color-bg-elevated]/50 px-2 py-1 text-xs text-[--color-fg-muted]"
+                          className="rounded-md border border-(--color-border) bg-(--color-bg-elevated)/50 px-2 py-1 text-xs text-(--color-fg-muted)"
                         >
                           {f}
                         </span>
@@ -153,11 +153,11 @@ export default async function FirmPage({
                   </div>
 
                   <div>
-                    <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                    <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-(--color-fg-subtle)">
                       <Globe className="size-3.5" aria-hidden />
                       {locale === "de" ? "Sprachen" : "Languages"}
                     </h4>
-                    <p className="mt-2 text-sm text-[--color-fg-muted]">
+                    <p className="mt-2 text-sm text-(--color-fg-muted)">
                       {m.languages.join(" · ")}
                     </p>
                   </div>
@@ -165,7 +165,7 @@ export default async function FirmPage({
 
                 <a
                   href={`mailto:${m.email}`}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-electric]"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-(--color-brand-electric) transition-colors hover:text-(--color-brand-electric)"
                 >
                   <Mail className="size-4" aria-hidden />
                   {m.email}

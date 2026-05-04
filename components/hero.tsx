@@ -18,7 +18,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 rounded-full border border-[--color-border-strong] bg-[--color-bg-surface] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric] shadow-[var(--shadow-xs)]"
+            className="inline-flex items-center gap-2 rounded-full border border-(--color-border-strong) bg-(--color-bg-surface) px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric) shadow-[var(--shadow-xs)]"
           >
             <Sparkles className="size-3.5" aria-hidden />
             {t("eyebrow")}
@@ -28,7 +28,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 text-balance text-5xl font-semibold leading-[1.05] tracking-[-0.025em] text-[--color-fg] md:text-6xl lg:text-7xl xl:text-[88px]"
+            className="mt-8 text-balance text-5xl font-semibold leading-[1.05] tracking-[-0.025em] text-(--color-fg) md:text-6xl lg:text-7xl xl:text-[88px]"
           >
             {t("headline")}
           </motion.h1>
@@ -37,7 +37,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-[--color-fg-muted] md:text-xl"
+            className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-(--color-fg-muted) md:text-xl"
           >
             {t("sub")}
           </motion.p>
@@ -48,25 +48,25 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-12 flex flex-wrap items-center justify-center gap-2 text-sm text-[--color-fg-muted]"
+            className="mt-12 flex flex-wrap items-center justify-center gap-2 text-sm text-(--color-fg-muted)"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-border] bg-[--color-bg-surface] px-3 py-1.5 shadow-[var(--shadow-xs)]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-(--color-border) bg-(--color-bg-surface) px-3 py-1.5 shadow-[var(--shadow-xs)]">
               <ShieldCheck
-                className="size-3.5 text-[--color-brand-electric]"
+                className="size-3.5 text-(--color-brand-electric)"
                 aria-hidden
               />
               {t("trust.badge1")}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-border] bg-[--color-bg-surface] px-3 py-1.5 shadow-[var(--shadow-xs)]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-(--color-border) bg-(--color-bg-surface) px-3 py-1.5 shadow-[var(--shadow-xs)]">
               <Globe2
-                className="size-3.5 text-[--color-brand-electric]"
+                className="size-3.5 text-(--color-brand-electric)"
                 aria-hidden
               />
               {t("trust.badge2")}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[--color-border] bg-[--color-bg-surface] px-3 py-1.5 shadow-[var(--shadow-xs)]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-(--color-border) bg-(--color-bg-surface) px-3 py-1.5 shadow-[var(--shadow-xs)]">
               <Sparkles
-                className="size-3.5 text-[--color-brand-electric]"
+                className="size-3.5 text-(--color-brand-electric)"
                 aria-hidden
               />
               {t("trust.badge3")}

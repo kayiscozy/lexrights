@@ -83,16 +83,16 @@ export default async function PillarPage({
     return (
       <section className="relative pb-24 pt-32 md:pt-40">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {platformCategories[platform.category][locale]}
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
             {platform.name}
           </h1>
-          <p className="mt-5 text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mt-5 text-base text-(--color-fg-muted) md:text-lg">
             {platform.shortDesc[locale]}
           </p>
-          <p className="mt-8 text-sm text-[--color-fg-subtle]">
+          <p className="mt-8 text-sm text-(--color-fg-subtle)">
             {locale === "de"
               ? "Detailinhalte zu dieser Plattform sind in Vorbereitung. Für eine kostenlose Ersteinschätzung kontaktieren Sie uns gerne direkt."
               : "Detailed content for this platform is in preparation. For a free first assessment, contact us directly."}
@@ -130,13 +130,13 @@ export default async function PillarPage({
       <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="editorial-bg absolute inset-0 -z-10" aria-hidden />
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
             {content.hero.eyebrow}
           </p>
-          <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+          <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-(--color-fg) md:text-5xl lg:text-6xl">
             {content.hero.headline}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-(--color-fg-muted) md:text-lg">
             {content.hero.sub}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -152,7 +152,7 @@ export default async function PillarPage({
               </Link>
             </Button>
           </div>
-          <p className="mt-8 text-xs text-[--color-fg-subtle]">
+          <p className="mt-8 text-xs text-(--color-fg-subtle)">
             {platform.vendor} · {platform.jurisdiction}
           </p>
         </div>
@@ -162,8 +162,8 @@ export default async function PillarPage({
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <ShieldAlert className="size-5 text-[--color-error]" aria-hidden />
-            <h2 className="text-2xl font-semibold tracking-tight text-[--color-fg] md:text-3xl">
+            <ShieldAlert className="size-5 text-(--color-error)" aria-hidden />
+            <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
               {content.problems.title}
             </h2>
           </div>
@@ -171,9 +171,9 @@ export default async function PillarPage({
             {content.problems.items.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-3 rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-4 text-sm text-[--color-fg-muted] shadow-[var(--shadow-xs)] transition-colors duration-200 hover:border-[--color-error]/40 hover:bg-[--color-error]/[0.04]"
+                className="flex items-start gap-3 rounded-xl border border-(--color-border) bg-(--color-bg-surface) p-4 text-sm text-(--color-fg-muted) shadow-[var(--shadow-xs)] transition-colors duration-200 hover:border-(--color-error)/40 hover:bg-(--color-error)/4"
               >
-                <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[--color-error]" aria-hidden />
+                <span className="mt-1 size-1.5 shrink-0 rounded-full bg-(--color-error)" aria-hidden />
                 <span>{item}</span>
               </li>
             ))}
@@ -185,16 +185,16 @@ export default async function PillarPage({
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="inline-flex items-center gap-2 text-[--color-brand-electric]">
+            <div className="inline-flex items-center gap-2 text-(--color-brand-electric)">
               <Scale className="size-5" aria-hidden />
               <span className="font-mono text-xs uppercase tracking-wider">
                 {locale === "de" ? "Rechts­grundlagen" : "Legal grounds"}
               </span>
             </div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-(--color-fg) md:text-4xl">
               {content.legal.title}
             </h2>
-            <p className="mt-4 text-pretty text-base text-[--color-fg-muted] md:text-lg">
+            <p className="mt-4 text-pretty text-base text-(--color-fg-muted) md:text-lg">
               {content.legal.intro}
             </p>
           </div>
@@ -202,15 +202,15 @@ export default async function PillarPage({
             {content.legal.arguments.map((arg) => (
               <div
                 key={arg.paragraph}
-                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-xs)]"
+                className="card-hover rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 shadow-[var(--shadow-xs)]"
               >
-                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
                   {arg.paragraph}
                 </p>
-                <h3 className="mt-3 text-lg font-semibold text-[--color-fg]">
+                <h3 className="mt-3 text-lg font-semibold text-(--color-fg)">
                   {arg.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[--color-fg-muted]">
+                <p className="mt-2 text-sm leading-relaxed text-(--color-fg-muted)">
                   {arg.desc}
                 </p>
               </div>
@@ -222,22 +222,22 @@ export default async function PillarPage({
       {/* Process */}
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+          <h2 className="text-center text-3xl font-semibold tracking-tight text-(--color-fg) md:text-4xl">
             {content.process.title}
           </h2>
           <ol className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
             {content.process.steps.map((step, idx) => (
               <li
                 key={step.title}
-                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-xs)] md:p-7"
+                className="card-hover rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 shadow-[var(--shadow-xs)] md:p-7"
               >
-                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
+                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-(--color-brand-electric)">
                   0{idx + 1}
                 </span>
-                <h3 className="mt-3 text-lg font-semibold text-[--color-fg]">
+                <h3 className="mt-3 text-lg font-semibold text-(--color-fg)">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[--color-fg-muted]">
+                <p className="mt-2 text-sm leading-relaxed text-(--color-fg-muted)">
                   {step.desc}
                 </p>
               </li>
@@ -249,21 +249,21 @@ export default async function PillarPage({
       {/* FAQ */}
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+          <h2 className="text-center text-3xl font-semibold tracking-tight text-(--color-fg) md:text-4xl">
             {content.faq.title}
           </h2>
-          <div className="mt-12 divide-y divide-[--color-border] overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface] shadow-[var(--shadow-sm)]">
+          <div className="mt-12 divide-y divide-(--color-border) overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-bg-surface) shadow-[var(--shadow-sm)]">
             {content.faq.items.map((item, i) => (
               <details
                 key={i}
-                className="group transition-colors duration-200 hover:bg-[--color-bg-tint] open:bg-[--color-bg-tint]"
+                className="group transition-colors duration-200 hover:bg-(--color-bg-tint) open:bg-(--color-bg-tint)"
               >
                 <summary className="flex cursor-pointer items-start justify-between gap-4 p-5 transition-colors md:p-6 [&::-webkit-details-marker]:hidden">
-                  <span className="text-base font-semibold text-[--color-fg]">
+                  <span className="text-base font-semibold text-(--color-fg)">
                     {item.q}
                   </span>
                   <span
-                    className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-[--color-border-strong] text-[--color-fg-subtle] transition-all duration-200 group-hover:border-[--color-brand-electric] group-hover:text-[--color-brand-electric] group-open:rotate-45 group-open:border-[--color-brand-electric] group-open:bg-[--color-brand-electric] group-open:text-white"
+                    className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-(--color-border-strong) text-(--color-fg-subtle) transition-all duration-200 group-hover:border-(--color-brand-electric) group-hover:text-(--color-brand-electric) group-open:rotate-45 group-open:border-(--color-brand-electric) group-open:bg-(--color-brand-electric) group-open:text-white"
                     aria-hidden
                   >
                     <svg className="size-3" viewBox="0 0 20 20" fill="none">
@@ -271,7 +271,7 @@ export default async function PillarPage({
                     </svg>
                   </span>
                 </summary>
-                <div className="px-5 pb-5 text-sm leading-relaxed text-[--color-fg-muted] md:px-6 md:pb-6">
+                <div className="px-5 pb-5 text-sm leading-relaxed text-(--color-fg-muted) md:px-6 md:pb-6">
                   {item.a}
                 </div>
               </details>
@@ -283,7 +283,7 @@ export default async function PillarPage({
       {/* CTA */}
       <section className="relative pb-24 pt-12 md:pb-32">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-2xl border border-[--color-brand-navy] bg-[--color-brand-navy] px-6 py-16 text-center md:px-12 md:py-20">
+          <div className="relative overflow-hidden rounded-2xl border border-(--color-brand-navy) bg-(--color-brand-navy) px-6 py-16 text-center md:px-12 md:py-20">
             <h2 className="mx-auto max-w-3xl text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl">
               {content.ctaTitle}
             </h2>
