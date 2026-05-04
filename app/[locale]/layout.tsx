@@ -9,6 +9,7 @@ import { StickyCta } from "@/components/sticky-cta";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { RouteProgress } from "@/components/route-progress";
 import { ToastProvider } from "@/components/toast";
+import { Plausible } from "@/components/plausible";
 import { env } from "@/lib/utils";
 import { organizationJsonLd } from "@/lib/schema";
 
@@ -75,6 +76,7 @@ export default async function LocaleLayout({
           __html: `document.documentElement.lang=${JSON.stringify(locale)};`,
         }}
       />
+      <Plausible />
       <ToastProvider>
         <RouteProgress />
         <div className="relative flex min-h-dvh flex-col">

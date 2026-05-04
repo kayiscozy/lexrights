@@ -78,11 +78,11 @@ export default async function PrivacyPage({
             </p>
           </Section>
 
-          <Section heading={isDe ? "4. Hosting (Vercel, Cloudflare)" : "4. Hosting (Vercel, Cloudflare)"}>
+          <Section heading={isDe ? "4. Hosting (Cloudflare Workers)" : "4. Hosting (Cloudflare Workers)"}>
             <p>
               {isDe
-                ? "Diese Website wird bei Vercel Inc. gehostet (Region: Frankfurt, Deutschland). DNS und CDN werden über Cloudflare bereitgestellt. Mit beiden Anbietern besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO. Server­standort EU. Rechts­grundlage: Art. 6 Abs. 1 lit. f DSGVO (effizienter Betrieb der Website)."
-                : "This website is hosted by Vercel Inc. (region: Frankfurt, Germany). DNS and CDN are provided by Cloudflare. Data processing agreements (Art. 28 GDPR) are in place with both providers. Server location: EU. Legal basis: Art. 6(1)(f) GDPR (efficient website operation)."}
+                ? "Diese Website wird auf Cloudflare Workers ausgeführt (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Die Edge-Auslieferung erfolgt über das globale Cloudflare-Netz; bei Anfragen aus Europa werden die Inhalte aus EU-Edge-Standorten ausgeliefert. Mit Cloudflare besteht ein Auftrags­verarbeitungs­vertrag gemäß Art. 28 DSGVO inklusive EU-Standardvertragsklauseln (SCC) und ergänzender Maßnahmen nach Schrems II. Cloudflare ist zudem unter dem EU-U.S. Data Privacy Framework zertifiziert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (effizienter und sicherer Betrieb der Website)."
+                : "This website runs on Cloudflare Workers (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Edge delivery uses Cloudflare's global network; requests from Europe are served from EU edge locations. A data processing agreement under Art. 28 GDPR is in place, including EU Standard Contractual Clauses (SCCs) and supplementary measures per Schrems II. Cloudflare is additionally certified under the EU-U.S. Data Privacy Framework. Legal basis: Art. 6(1)(f) GDPR (efficient and secure website operation)."}
             </p>
           </Section>
 
