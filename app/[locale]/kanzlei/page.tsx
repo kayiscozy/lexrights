@@ -97,11 +97,11 @@ export default async function FirmPage({
               <article
                 key={m.id}
                 id={m.id}
-                className="card-hover group relative overflow-hidden rounded-3xl border border-[--color-border] bg-[--color-bg-surface] p-6 md:p-8"
+                className="card-hover group relative overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-xs)] md:p-8"
               >
                 {/* Avatar Placeholder */}
                 <div
-                  className="mb-6 flex size-20 items-center justify-center rounded-2xl border border-[--color-border-brand] bg-gradient-to-br from-[--color-brand-electric]/20 to-[--color-brand-glow]/10 text-2xl font-semibold tracking-tight text-[--color-fg]"
+                  className="mb-6 flex size-20 items-center justify-center rounded-2xl border border-[--color-brand-electric]/40 bg-[--color-brand-electric]/[0.08] text-2xl font-semibold tracking-tight text-[--color-brand-navy]"
                   aria-hidden
                 >
                   {m.name

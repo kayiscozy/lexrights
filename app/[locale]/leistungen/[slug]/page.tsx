@@ -171,7 +171,7 @@ export default async function PillarPage({
             {content.problems.items.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-3 rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-4 text-sm text-[--color-fg-muted] transition-colors duration-200 hover:border-[--color-error]/40 hover:bg-[--color-error]/[0.03]"
+                className="flex items-start gap-3 rounded-xl border border-[--color-border] bg-[--color-bg-surface] p-4 text-sm text-[--color-fg-muted] shadow-[var(--shadow-xs)] transition-colors duration-200 hover:border-[--color-error]/40 hover:bg-[--color-error]/[0.04]"
               >
                 <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[--color-error]" aria-hidden />
                 <span>{item}</span>
@@ -202,7 +202,7 @@ export default async function PillarPage({
             {content.legal.arguments.map((arg) => (
               <div
                 key={arg.paragraph}
-                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6"
+                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-xs)]"
               >
                 <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
                   {arg.paragraph}
@@ -229,7 +229,7 @@ export default async function PillarPage({
             {content.process.steps.map((step, idx) => (
               <li
                 key={step.title}
-                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 md:p-7"
+                className="card-hover rounded-2xl border border-[--color-border] bg-[--color-bg-surface] p-6 shadow-[var(--shadow-xs)] md:p-7"
               >
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[--color-brand-electric]">
                   0{idx + 1}
@@ -252,18 +252,18 @@ export default async function PillarPage({
           <h2 className="text-center text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
             {content.faq.title}
           </h2>
-          <div className="mt-12 divide-y divide-[--color-fg]/10 overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface]">
+          <div className="mt-12 divide-y divide-[--color-border] overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-surface] shadow-[var(--shadow-sm)]">
             {content.faq.items.map((item, i) => (
               <details
                 key={i}
-                className="group transition-colors duration-200 open:bg-[--color-brand-electric]/[0.04] hover:bg-[--color-brand-electric]/[0.03]"
+                className="group transition-colors duration-200 hover:bg-[--color-bg-tint] open:bg-[--color-bg-tint]"
               >
                 <summary className="flex cursor-pointer items-start justify-between gap-4 p-5 transition-colors md:p-6 [&::-webkit-details-marker]:hidden">
-                  <span className="text-base font-medium text-[--color-fg] group-hover:text-[--color-fg] group-open:text-[--color-fg]">
+                  <span className="text-base font-semibold text-[--color-fg]">
                     {item.q}
                   </span>
                   <span
-                    className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-[--color-border] text-[--color-fg-subtle] transition-all duration-200 group-hover:border-[--color-brand-electric]/55 group-hover:bg-[--color-brand-electric]/[0.08] group-hover:text-[--color-brand-electric] group-open:rotate-45 group-open:border-[--color-brand-electric] group-open:bg-[--color-brand-electric]/[0.10] group-open:text-[--color-brand-electric]"
+                    className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-[--color-border-strong] text-[--color-fg-subtle] transition-all duration-200 group-hover:border-[--color-brand-electric] group-hover:text-[--color-brand-electric] group-open:rotate-45 group-open:border-[--color-brand-electric] group-open:bg-[--color-brand-electric] group-open:text-white"
                     aria-hidden
                   >
                     <svg className="size-3" viewBox="0 0 20 20" fill="none">
