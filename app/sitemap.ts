@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { platforms } from "@/lib/platforms";
+import { articles } from "@/lib/articles";
 import { env } from "@/lib/utils";
 
 const BASE = env.siteUrl.replace(/\/$/, "");
@@ -62,6 +63,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.85,
+      alternates: { languages: { de: `${BASE}${dePath}`, en: `${BASE}${enPath}` } },
+    });
+  }
+
+  for (const a of articles) {
+    const dePath = `/de/wissen/${a.slug.de}`;
+    const enPath = `/en/insights/${a.slug.en}`;
+    const articleDate = new Date(a.date);
+    items.push({
+      url: `${BASE}${dePath}`,
+      lastModified: articleDate,
+      changeFrequency: "yearly",
+      priority: 0.7,
+      alternates: { languages: { de: `${BASE}${dePath}`, en: `${BASE}${enPath}` } },
+    });
+    items.push({
+      url: `${BASE}${enPath}`,
+      lastModified: articleDate,
+      changeFrequency: "yearly",
+      priority: 0.7,
       alternates: { languages: { de: `${BASE}${dePath}`, en: `${BASE}${enPath}` } },
     });
   }

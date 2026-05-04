@@ -6,6 +6,7 @@ import {
   type ConsultationInput,
 } from "./consultation-schema";
 import { sendConsultationEmail } from "./email";
+import { rateLimit } from "./rate-limit";
 
 export type ActionState = {
   status: "idle" | "success" | "error";
@@ -17,6 +18,15 @@ export async function submitConsultation(
   _prev: ActionState,
   formData: FormData,
 ): Promise<ActionState> {
+  const limit = await rateLimit({
+    key: "consultation",
+    limit: 3,
+    windowMs: 10 * 60 * 1000,
+  });
+  if (!limit.ok) {
+    return { status: "error", message: "rate_limited" };
+  }
+
   const raw = Object.fromEntries(formData.entries());
 
   const parsed = consultationSchema.safeParse(raw);
@@ -54,6 +64,15 @@ export async function submitHeroQuick(
   _prev: ActionState,
   formData: FormData,
 ): Promise<ActionState> {
+  const limit = await rateLimit({
+    key: "hero",
+    limit: 5,
+    windowMs: 10 * 60 * 1000,
+  });
+  if (!limit.ok) {
+    return { status: "error", message: "rate_limited" };
+  }
+
   const raw = Object.fromEntries(formData.entries());
   const parsed = heroQuickSchema.safeParse(raw);
 

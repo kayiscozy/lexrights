@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { Mail, Globe, GraduationCap } from "lucide-react";
 import { team, attorneyJsonLd } from "@/lib/schema";
 import { PageHero } from "@/components/page-hero";
@@ -92,16 +93,14 @@ export default async function FirmPage({
                 id={m.id}
                 className="card-hover group relative overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 shadow-[var(--shadow-xs)] md:p-8"
               >
-                {/* Avatar Placeholder */}
-                <div
-                  className="mb-6 flex size-20 items-center justify-center rounded-2xl border border-(--color-brand-electric)/40 bg-(--color-brand-electric)/8 text-2xl font-semibold tracking-tight text-(--color-brand-navy)"
-                  aria-hidden
-                >
-                  {m.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .filter((c, i, arr) => i === 0 || i === arr.length - 1)
-                    .join("")}
+                <div className="relative mb-6 size-24 overflow-hidden rounded-2xl ring-2 ring-(--color-brand-electric)/30 ring-offset-2 ring-offset-(--color-bg-surface)">
+                  <Image
+                    src={m.image}
+                    alt={m.name}
+                    fill
+                    sizes="96px"
+                    className="object-cover"
+                  />
                 </div>
 
                 <h3 className="text-2xl font-semibold tracking-tight text-(--color-fg)">

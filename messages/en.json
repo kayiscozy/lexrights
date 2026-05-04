@@ -37,6 +37,7 @@
       "submitting": "Sending…",
       "success": "Thank you - we'll respond within 24 hours.",
       "error": "Something went wrong. Please try again.",
+      "rateLimit": "Please wait a moment - you've sent multiple requests.",
       "consent": "By submitting you accept our <privacyLink>privacy policy</privacyLink>."
     },
     "trust": {
@@ -352,6 +353,10 @@
       "title": "Something went wrong.",
       "sub": "Please try again or contact us directly by email.",
       "retry": "Try again"
+    },
+    "rateLimit": {
+      "title": "Please wait a moment.",
+      "sub": "You've sent multiple requests recently. Please try again in a few minutes or email us directly:"
     },
     "validation": {
       "min2": "Please enter at least 2 characters.",

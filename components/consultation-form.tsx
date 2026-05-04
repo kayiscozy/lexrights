@@ -263,9 +263,15 @@ export function ConsultationForm({
         >
           <AlertCircle className="size-4 mt-0.5 shrink-0" aria-hidden />
           <div>
-            <p className="font-medium">{t("error.title")}</p>
+            <p className="font-medium">
+              {result.message === "rate_limited"
+                ? t("rateLimit.title")
+                : t("error.title")}
+            </p>
             <p className="mt-1 text-(--color-fg-muted)">
-              {t("error.sub")}{" "}
+              {result.message === "rate_limited"
+                ? t("rateLimit.sub")
+                : t("error.sub")}{" "}
               <a
                 href={`mailto:${env.email}`}
                 className="text-(--color-brand-electric) underline-offset-2 hover:underline"

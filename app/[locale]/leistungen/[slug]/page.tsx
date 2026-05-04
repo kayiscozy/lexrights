@@ -15,6 +15,7 @@ import {
   type PlatformCategory,
 } from "@/lib/platforms";
 import { getPillarContent } from "@/lib/platform-content";
+import { cases } from "@/lib/cases";
 import { PageHero } from "@/components/page-hero";
 import type { PageImageKey } from "@/lib/page-images";
 import type { Locale } from "@/i18n/routing";
@@ -89,7 +90,18 @@ export default async function PillarPage({
 
   const content = getPillarContent(platform.name, locale);
   const tNav = await getTranslations({ locale, namespace: "nav" });
-  const tCommon = await getTranslations({ locale });
+
+  const relatedCases = cases
+    .filter((c) => c.platform === platform.name)
+    .slice(0, 3);
+  const relatedPlatforms = platforms
+    .filter((p) => p.category === platform.category && p.name !== platform.name)
+    .slice(0, 4);
+  const valueFormatter = new Intl.NumberFormat(locale === "de" ? "de-DE" : "en-EU", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
+  });
 
   if (!content) {
     return (
@@ -290,6 +302,97 @@ export default async function PillarPage({
           </div>
         </div>
       </section>
+
+      {/* Related Cases */}
+      {relatedCases.length > 0 && (
+        <section className="relative py-20 md:py-24">
+          <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
+                {locale === "de"
+                  ? "Erfolgreiche Fälle zu dieser Plattform"
+                  : "Successful cases on this platform"}
+              </h2>
+              <Link
+                href="/faelle"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-(--color-brand-electric) hover:underline"
+              >
+                {locale === "de" ? "Alle Fälle" : "All cases"}
+                <ArrowRight className="size-3.5" aria-hidden />
+              </Link>
+            </div>
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {relatedCases.map((c) => (
+                <article
+                  key={c.id}
+                  className="card-hover rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-6 shadow-[var(--shadow-xs)]"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-mono text-xs uppercase tracking-wider text-(--color-brand-electric)">
+                      {c.year}
+                    </span>
+                    <span className="text-xs text-(--color-fg-subtle)">
+                      {valueFormatter.format(c.value)} ·{" "}
+                      {c.durationDays} {locale === "de" ? "Tage" : "days"}
+                    </span>
+                  </div>
+                  <h3 className="mt-3 text-base font-semibold leading-snug text-(--color-fg)">
+                    {c.headline[locale]}
+                  </h3>
+                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-(--color-fg-muted)">
+                    {c.outcomeText[locale]}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {c.legalBasis.slice(0, 3).map((b) => (
+                      <span
+                        key={b}
+                        className="rounded-md border border-(--color-border) bg-(--color-bg-elevated)/50 px-2 py-0.5 text-xs text-(--color-fg-muted)"
+                      >
+                        {b}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Platforms */}
+      {relatedPlatforms.length > 0 && (
+        <section className="relative py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+            <h2 className="text-2xl font-semibold tracking-tight text-(--color-fg) md:text-3xl">
+              {locale === "de"
+                ? `Weitere ${platformCategories[platform.category][locale]}-Plattformen`
+                : `More ${platformCategories[platform.category][locale]} platforms`}
+            </h2>
+            <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+              {relatedPlatforms.map((p) => (
+                <Link
+                  key={p.name}
+                  href={`/leistungen/${p.slug[locale]}` as never}
+                  className="card-hover group rounded-2xl border border-(--color-border) bg-(--color-bg-surface) p-5 shadow-[var(--shadow-xs)]"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="text-sm font-semibold text-(--color-fg)">
+                      {p.name}
+                    </h3>
+                    <ArrowUpRight
+                      className="size-4 shrink-0 text-(--color-fg-subtle) transition-colors group-hover:text-(--color-brand-electric)"
+                      aria-hidden
+                    />
+                  </div>
+                  <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-(--color-fg-muted)">
+                    {p.shortDesc[locale]}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="relative pb-24 pt-12 md:pb-32">

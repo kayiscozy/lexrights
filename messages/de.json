@@ -37,6 +37,7 @@
       "submitting": "Wird gesendet…",
       "success": "Vielen Dank - wir melden uns binnen 24 Stunden.",
       "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+      "rateLimit": "Bitte einen Moment warten - Sie haben mehrere Anfragen abgesendet.",
       "consent": "Mit dem Absenden stimmen Sie unserer <privacyLink>Datenschutzerklärung</privacyLink> zu."
     },
     "trust": {
@@ -352,6 +353,10 @@
       "title": "Etwas ist schiefgelaufen.",
       "sub": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.",
       "retry": "Erneut versuchen"
+    },
+    "rateLimit": {
+      "title": "Bitte einen Moment warten.",
+      "sub": "Sie haben zuletzt mehrere Anfragen abgesendet. Bitte versuchen Sie es in einigen Minuten erneut oder schreiben Sie uns direkt:"
     },
     "validation": {
       "min2": "Bitte mindestens 2 Zeichen.",

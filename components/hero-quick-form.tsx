@@ -41,7 +41,8 @@ export function HeroQuickForm() {
     } else if (state.status === "error") {
       toast.show({
         variant: "error",
-        title: t("error"),
+        title:
+          state.message === "rate_limited" ? t("rateLimit") : t("error"),
         duration: 6000,
       });
     }

@@ -19,6 +19,7 @@ export const team = [
     },
     languages: ["Deutsch", "English", "Français"],
     email: "n.hartmann@lexrights.com",
+    image: "/images/lawyer/nh.jpg",
   },
   {
     id: "vogel",
@@ -38,6 +39,7 @@ export const team = [
     },
     languages: ["Deutsch", "English", "Nederlands", "Français"],
     email: "s.vogel@lexrights.com",
+    image: "/images/lawyer/sv.jpg",
   },
 ] as const;
 
@@ -104,6 +106,7 @@ export function attorneyJsonLd(member: TeamMember, locale: "de" | "en") {
     "@id": `${env.siteUrl}/${locale}/kanzlei#${member.id}`,
     name: member.name,
     jobTitle: member.role[locale],
+    image: `${env.siteUrl}${member.image}`,
     description:
       locale === "de"
         ? `${member.title.de} mit Schwerpunkt ${member.focus.de.join(", ")}.`

@@ -14,7 +14,13 @@ import {
   type CaseCategory,
   type CaseStudy,
 } from "@/lib/cases";
+import { platforms } from "@/lib/platforms";
 import type { Locale } from "@/i18n/routing";
+
+function platformSlug(name: string, locale: Locale): string | null {
+  const p = platforms.find((pl) => pl.name === name);
+  return p ? p.slug[locale] : null;
+}
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight, Calendar, Clock, Euro } from "lucide-react";
 
@@ -215,9 +221,19 @@ function CaseCard({
 
       {/* Platform + client */}
       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--color-fg-muted)">
-        <span>
-          <strong className="text-(--color-fg)">{c.platform}</strong>
-        </span>
+        {(() => {
+          const slug = platformSlug(c.platform, locale);
+          return slug ? (
+            <Link
+              href={`/leistungen/${slug}` as never}
+              className="font-semibold text-(--color-fg) transition-colors hover:text-(--color-brand-electric)"
+            >
+              {c.platform}
+            </Link>
+          ) : (
+            <strong className="text-(--color-fg)">{c.platform}</strong>
+          );
+        })()}
         <span>·</span>
         <span>{c.client[locale]}</span>
       </div>
