@@ -41,7 +41,7 @@ export function StickyCta() {
             <a
               href={`tel:${env.phone}`}
               aria-label={env.phoneDisplay}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.08] hover:text-[--color-brand-electric] hover:shadow-[0_0_0_3px_rgba(4,58,253,0.10)]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[--color-fg]/20 bg-[--color-fg]/[0.05] text-[--color-fg] transition-all duration-200 active:scale-95 hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.20] hover:text-white hover:shadow-[0_0_0_3px_rgba(4,58,253,0.20)]"
             >
               <Phone className="size-4" aria-hidden />
             </a>

@@ -404,8 +404,8 @@ function Step1({ form, update, errors, touched, markTouched }: StepProps) {
                   className={cn(
                     "group relative cursor-pointer rounded-lg border px-4 py-3 pr-9 text-sm font-medium transition-all duration-200 active:scale-[0.99]",
                     selected
-                      ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
-                      : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
+                      ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.18] text-white shadow-[0_0_0_3px_rgba(4,58,253,0.28),0_10px_32px_-10px_rgba(4,58,253,0.7)]"
+                      : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.10] hover:text-white",
                   )}
                 >
                   <input
@@ -495,8 +495,8 @@ function Step2({ form, update, errors, touched, markTouched }: StepProps) {
                 className={cn(
                   "cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-medium transition-all duration-200 active:scale-[0.97]",
                   form.timing === opt
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
-                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
+                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.18] text-white shadow-[0_0_0_3px_rgba(4,58,253,0.28),0_10px_32px_-10px_rgba(4,58,253,0.7)]"
+                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.10] hover:text-white",
                 )}
               >
                 <input
@@ -541,8 +541,8 @@ function Step3({ form, update, errors, touched, markTouched }: StepProps) {
                 className={cn(
                   "flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3.5 text-sm font-medium transition-all duration-200 active:scale-[0.99]",
                   selected
-                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.10] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_8px_24px_-10px_rgba(4,58,253,0.55)]"
-                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.05] hover:text-[--color-fg]",
+                    ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.18] text-white shadow-[0_0_0_3px_rgba(4,58,253,0.28),0_10px_32px_-10px_rgba(4,58,253,0.7)]"
+                    : "border-[--color-fg]/15 bg-[--color-fg]/[0.02] text-[--color-fg-muted] hover:border-[--color-brand-electric]/40 hover:bg-[--color-brand-electric]/[0.10] hover:text-white",
                 )}
               >
                 <input

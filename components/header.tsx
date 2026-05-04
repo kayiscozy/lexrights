@@ -82,7 +82,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
 
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-0.5 rounded-full border border-[--color-fg]/10 bg-[--color-bg-surface]/40 p-1 backdrop-blur-sm lg:flex"
+            className="hidden items-center gap-0.5 rounded-full border border-[--color-fg]/20 bg-[--color-bg-surface]/60 p-1 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] backdrop-blur-md lg:flex"
           >
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
@@ -91,16 +91,16 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200 active:scale-95",
+                    "relative rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-200 active:scale-95",
                     active
-                      ? "text-[--color-fg]"
-                      : "text-[--color-fg-muted] hover:bg-[--color-brand-electric]/[0.12] hover:text-[--color-fg]",
+                      ? "text-white"
+                      : "text-[--color-fg-muted] hover:bg-[--color-brand-electric]/[0.18] hover:text-white",
                   )}
                 >
                   {active && (
                     <motion.span
                       layoutId="active-nav-bg"
-                      className="absolute inset-0 -z-10 rounded-full border border-[--color-brand-electric]/55 bg-[--color-brand-electric]/[0.16] shadow-[0_0_16px_-2px_rgba(4,58,253,0.45),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
+                      className="absolute inset-0 -z-10 rounded-full border border-[--color-brand-electric] bg-[--color-brand-electric] shadow-[0_0_0_1px_rgba(4,58,253,0.5),0_8px_24px_-6px_rgba(4,58,253,0.7),inset_0_1px_0_0_rgba(255,255,255,0.18)]"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -124,10 +124,10 @@ export function Header({ locale: _locale }: { locale: Locale }) {
               type="button"
               onClick={() => setOpen((v) => !v)}
               className={cn(
-                "relative inline-flex size-10 items-center justify-center rounded-lg border text-[--color-fg] transition-all duration-200 active:scale-95 lg:hidden",
+                "relative inline-flex size-10 items-center justify-center rounded-lg border transition-all duration-200 active:scale-95 lg:hidden",
                 open
-                  ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.16] text-[--color-brand-electric] shadow-[0_0_0_3px_rgba(4,58,253,0.18)]"
-                  : "border-[--color-fg]/15 bg-[--color-fg]/[0.03] hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.10] hover:text-[--color-brand-electric] hover:shadow-[0_0_0_3px_rgba(4,58,253,0.12)]",
+                  ? "border-[--color-brand-electric] bg-[--color-brand-electric] text-white shadow-[0_0_0_2px_rgba(4,58,253,0.4),0_8px_20px_-4px_rgba(4,58,253,0.6)]"
+                  : "border-[--color-fg]/20 bg-[--color-fg]/[0.05] text-[--color-fg] hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.20] hover:text-white hover:shadow-[0_0_0_3px_rgba(4,58,253,0.18)]",
               )}
               aria-expanded={open}
               aria-label={open ? t("close") : t("menu")}
@@ -194,15 +194,15 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                     <Link
                       href={link.href}
                       className={cn(
-                        "flex items-center justify-between rounded-xl border px-4 py-3.5 text-lg font-medium transition-all duration-200 active:scale-[0.98]",
+                        "flex items-center justify-between rounded-xl border px-4 py-3.5 text-lg font-semibold transition-all duration-200 active:scale-[0.98]",
                         active
-                          ? "border-[--color-brand-electric] bg-[--color-brand-electric]/[0.16] text-[--color-fg] shadow-[0_0_0_3px_rgba(4,58,253,0.18),0_0_28px_-6px_rgba(4,58,253,0.55)]"
-                          : "border-[--color-fg]/10 bg-[--color-fg]/[0.02] text-[--color-fg]/85 hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.10] hover:text-[--color-fg]",
+                          ? "border-[--color-brand-electric] bg-[--color-brand-electric] text-white shadow-[0_0_0_2px_rgba(4,58,253,0.5),0_10px_28px_-6px_rgba(4,58,253,0.7),inset_0_1px_0_0_rgba(255,255,255,0.18)]"
+                          : "border-[--color-fg]/15 bg-[--color-fg]/[0.04] text-[--color-fg] hover:border-[--color-brand-electric] hover:bg-[--color-brand-electric]/[0.18] hover:text-white hover:shadow-[0_0_0_2px_rgba(4,58,253,0.18)]",
                       )}
                     >
                       <span>{t(link.labelKey)}</span>
                       {active && (
-                        <span className="size-2 rounded-full bg-[--color-brand-electric] shadow-[0_0_10px_rgba(4,58,253,0.9)]" aria-hidden />
+                        <span className="size-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" aria-hidden />
                       )}
                     </Link>
                   </motion.div>
