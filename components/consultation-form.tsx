@@ -295,7 +295,7 @@ export function ConsultationForm({
             <ArrowRight className="size-4" />
           </Button>
         ) : (
-          <Button type="submit" loading={isPending}>
+          <Button type="submit" variant="brand" loading={isPending}>
             {isPending ? t("steps.submitting") : t("steps.submit")}
             {!isPending && <ArrowRight className="size-4" />}
           </Button>

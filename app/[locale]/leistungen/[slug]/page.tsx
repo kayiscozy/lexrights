@@ -97,7 +97,7 @@ export default async function PillarPage({
               ? "Detailinhalte zu dieser Plattform sind in Vorbereitung. Für eine kostenlose Ersteinschätzung kontaktieren Sie uns gerne direkt."
               : "Detailed content for this platform is in preparation. For a free first assessment, contact us directly."}
           </p>
-          <Button asChild size="lg" className="mt-8">
+          <Button asChild variant="brand" size="lg" className="mt-8">
             <Link href="/erstberatung">
               {tNav("consultationCta")}
               <ArrowRight className="size-4" />
@@ -140,7 +140,7 @@ export default async function PillarPage({
             {content.hero.sub}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg">
+            <Button asChild variant="brand" size="lg">
               <Link href="/erstberatung">
                 {tNav("consultationCta")}
                 <ArrowRight className="size-4" />

@@ -121,7 +121,7 @@ export function CasesList({ locale }: { locale: Locale }) {
             {t("disclaimer")}
           </p>
           <div className="mt-12 text-center">
-            <Button asChild size="lg">
+            <Button asChild variant="brand" size="lg">
               <Link href="/erstberatung">
                 {locale === "de"
                   ? "Kostenlose Ersteinschätzung"

@@ -113,7 +113,7 @@ export function HeroQuickForm() {
           />
         </div>
 
-        <Button type="submit" size="lg" loading={pending} className="h-12 sm:w-auto">
+        <Button type="submit" variant="brand" size="lg" loading={pending} className="h-12 sm:w-auto">
           {pending ? t("submitting") : t("submit")}
           {!pending && <ArrowRight className="size-4" />}
         </Button>

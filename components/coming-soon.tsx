@@ -60,7 +60,7 @@ export function ComingSoon({ namespace }: ComingSoonProps) {
             <p className="mx-auto mt-4 max-w-lg text-pretty text-(--color-fg-muted)">
               {t("sub")}
             </p>
-            <Button asChild size="lg" className="mt-10">
+            <Button asChild variant="brand" size="lg" className="mt-10">
               <Link href="/erstberatung">
                 {t("cta")}
                 <ArrowRight className="size-4" />

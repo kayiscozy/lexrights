@@ -220,7 +220,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                 className="mt-6 flex flex-col gap-3 border-t border-(--color-border) pt-6"
               >
                 <LanguageToggle />
-                <Button asChild variant="primary" size="lg" className="w-full">
+                <Button asChild variant="brand" size="lg" className="w-full">
                   <Link href="/erstberatung">{t("consultationCta")}</Link>
                 </Button>
               </motion.div>

@@ -67,7 +67,7 @@ export default async function ContactPage({
             {tHero("sub")}
           </p>
           <div className="mt-10">
-            <Button asChild size="lg">
+            <Button asChild variant="brand" size="lg">
               <Link href="/erstberatung">
                 {tNav("consultationCta")}
                 <ArrowRight className="size-4" />
