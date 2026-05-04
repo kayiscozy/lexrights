@@ -1,0 +1,180 @@
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Mail, Globe, GraduationCap } from "lucide-react";
+import { team, attorneyJsonLd } from "@/lib/schema";
+import type { Locale } from "@/i18n/routing";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "firm.meta" });
+  return { title: t("title"), description: t("description") };
+}
+
+export default async function FirmPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as Locale;
+  setRequestLocale(locale);
+
+  const tHero = await getTranslations({ locale, namespace: "firm.hero" });
+  const tValues = await getTranslations({ locale, namespace: "firm.values" });
+  const tTeam = await getTranslations({ locale, namespace: "firm.team" });
+  const values = tValues.raw("items") as Array<{
+    title: string;
+    desc: string;
+  }>;
+
+  return (
+    <>
+      {team.map((m) => (
+        <script
+          key={m.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(attorneyJsonLd(m, locale)),
+          }}
+        />
+      ))}
+
+      <section className="relative pb-20 pt-32 md:pb-24 md:pt-40">
+        <div className="aurora-bg absolute inset-x-0 top-0 -z-10 h-[600px]" aria-hidden />
+        <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
+          <p className="font-mono text-xs uppercase tracking-wider text-[--color-brand-electric]">
+            {tHero("eyebrow")}
+          </p>
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-[--color-fg] md:text-5xl lg:text-6xl">
+            {tHero("title")}
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-[--color-fg-muted] md:text-lg">
+            {tHero("sub")}
+          </p>
+        </div>
+      </section>
+
+      <section className="relative py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+            {tValues("title")}
+          </h2>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {values.map((v) => (
+              <div
+                key={v.title}
+                className="rounded-2xl border border-[--color-border] bg-[--color-bg-surface]/40 p-6"
+              >
+                <h3 className="text-lg font-semibold text-[--color-fg]">
+                  {v.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[--color-fg-muted]">
+                  {v.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold tracking-tight text-[--color-fg] md:text-4xl">
+              {tTeam("title")}
+            </h2>
+            <p className="mt-4 text-pretty text-base text-[--color-fg-muted] md:text-lg">
+              {tTeam("subtitle")}
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
+            {team.map((m) => (
+              <article
+                key={m.id}
+                id={m.id}
+                className="group relative overflow-hidden rounded-3xl border border-[--color-border] bg-[--color-bg-surface]/50 p-6 transition-colors hover:border-[--color-border-brand] md:p-8"
+              >
+                {/* Avatar Placeholder */}
+                <div
+                  className="mb-6 flex size-20 items-center justify-center rounded-2xl border border-[--color-border-brand] bg-gradient-to-br from-[--color-brand-electric]/20 to-[--color-brand-glow]/10 text-2xl font-semibold tracking-tight text-[--color-fg]"
+                  aria-hidden
+                >
+                  {m.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .filter((c, i, arr) => i === 0 || i === arr.length - 1)
+                    .join("")}
+                </div>
+
+                <h3 className="text-2xl font-semibold tracking-tight text-[--color-fg]">
+                  {m.name}
+                </h3>
+                <p className="mt-1 text-sm font-medium text-[--color-brand-electric]">
+                  {m.role[locale]}
+                </p>
+                <p className="mt-3 text-sm text-[--color-fg-muted]">
+                  {m.title[locale]} · {m.bar} ·{" "}
+                  {locale === "de" ? "zugelassen seit" : "admitted"}{" "}
+                  {m.admittedSince}
+                </p>
+
+                <div className="mt-6 space-y-4">
+                  <div>
+                    <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                      <GraduationCap className="size-3.5" aria-hidden />
+                      {locale === "de" ? "Vita" : "Education"}
+                    </h4>
+                    <ul className="mt-2 space-y-1 text-sm text-[--color-fg-muted]">
+                      {m.education.map((e, i) => (
+                        <li key={i}>{e[locale]}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                      {locale === "de" ? "Schwerpunkte" : "Focus areas"}
+                    </h4>
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {m.focus[locale].map((f) => (
+                        <span
+                          key={f}
+                          className="rounded-md border border-[--color-border] bg-[--color-bg-elevated]/50 px-2 py-1 text-xs text-[--color-fg-muted]"
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle]">
+                      <Globe className="size-3.5" aria-hidden />
+                      {locale === "de" ? "Sprachen" : "Languages"}
+                    </h4>
+                    <p className="mt-2 text-sm text-[--color-fg-muted]">
+                      {m.languages.join(" · ")}
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href={`mailto:${m.email}`}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[--color-brand-electric] transition-colors hover:text-[--color-brand-glow]"
+                >
+                  <Mail className="size-4" aria-hidden />
+                  {m.email}
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

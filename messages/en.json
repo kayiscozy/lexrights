@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "title": "LexRights — Your digital rights. Enforced.",
+    "titleTemplate": "%s | LexRights",
+    "description": "Europe's specialized boutique law firm for digital rights. Platform suspensions, DSA complaints, GDPR damages, consumer protection for digital content. Free first assessment within 24h."
+  },
+  "nav": {
+    "services": "Services",
+    "firm": "Firm",
+    "insights": "Insights",
+    "cases": "Cases",
+    "contact": "Contact",
+    "consultation": "Consultation",
+    "consultationCta": "Free assessment",
+    "language": "Language",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "Europe's boutique for digital rights",
+    "headline": "Your digital rights. Enforced.",
+    "sub": "Suspended, frozen, removed? LexRights is Europe's specialized boutique law firm for digital rights. Free first assessment within 24 hours.",
+    "form": {
+      "issueLabel": "What's the issue?",
+      "issuePlaceholder": "Please select…",
+      "issues": {
+        "accountSuspended": "Account suspended",
+        "dataAccess": "GDPR data access",
+        "dataDamage": "GDPR damages claim",
+        "platformDispute": "Platform dispute",
+        "inGamePurchases": "In-game purchases / digital content",
+        "other": "Something else"
+      },
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "submit": "Get free assessment",
+      "submitting": "Sending…",
+      "success": "Thank you — we'll respond within 24 hours.",
+      "error": "Something went wrong. Please try again.",
+      "consent": "By submitting you accept our <privacyLink>privacy policy</privacyLink>."
+    },
+    "trust": {
+      "badge1": "DSA & GDPR specialists",
+      "badge2": "EU-wide",
+      "badge3": "Free first assessment"
+    }
+  },
+  "pillars": {
+    "title": "Four pillars under one roof",
+    "subtitle": "We combine platform specialization with European legal expertise. Each pillar with deep, specific content — never generic legal advice.",
+    "platforms": {
+      "title": "Platform suspensions",
+      "desc": "Account bans on gaming, social, marketplace, payment and crypto platforms. We enforce your reinstatement and damages claims."
+    },
+    "dsa": {
+      "title": "DSA & Digital Services",
+      "desc": "Complaints under Art. 17, 20, 21 DSA. Statement-of-Reasons analysis, internal complaint handling, referral to certified Out-of-Court Dispute Bodies."
+    },
+    "gdpr": {
+      "title": "GDPR & Privacy",
+      "desc": "Data access requests, non-material damages following ECJ C-300/21, right to be forgotten, prohibition of solely automated decisions under Art. 22 GDPR."
+    },
+    "consumer": {
+      "title": "Digital consumer rights",
+      "desc": "Consumer protection for digital content and services: in-game purchases, streaming, app stores, cloud — under § 327 et seq. BGB / Directive 2019/770."
+    }
+  },
+  "platforms": {
+    "title": "Specialized for every platform",
+    "subtitle": "Dedicated deep-content pages per platform — not one-size-fits-all. We know the ToS, anti-cheat systems, complaint paths and case law.",
+    "viewAll": "See all platforms"
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "Transparent, digital, EU-wide.",
+    "steps": [
+      {
+        "title": "Free first assessment",
+        "desc": "You describe your case. We assess the chances within 24 hours — at no cost, no commitment."
+      },
+      {
+        "title": "Strategy & fee agreement",
+        "desc": "On engagement you receive a clear strategic plan and transparent fee agreement — fixed fee where possible."
+      },
+      {
+        "title": "Out-of-court enforcement",
+        "desc": "GDPR data request, DSA complaint, formal letter to the platform with deadline. Often successful at this stage."
+      },
+      {
+        "title": "Escalation: ADR or court",
+        "desc": "If needed: referral to Out-of-Court Dispute Body (DSA Art. 21) or interim injunction at consumer's home venue."
+      }
+    ]
+  },
+  "trustSection": {
+    "title": "Why LexRights",
+    "items": [
+      {
+        "title": "Specialized, not generalist",
+        "desc": "We don't do generic IT law. Every platform, every legal topic with dedicated deep content and experience."
+      },
+      {
+        "title": "DSA-native",
+        "desc": "First firm with an explicit workflow for the Digital Services Act. Statement-of-Reasons analysis, ADR referral, damages under Art. 54 DSA."
+      },
+      {
+        "title": "EU-wide single source",
+        "desc": "Consumer's home venue under Brussels Ia. We represent you across DACH and the EU in German and English."
+      },
+      {
+        "title": "Digital-first",
+        "desc": "Video call, beA, online file. No office visits required. All mandates handled digitally."
+      },
+      {
+        "title": "Transparent",
+        "desc": "Clear strategy, clear fee agreement before engagement. Direct billing with legal expenses insurance possible."
+      },
+      {
+        "title": "Specialist team",
+        "desc": "PhD platform-law expert with Oxford background + privacy specialist with Tilburg LL.M. — complementary depth."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your account suspended? You have digital rights.",
+    "subtitle": "We assess your case in 24 hours — free and without commitment.",
+    "button": "Request free assessment"
+  },
+  "firm": {
+    "meta": {
+      "title": "Firm",
+      "description": "LexRights is a pan-European boutique law firm for digital rights. Specialized in platform suspensions, DSA, GDPR and consumer protection for digital content."
+    },
+    "hero": {
+      "eyebrow": "Firm",
+      "title": "A law firm for a new legal reality.",
+      "sub": "LexRights was founded with a clear mission: give consumers and businesses across Europe access to specialized legal protection in the digital space — at eye level with the major platforms."
+    },
+    "values": {
+      "title": "Our principles",
+      "items": [
+        {
+          "title": "Specialization",
+          "desc": "We don't do generic IT law. Our mandates focus consistently on digital rights: platforms, DSA, GDPR, digital content."
+        },
+        {
+          "title": "Depth over breadth",
+          "desc": "Dedicated deep analysis per platform and legal topic. We know the ToS, the anti-cheat systems, the complaint paths and the relevant case law."
+        },
+        {
+          "title": "EU-wide single source",
+          "desc": "Consumer's home venue under Brussels Ia. We represent you across DACH and the EU in German and English — no correspondent lawyer surcharge."
+        },
+        {
+          "title": "Digital-first",
+          "desc": "Video call, beA, secure online file. Mandates handled fully digitally. No office visits required."
+        },
+        {
+          "title": "Transparent",
+          "desc": "Clear fee agreement before engagement. Direct billing with legal-expenses insurance. No hidden costs."
+        }
+      ]
+    },
+    "team": {
+      "title": "Our team",
+      "subtitle": "Complementary specialization. Double depth in platform law and data protection."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Contact LexRights — boutique law firm for digital rights. Free first assessment within 24 hours."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your case.",
+      "sub": "Write to us, call, or book an appointment directly. We respond within 24 hours."
+    },
+    "channels": {
+      "phone": "Phone",
+      "phoneNote": "Mon–Fri 09:00–18:00 (CET)",
+      "email": "Email",
+      "emailNote": "Reply within 24 hours",
+      "whatsapp": "WhatsApp",
+      "whatsappNote": "Quick first contact",
+      "address": "Address",
+      "addressNote": "In-person meetings by appointment only"
+    },
+    "office": {
+      "title": "Digital-first practice",
+      "desc": "We handle mandates fully digitally. First consultations by video call or phone, client dashboard, beA for correspondence with platforms and courts. In-person meetings in Berlin by appointment only."
+    }
+  },
+  "wissen": {
+    "meta": {
+      "title": "Insights",
+      "description": "Current articles on the DSA, GDPR, platform suspensions and digital consumer rights. In-depth analysis, not boulevard law."
+    },
+    "hero": {
+      "eyebrow": "Insights",
+      "title": "Deep analysis of digital rights.",
+      "sub": "Background on the Digital Services Act, GDPR, BGH and ECJ rulings, platform suspensions — written for clients, not for search engines."
+    },
+    "comingSoon": {
+      "title": "Content in preparation",
+      "sub": "First articles will follow shortly after launch. Topics include 'DSA Art. 17 in practice', 'BGH procedural triad in platform suspensions', 'Vanguard HWID bans and GDPR Art. 22'.",
+      "cta": "Free first assessment"
+    }
+  },
+  "faelle": {
+    "meta": {
+      "title": "Cases",
+      "description": "Anonymized case studies from our practice. What worked — and why."
+    },
+    "hero": {
+      "eyebrow": "Cases",
+      "title": "Real cases. Real outcomes.",
+      "sub": "A selection of anonymized case studies from our practice. Values at stake, strategies, outcomes — transparently documented."
+    },
+    "comingSoon": {
+      "title": "Case studies in preparation",
+      "sub": "We publish case studies only after client consent. The first anonymized examples will follow shortly after launch.",
+      "cta": "Free first assessment"
+    }
+  },
+  "imprint": {
+    "meta": {
+      "title": "Legal Notice",
+      "description": "Legal notice / Impressum pursuant to § 5 TMG"
+    },
+    "title": "Legal Notice",
+    "providerHeading": "Provider pursuant to § 5 TMG",
+    "partnersHeading": "Authorized representative partners",
+    "contactHeading": "Contact",
+    "professionHeading": "Professional title and Bar Association",
+    "professionTitle": "Professional title",
+    "professionState": "Country of admission",
+    "professionStateValue": "Federal Republic of Germany",
+    "barAuthority": "Competent Bar Association",
+    "regulationsHeading": "Professional regulations",
+    "regulationsBody": "These regulations are available at www.brak.de.",
+    "insuranceHeading": "Professional liability insurance",
+    "insuranceSum": "Coverage",
+    "insuranceScope": "Geographic scope",
+    "insuranceScopeValue": "EU member states, United Kingdom, Switzerland, Norway, Iceland, Liechtenstein.",
+    "vsbgHeading": "Consumer dispute resolution",
+    "vsbgBody": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG). For consumer disputes arising from the mandate relationship, the Schlichtungsstelle der Rechtsanwaltschaft (Neue Grünstraße 17, 10179 Berlin, www.schlichtungsstelle-der-rechtsanwaltschaft.de) is competent.",
+    "odrHeading": "EU dispute resolution platform",
+    "odrBody": "The European Commission provides a platform for online dispute resolution:",
+    "liabilityHeading": "Liability for content",
+    "liabilityBody": "The contents of this website have been created with the greatest care. However, we cannot guarantee the accuracy, completeness or topicality of the content. As a service provider, we are responsible for our own content on these pages in accordance with general laws (§ 7 (1) TMG).",
+    "linksHeading": "Liability for links",
+    "linksBody": "Our offer contains links to external third-party websites whose content we have no control over. We therefore cannot accept any liability for these external contents.",
+    "copyrightHeading": "Copyright",
+    "copyrightBody": "The contents and works on these pages created by the site operators are subject to German copyright law. Reproduction, editing, distribution and any kind of use outside the limits of copyright require the written consent of the respective author or creator."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "Information on processing of personal data under GDPR"
+    },
+    "title": "Privacy Policy",
+    "intro": "This privacy policy informs you about the processing of personal data when you visit this website and use our contact channels, in accordance with the General Data Protection Regulation (GDPR) and the German Federal Data Protection Act (BDSG)."
+  },
+  "consultation": {
+    "meta": {
+      "title": "Free first assessment",
+      "description": "Tell us about your case. We assess your chances within 24 hours — free, no commitment."
+    },
+    "intro": {
+      "eyebrow": "Free first assessment",
+      "title": "Tell us about your case.",
+      "sub": "Four short steps. Reply within 24 hours — free and without commitment."
+    },
+    "steps": {
+      "step": "Step {current} of {total}",
+      "next": "Next",
+      "back": "Back",
+      "submit": "Send request",
+      "submitting": "Sending…"
+    },
+    "step1": {
+      "title": "What's the issue?",
+      "sub": "Choose the topic that best describes your case.",
+      "platformLabel": "Platform / Provider",
+      "platformPlaceholder": "e.g. Epic Games, TikTok, PayPal, Steam…"
+    },
+    "step2": {
+      "title": "What happened?",
+      "sub": "Briefly describe what the platform told you.",
+      "reasonLabel": "Platform's reason / your account",
+      "reasonPlaceholder": "e.g. 'community guidelines violation', 'suspicious activity', or your own description…",
+      "timingLabel": "When did it happen?",
+      "timing": {
+        "today": "Today",
+        "thisWeek": "This week",
+        "weeksAgo": "Weeks ago",
+        "monthsAgo": "Months ago"
+      }
+    },
+    "step3": {
+      "title": "Estimated value?",
+      "sub": "A rough estimate of the value at stake (purchased content, balance, items).",
+      "value": {
+        "below100": "Under €100",
+        "100to500": "€100–€500",
+        "500to2000": "€500–€2,000",
+        "above2000": "Above €2,000",
+        "unknown": "Don't know / Not applicable"
+      }
+    },
+    "step4": {
+      "title": "Your contact details",
+      "sub": "So we can get back to you within 24 hours.",
+      "nameLabel": "Name",
+      "namePlaceholder": "First and last name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Phone (optional)",
+      "phonePlaceholder": "+49 …",
+      "messageLabel": "Additional details (optional)",
+      "messagePlaceholder": "Anything else you think is relevant for the assessment.",
+      "consent": "I consent to the processing of my data for handling this request. Our <privacyLink>privacy policy</privacyLink> applies."
+    },
+    "success": {
+      "title": "Thank you!",
+      "sub": "We've received your request. You'll hear from us within 24 hours.",
+      "back": "Back to home"
+    },
+    "error": {
+      "title": "Something went wrong.",
+      "sub": "Please try again or contact us directly by email.",
+      "retry": "Try again"
+    },
+    "validation": {
+      "min2": "Please enter at least 2 characters.",
+      "invalidEmail": "Please enter a valid email address.",
+      "consentRequired": "Please consent to data processing."
+    }
+  },
+  "footer": {
+    "tagline": "Europe's boutique for digital rights.",
+    "sections": {
+      "services": "Services",
+      "firm": "Firm",
+      "legal": "Legal",
+      "contact": "Contact"
+    },
+    "links": {
+      "platforms": "Platforms",
+      "dsa": "DSA advisory",
+      "gdpr": "GDPR",
+      "digitalContent": "Digital content",
+      "team": "Team",
+      "insights": "Insights",
+      "cases": "Cases",
+      "imprint": "Legal notice",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    },
+    "copyright": "All rights reserved.",
+    "compliance": "Admitted to the Berlin Bar Association · BRAO/BORA compliant"
+  }
+}

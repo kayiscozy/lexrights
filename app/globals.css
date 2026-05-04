@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors (from LexRights Logo) ─────────────────── */
+  --color-brand-navy: #011444;
+  --color-brand-electric: #043afd;
+  --color-brand-glow: #2e5bff;
+
+  /* ── Background System (Premium Dark) ──────────────────── */
+  --color-bg: #050a1f;
+  --color-bg-surface: #0a1230;
+  --color-bg-elevated: #0f1a40;
+  --color-bg-overlay: rgba(5, 10, 31, 0.8);
+
+  /* ── Text ──────────────────────────────────────────────── */
+  --color-fg: #f5f7ff;
+  --color-fg-muted: #8b95b8;
+  --color-fg-subtle: #5b6594;
+
+  /* ── Borders ───────────────────────────────────────────── */
+  --color-border: rgba(139, 149, 184, 0.12);
+  --color-border-strong: rgba(139, 149, 184, 0.2);
+  --color-border-brand: rgba(4, 58, 253, 0.3);
+
+  /* ── Accents ───────────────────────────────────────────── */
+  --color-accent: #043afd;
+  --color-accent-hover: #2e5bff;
+
+  /* ── Status ────────────────────────────────────────────── */
+  --color-success: #4ade80;
+  --color-warning: #fbb04f;
+  --color-error: #f87171;
+
+  /* ── Typography (Geist via geist npm package, self-hosted) ─ */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", "Menlo",
+    "Monaco", "Consolas", monospace;
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Radius ────────────────────────────────────────────── */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --shadow-glow-sm: 0 0 0 1px rgba(4, 58, 253, 0.2);
+  --shadow-glow-md: 0 0 24px rgba(4, 58, 253, 0.18);
+  --shadow-glow-lg: 0 0 48px rgba(4, 58, 253, 0.22);
+
+  /* ── Animation ─────────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quad: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* ── Geist Font: loaded via `geist` npm package in app/layout.tsx ─── */
+
+/* ── Base ────────────────────────────────────────────────── */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background: var(--color-brand-electric);
+    color: var(--color-fg);
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-bg-elevated);
+    border: 3px solid var(--color-bg);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-fg-subtle);
+  }
+}
+
+/* ── Aurora Background (Hero) ─────────────────────────────── */
+@layer utilities {
+  .aurora-bg {
+    background:
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(4, 58, 253, 0.15),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse 60% 50% at 90% 30%,
+        rgba(46, 91, 255, 0.1),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse 60% 60% at 10% 50%,
+        rgba(1, 20, 68, 0.4),
+        transparent 60%
+      );
+  }
+
+  .aurora-grid {
+    background-image:
+      linear-gradient(to right, rgba(139, 149, 184, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139, 149, 184, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .glow-cyan {
+    box-shadow: var(--shadow-glow-md);
+  }
+
+  .glass {
+    background: rgba(15, 26, 64, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+  }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Focus Ring (A11y) ───────────────────────────────────── */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+}

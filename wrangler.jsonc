@@ -1,0 +1,64 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lexrights",
+  "account_id": "33f75b8991db6d57ef5c354e9dee55ca",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-04-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+
+  // Static assets (HTML, JS, CSS, images, fonts) served directly from edge
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+
+  // Observability — Free tier includes 100k events/day
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+
+  // KV namespace for next-on-cloudflare cache (incremental cache)
+  // Bind a KV namespace before deploy: wrangler kv namespace create NEXT_INC_CACHE_KV
+  // Then add the id below.
+  // "kv_namespaces": [
+  //   { "binding": "NEXT_INC_CACHE_KV", "id": "<your-kv-namespace-id>" }
+  // ],
+
+  // R2 bucket (optional — for media uploads, asset storage)
+  // "r2_buckets": [
+  //   { "binding": "MEDIA", "bucket_name": "lexrights-media" }
+  // ],
+
+  // Custom domain — Cloudflare will provision SSL automatically
+  // Configure via dashboard or `wrangler deploy --routes` after first deploy.
+  // "routes": [
+  //   { "pattern": "lexrights.com/*", "custom_domain": true },
+  //   { "pattern": "www.lexrights.com/*", "custom_domain": true }
+  // ],
+
+  // Environment variables (non-secret) — secrets via `wrangler secret put`
+  "vars": {
+    "NEXT_PUBLIC_BRAND_NAME": "LexRights",
+    "NEXT_PUBLIC_LEGAL_NAME": "LexRights Rechtsanwälte PartG mbB",
+    "NEXT_PUBLIC_SITE_URL": "https://lexrights.com",
+    "NEXT_PUBLIC_ADDRESS_STREET": "Charlottenstraße 65",
+    "NEXT_PUBLIC_ADDRESS_ZIP": "10117",
+    "NEXT_PUBLIC_ADDRESS_CITY": "Berlin",
+    "NEXT_PUBLIC_ADDRESS_COUNTRY": "Deutschland",
+    "NEXT_PUBLIC_PHONE": "+493055508242",
+    "NEXT_PUBLIC_PHONE_DISPLAY": "+49 30 5550 8242",
+    "NEXT_PUBLIC_WHATSAPP": "491735508242",
+    "NEXT_PUBLIC_EMAIL": "kontakt@lexrights.com",
+    "NEXT_PUBLIC_EMAIL_MANDATE": "mandate@lexrights.com",
+    "NEXT_PUBLIC_VAT_ID": "DE329884712",
+    "NEXT_PUBLIC_REGISTER": "Amtsgericht Charlottenburg, PR 2024 B",
+    "NEXT_PUBLIC_INSURANCE_NAME": "HDI Versicherung AG",
+    "NEXT_PUBLIC_INSURANCE_ADDRESS": "HDI-Platz 1, 30659 Hannover",
+    "NEXT_PUBLIC_INSURANCE_SUM": "5.000.000 €",
+    "NEXT_PUBLIC_BAR_NAME": "Rechtsanwaltskammer Berlin",
+    "NEXT_PUBLIC_BAR_URL": "https://www.rak-berlin.de",
+    "RESEND_FROM": "kontakt@lexrights.com",
+    "RESEND_TO": "mandate@lexrights.com"
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "title": "LexRights — Ihre digitalen Rechte. Durchgesetzt.",
+    "titleTemplate": "%s | LexRights",
+    "description": "Spezialisierte Boutique-Kanzlei für digitale Rechte in Europa. Account-Sperrungen, DSA-Beschwerden, DSGVO-Schadensersatz, Verbraucherschutz für digitale Inhalte. Kostenlose Ersteinschätzung in 24 h."
+  },
+  "nav": {
+    "services": "Leistungen",
+    "firm": "Kanzlei",
+    "insights": "Wissen",
+    "cases": "Fälle",
+    "contact": "Kontakt",
+    "consultation": "Ersteinschätzung",
+    "consultationCta": "Kostenlose Ersteinschätzung",
+    "language": "Sprache",
+    "menu": "Menü",
+    "close": "Schließen"
+  },
+  "hero": {
+    "eyebrow": "Europäische Boutique für digitale Rechte",
+    "headline": "Ihre digitalen Rechte. Durchgesetzt.",
+    "sub": "Account gesperrt, Daten verloren, Inhalte gelöscht? LexRights ist Europas spezialisierte Anwaltskanzlei für digitale Rechte. Kostenlose Ersteinschätzung in 24 Stunden.",
+    "form": {
+      "issueLabel": "Worum geht's?",
+      "issuePlaceholder": "Bitte wählen…",
+      "issues": {
+        "accountSuspended": "Account gesperrt",
+        "dataAccess": "DSGVO-Auskunft",
+        "dataDamage": "DSGVO-Schadensersatz",
+        "platformDispute": "Plattform-Streit",
+        "inGamePurchases": "In-Game-Käufe / digitale Inhalte",
+        "other": "Anderes Thema"
+      },
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "ihre@email.de",
+      "submit": "Jetzt prüfen lassen",
+      "submitting": "Wird gesendet…",
+      "success": "Vielen Dank — wir melden uns binnen 24 Stunden.",
+      "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+      "consent": "Mit dem Absenden stimmen Sie unserer <privacyLink>Datenschutzerklärung</privacyLink> zu."
+    },
+    "trust": {
+      "badge1": "DSA & DSGVO Spezialisten",
+      "badge2": "EU-weit tätig",
+      "badge3": "Kostenlose Ersteinschätzung"
+    }
+  },
+  "pillars": {
+    "title": "Vier Säulen unter einem Dach",
+    "subtitle": "Wir kombinieren Plattform-Spezialisierung mit europäischem Rechts-Know-how. Jede Säule mit Tiefen-Content statt Allgemeinplätzen.",
+    "platforms": {
+      "title": "Plattform-Sperrungen",
+      "desc": "Account-Sperren auf Gaming-, Social-, Marketplace-, Payment- und Crypto-Plattformen. Wir setzen Ihre Wieder­herstellungs- und Schadens­ersatz­ansprüche durch."
+    },
+    "dsa": {
+      "title": "DSA & Digital Services",
+      "desc": "Beschwerden nach Art. 17, 20, 21 DSA. Statement-of-Reasons-Analyse, internes Beschwerde­management, Verweis an zertifizierte Out-of-Court Dispute Bodies."
+    },
+    "gdpr": {
+      "title": "DSGVO & Datenschutz",
+      "desc": "Auskunfts­ansprüche, immaterieller Schadens­ersatz nach EuGH C-300/21, Recht auf Vergessen, Verbot rein automatisierter Entscheidungen nach Art. 22 DSGVO."
+    },
+    "consumer": {
+      "title": "Digital Consumer Rights",
+      "desc": "Verbraucher­schutz bei digitalen Inhalten und Diensten: In-Game-Käufe, Streaming, App-Stores, Cloud-Dienste — nach §§ 327 ff. BGB / RL 2019/770."
+    }
+  },
+  "platforms": {
+    "title": "Spezialisiert auf jede Plattform",
+    "subtitle": "Eigene Tiefen-Pages pro Plattform statt One-size-fits-all. Wir kennen die AGB, die Anti-Cheat-Systeme, die Beschwerde­wege und die Rechts­prechung.",
+    "viewAll": "Alle Plattformen ansehen"
+  },
+  "process": {
+    "title": "So arbeiten wir",
+    "subtitle": "Transparent, digital, EU-weit.",
+    "steps": [
+      {
+        "title": "Kostenlose Ersteinschätzung",
+        "desc": "Sie schildern uns Ihren Fall. Wir prüfen die Erfolgs­aussichten binnen 24 Stunden — ohne Kosten, ohne Bindung."
+      },
+      {
+        "title": "Strategie & Honorar­vereinbarung",
+        "desc": "Bei Mandats­annahme erhalten Sie einen klaren Strategie­plan und transparente Honorar­vereinbarung — Festpreis wo möglich."
+      },
+      {
+        "title": "Außer­gerichtliche Durchsetzung",
+        "desc": "DSGVO-Auskunft, DSA-Beschwerde, Anwaltsschreiben an die Plattform mit Frist­setzung. Häufig schon hier erfolgreich."
+      },
+      {
+        "title": "Eskalation: ADR oder Gericht",
+        "desc": "Falls erforderlich: Verweis an Out-of-Court Dispute Body (DSA Art. 21) oder einstweilige Verfügung am Verbraucher­wohnsitz."
+      }
+    ]
+  },
+  "trustSection": {
+    "title": "Warum LexRights",
+    "items": [
+      {
+        "title": "Spezialisiert, nicht generalistisch",
+        "desc": "Wir machen kein „IT-Recht-allgemein\". Jede Plattform, jedes Rechts­thema mit eigenem Tiefen-Content und Erfahrung."
+      },
+      {
+        "title": "DSA-nativ",
+        "desc": "Erste Kanzlei mit explizitem Workflow zum Digital Services Act. Statement-of-Reasons-Analyse, ADR-Verweisung, Schadens­ersatz nach Art. 54 DSA."
+      },
+      {
+        "title": "EU-weit aus einer Hand",
+        "desc": "Verbraucher­wohn­sitz­gerichts­stand nach Brüssel-Ia. Wir vertreten Sie in DACH und EU-weit auf Deutsch und Englisch."
+      },
+      {
+        "title": "Digital-first",
+        "desc": "Video-Call, beA, Online-Akte. Keine Termine im Büro nötig. Alle Mandate digital abwickelbar."
+      },
+      {
+        "title": "Transparent",
+        "desc": "Klare Strategie, klare Honorar­vereinbarung vor Mandats­annahme. Bei Rechts­schutz­versicherung Direkt­abrechnung möglich."
+      },
+      {
+        "title": "Spezialisten-Team",
+        "desc": "Promovierter Plattform­rechtler mit Oxford-Hintergrund + Datenschutz-Spezialistin mit Tilburg LL.M. — komplementäre Tiefe."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ihr Account ist gesperrt? Sie haben digitale Rechte.",
+    "subtitle": "Wir prüfen Ihren Fall in 24 Stunden — kostenlos und unverbindlich.",
+    "button": "Kostenlose Ersteinschätzung anfragen"
+  },
+  "firm": {
+    "meta": {
+      "title": "Kanzlei",
+      "description": "LexRights ist eine pan-europäische Boutique-Kanzlei für digitale Rechte. Spezialisiert auf Plattform-Sperrungen, DSA, DSGVO und Verbraucherschutz für digitale Inhalte."
+    },
+    "hero": {
+      "eyebrow": "Kanzlei",
+      "title": "Eine Kanzlei für eine neue Rechtswirklichkeit.",
+      "sub": "LexRights wurde mit einem klaren Auftrag gegründet: Verbrauchern und Unternehmen in Europa Zugang zu spezialisiertem Rechts­schutz im digitalen Raum zu geben — auf Augen­höhe mit den großen Plattformen."
+    },
+    "values": {
+      "title": "Unsere Prinzipien",
+      "items": [
+        {
+          "title": "Spezialisierung",
+          "desc": "Wir machen kein „IT-Recht-allgemein\". Unsere Mandate beschränken sich konsequent auf digitale Rechte: Plattformen, DSA, DSGVO, digitale Inhalte."
+        },
+        {
+          "title": "Tiefe statt Breite",
+          "desc": "Pro Plattform und Rechtsthema eigene Tiefen-Analyse. Wir kennen die AGB, die Anti-Cheat-Systeme, die Beschwerde­wege und die einschlägige Rechts­prechung."
+        },
+        {
+          "title": "EU-weit aus einer Hand",
+          "desc": "Verbrauchergerichtsstand am Wohnsitz nach Brüssel-Ia. Wir vertreten Sie in DACH und EU-weit auf Deutsch und Englisch — ohne Korrespondenz­anwalt-Aufschlag."
+        },
+        {
+          "title": "Digital-first",
+          "desc": "Video-Call, beA, sichere Online-Akte. Mandate werden vollständig digital abgewickelt. Keine Termine im Büro nötig."
+        },
+        {
+          "title": "Transparent",
+          "desc": "Klare Honorar­vereinbarung vor Mandats­annahme. Bei Rechts­schutz­versicherung Direkt­abrechnung. Keine versteckten Kosten."
+        }
+      ]
+    },
+    "team": {
+      "title": "Unser Team",
+      "subtitle": "Komplementäre Spezialisierung. Doppel­tiefe in Plattform­recht und Datenschutz."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt",
+      "description": "Kontaktieren Sie LexRights — Boutique-Kanzlei für digitale Rechte. Kostenlose Ersteinschätzung in 24 Stunden."
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Reden wir über Ihren Fall.",
+      "sub": "Schreiben Sie uns, rufen Sie an oder buchen Sie direkt einen Termin. Wir antworten innerhalb von 24 Stunden."
+    },
+    "channels": {
+      "phone": "Telefon",
+      "phoneNote": "Mo–Fr 09:00–18:00 (CET)",
+      "email": "E-Mail",
+      "emailNote": "Antwort binnen 24 Stunden",
+      "whatsapp": "WhatsApp",
+      "whatsappNote": "Schneller Erstkontakt",
+      "address": "Anschrift",
+      "addressNote": "Persönliche Termine nur nach Vereinbarung"
+    },
+    "office": {
+      "title": "Digital-first arbeiten",
+      "desc": "Wir bearbeiten Mandate vollständig digital. Erstgespräche per Video-Call oder Telefon, Mandanten-Dashboard, beA für Schriftverkehr mit Plattformen und Gerichten. Persönliche Termine in Berlin nur nach Vereinbarung."
+    }
+  },
+  "wissen": {
+    "meta": {
+      "title": "Wissen",
+      "description": "Aktuelle Beiträge zum DSA, zur DSGVO, zu Plattform-Sperrungen und digitalen Verbraucher­rechten. Tiefen-Analyse statt Boulevard-Recht."
+    },
+    "hero": {
+      "eyebrow": "Wissen",
+      "title": "Tiefen-Analyse digitaler Rechte.",
+      "sub": "Hintergründe zum Digital Services Act, zur DSGVO, zu BGH- und EuGH-Entscheidungen, zu Plattform-Sperrungen — geschrieben für Mandanten, nicht für Suchmaschinen."
+    },
+    "comingSoon": {
+      "title": "Inhalte in Vorbereitung",
+      "sub": "Die ersten Beiträge folgen kurz nach Launch. Themen u.a. „DSA Art. 17 in der Praxis\", „BGH-Verfahrenstrias bei Plattform-Sperrungen\", „Vanguard-HWID-Bans und Art. 22 DSGVO\".",
+      "cta": "Kostenlose Ersteinschätzung"
+    }
+  },
+  "faelle": {
+    "meta": {
+      "title": "Fälle",
+      "description": "Anonymisierte Fall-Studien aus unserer Praxis. Was funktioniert hat — und warum."
+    },
+    "hero": {
+      "eyebrow": "Fälle",
+      "title": "Echte Fälle. Echte Ergebnisse.",
+      "sub": "Eine Auswahl anonymisierter Fall-Studien aus unserer Praxis. Streitwerte, Strategien, Outcomes — transparent dokumentiert."
+    },
+    "comingSoon": {
+      "title": "Fall-Studien in Vorbereitung",
+      "sub": "Wir publizieren Fall-Studien erst nach Mandanten-Freigabe. Die ersten anonymisierten Beispiele folgen kurz nach Launch.",
+      "cta": "Kostenlose Ersteinschätzung"
+    }
+  },
+  "imprint": {
+    "meta": {
+      "title": "Impressum",
+      "description": "Impressum nach § 5 TMG / § 18 MStV"
+    },
+    "title": "Impressum",
+    "providerHeading": "Anbieter im Sinne des § 5 TMG",
+    "partnersHeading": "Vertretungsberechtigte Partner",
+    "contactHeading": "Kontakt",
+    "professionHeading": "Berufsbezeichnung und Anwaltskammer",
+    "professionTitle": "Berufsbezeichnung",
+    "professionState": "Verleihungsstaat",
+    "professionStateValue": "Bundesrepublik Deutschland",
+    "barAuthority": "Zuständige Anwaltskammer",
+    "regulationsHeading": "Berufsrechtliche Regelungen",
+    "regulationsBody": "Diese Regelungen sind unter www.brak.de einsehbar.",
+    "insuranceHeading": "Berufshaftpflichtversicherung",
+    "insuranceSum": "Versicherungssumme",
+    "insuranceScope": "Räumlicher Geltungsbereich",
+    "insuranceScopeValue": "Mitgliedstaaten der Europäischen Union, Vereinigtes Königreich, Schweiz, Norwegen, Island, Liechtenstein.",
+    "vsbgHeading": "Verbraucherstreitbeilegung",
+    "vsbgBody": "Wir sind nicht bereit und nicht verpflichtet, an Streit­beilegungs­verfahren vor einer Verbraucher­schlichtungs­stelle teilzunehmen (§ 36 VSBG). Für Streitigkeiten mit Verbrauchern aus dem Mandats­verhältnis ist die Schlichtungsstelle der Rechtsanwaltschaft (Neue Grünstraße 17, 10179 Berlin, www.schlichtungsstelle-der-rechtsanwaltschaft.de) zuständig.",
+    "odrHeading": "EU-Streitbeilegungsplattform",
+    "odrBody": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:",
+    "liabilityHeading": "Haftung für Inhalte",
+    "liabilityBody": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.",
+    "linksHeading": "Haftung für Links",
+    "linksBody": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "copyrightHeading": "Urheberrecht",
+    "copyrightBody": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Datenschutzerklärung",
+      "description": "Informationen zur Verarbeitung personen­bezogener Daten gemäß DSGVO"
+    },
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Datenschutz­erklärung informiert Sie über die Verarbeitung personen­bezogener Daten beim Besuch dieser Website und bei der Nutzung unserer Kontaktwege im Sinne der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutz­gesetzes (BDSG)."
+  },
+  "consultation": {
+    "meta": {
+      "title": "Kostenlose Ersteinschätzung",
+      "description": "Schildern Sie uns Ihren Fall. Wir prüfen die Erfolgs­aussichten binnen 24 Stunden — kostenlos und unverbindlich."
+    },
+    "intro": {
+      "eyebrow": "Kostenlose Ersteinschätzung",
+      "title": "Erzählen Sie uns von Ihrem Fall.",
+      "sub": "Vier kurze Schritte. Antwort innerhalb von 24 Stunden — kostenlos und unverbindlich."
+    },
+    "steps": {
+      "step": "Schritt {current} / {total}",
+      "next": "Weiter",
+      "back": "Zurück",
+      "submit": "Anfrage senden",
+      "submitting": "Wird gesendet…"
+    },
+    "step1": {
+      "title": "Worum geht's?",
+      "sub": "Wählen Sie das Thema, das Ihren Fall am besten beschreibt.",
+      "platformLabel": "Plattform / Anbieter",
+      "platformPlaceholder": "z. B. Epic Games, TikTok, PayPal, Steam…"
+    },
+    "step2": {
+      "title": "Was ist passiert?",
+      "sub": "Beschreiben Sie kurz, was die Plattform Ihnen mitgeteilt hat.",
+      "reasonLabel": "Begründung der Plattform / Sachverhalt",
+      "reasonPlaceholder": "z. B. „Verstoß gegen die Community-Richtlinien\", „verdächtige Aktivität\", oder eigene Schilderung…",
+      "timingLabel": "Wann ist das passiert?",
+      "timing": {
+        "today": "Heute",
+        "thisWeek": "Diese Woche",
+        "weeksAgo": "Vor Wochen",
+        "monthsAgo": "Vor Monaten"
+      }
+    },
+    "step3": {
+      "title": "Geschätzter Wert?",
+      "sub": "Eine grobe Einschätzung des betroffenen Werts (gekaufte Inhalte, Guthaben, Items).",
+      "value": {
+        "below100": "Unter 100 €",
+        "100to500": "100 € – 500 €",
+        "500to2000": "500 € – 2 000 €",
+        "above2000": "Über 2 000 €",
+        "unknown": "Weiß ich nicht / Nicht zutreffend"
+      }
+    },
+    "step4": {
+      "title": "Ihre Kontaktdaten",
+      "sub": "Damit wir uns binnen 24 Stunden bei Ihnen melden können.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Vor- und Nachname",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "ihre@email.de",
+      "phoneLabel": "Telefon (optional)",
+      "phonePlaceholder": "+49 …",
+      "messageLabel": "Weitere Informationen (optional)",
+      "messagePlaceholder": "Alles, was Ihrer Meinung nach für die Einschätzung wichtig ist.",
+      "consent": "Ich willige ein, dass meine Daten zur Bearbeitung der Anfrage verarbeitet werden. Es gilt unsere <privacyLink>Datenschutzerklärung</privacyLink>."
+    },
+    "success": {
+      "title": "Vielen Dank!",
+      "sub": "Wir haben Ihre Anfrage erhalten. Sie hören innerhalb von 24 Stunden von uns.",
+      "back": "Zurück zur Startseite"
+    },
+    "error": {
+      "title": "Etwas ist schiefgelaufen.",
+      "sub": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.",
+      "retry": "Erneut versuchen"
+    },
+    "validation": {
+      "min2": "Bitte mindestens 2 Zeichen.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "consentRequired": "Bitte stimmen Sie der Datenverarbeitung zu."
+    }
+  },
+  "footer": {
+    "tagline": "Europäische Boutique für digitale Rechte.",
+    "sections": {
+      "services": "Leistungen",
+      "firm": "Kanzlei",
+      "legal": "Rechtliches",
+      "contact": "Kontakt"
+    },
+    "links": {
+      "platforms": "Plattformen",
+      "dsa": "DSA-Beratung",
+      "gdpr": "DSGVO",
+      "digitalContent": "Digitale Inhalte",
+      "team": "Team",
+      "insights": "Wissen",
+      "cases": "Fälle",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz",
+      "terms": "AGB"
+    },
+    "copyright": "Alle Rechte vorbehalten.",
+    "compliance": "Zugelassen bei der Rechtsanwaltskammer Berlin · BRAO/BORA-konform"
+  }
+}
