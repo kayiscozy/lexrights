@@ -17,7 +17,6 @@ export function LanguageToggle({ className }: { className?: string }) {
     if (next === locale || isPending) return;
     document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; SameSite=Lax`;
     startTransition(() => {
-      // pathname here can be any localized route incl. dynamic — accept as-is
       router.replace(pathname as never, { locale: next });
     });
   }
@@ -27,7 +26,7 @@ export function LanguageToggle({ className }: { className?: string }) {
       role="group"
       aria-label={t("language")}
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border border-[--color-border] bg-[--color-bg-surface]/60 p-1 backdrop-blur-sm",
+        "inline-flex items-center gap-0.5 rounded-full border border-[--color-fg]/15 bg-[--color-fg]/[0.03] p-0.5 backdrop-blur-sm transition-colors duration-200 hover:border-[--color-fg]/25",
         className,
       )}
     >
@@ -43,10 +42,11 @@ export function LanguageToggle({ className }: { className?: string }) {
           aria-pressed={locale === lng}
           disabled={isPending}
           className={cn(
-            "h-7 min-w-[2.5rem] rounded-full px-3 text-xs font-medium uppercase tracking-wide transition-colors",
+            "h-7 min-w-[2.5rem] rounded-full px-3 text-xs font-semibold uppercase tracking-wide transition-all duration-200",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-brand-electric] focus-visible:ring-offset-1 focus-visible:ring-offset-[--color-bg]",
             locale === lng
-              ? "bg-[--color-brand-electric] text-white"
-              : "text-[--color-fg-muted] hover:text-[--color-fg]",
+              ? "bg-[--color-brand-electric] text-white shadow-[0_0_0_1px_rgba(4,58,253,0.4),0_4px_12px_-4px_rgba(4,58,253,0.6)]"
+              : "text-[--color-fg-muted] hover:bg-[--color-brand-electric]/[0.08] hover:text-[--color-fg]",
           )}
         >
           {lng}

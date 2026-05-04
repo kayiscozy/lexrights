@@ -91,10 +91,10 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200",
+                    "relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
                     active
                       ? "text-[--color-fg]"
-                      : "text-[--color-fg-muted] hover:text-[--color-fg]",
+                      : "text-[--color-fg-muted] hover:bg-[--color-brand-electric]/[0.06] hover:text-[--color-fg]",
                   )}
                 >
                   {t(link.labelKey)}
@@ -123,7 +123,7 @@ export function Header({ locale: _locale }: { locale: Locale }) {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="relative inline-flex size-10 items-center justify-center rounded-md text-[--color-fg] transition-colors hover:bg-[--color-bg-surface]/70 lg:hidden"
+              className="relative inline-flex size-10 items-center justify-center rounded-md border border-[--color-fg]/15 bg-[--color-fg]/[0.03] text-[--color-fg] transition-all duration-200 hover:border-[--color-brand-electric]/55 hover:bg-[--color-brand-electric]/[0.08] hover:text-[--color-brand-electric] hover:shadow-[0_0_0_3px_rgba(4,58,253,0.10)] lg:hidden"
               aria-expanded={open}
               aria-label={open ? t("close") : t("menu")}
             >
