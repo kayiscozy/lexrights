@@ -41,6 +41,40 @@ export const team = [
     email: "s.vogel@lexrights.com",
     image: "/images/lawyer/sv.jpg",
   },
+  {
+    id: "phillips",
+    name: "Blaine Phillips",
+    role: { de: "Senior Counsel (US)", en: "Senior Counsel (US)" },
+    title: {
+      de: "Attorney-at-Law (New York)",
+      en: "Attorney-at-Law (New York)",
+    },
+    admittedSince: "2014",
+    bar: "New York State Bar",
+    education: [
+      { de: "A.B. Government, Yale University — summa cum laude, Phi Beta Kappa (2010)", en: "A.B. Government, Yale University — summa cum laude, Phi Beta Kappa (2010)" },
+      { de: "J.D., Stanford Law School — Order of the Coif, Stanford Law Review (2013)", en: "J.D., Stanford Law School — Order of the Coif, Stanford Law Review (2013)" },
+      { de: "Federal Clerkship, U.S. Court of Appeals for the Ninth Circuit (2013–2014)", en: "Federal Clerkship, U.S. Court of Appeals for the Ninth Circuit (2013–2014)" },
+      { de: "Vormals Wilson Sonsini Goodrich & Rosati (Palo Alto), Tech Litigation & Transactions", en: "Previously Wilson Sonsini Goodrich & Rosati (Palo Alto), Tech Litigation & Transactions" },
+    ],
+    focus: {
+      de: [
+        "US-Plattformrecht (Section 230, DMCA)",
+        "US-Datenschutz (CCPA, CPRA, BIPA)",
+        "FTC- & State-AG-Verfahren",
+        "US-Litigation für internationale Plattform­streitig­keiten",
+      ],
+      en: [
+        "US platform law (Section 230, DMCA)",
+        "US privacy (CCPA, CPRA, BIPA)",
+        "FTC & state-AG enforcement",
+        "US-side litigation for international platform disputes",
+      ],
+    },
+    languages: ["English", "Deutsch", "Français", "Español"],
+    email: "b.phillips@lexrights.com",
+    image: "/images/lawyer/bp.jpg",
+  },
 ] as const;
 
 export type TeamMember = (typeof team)[number];
