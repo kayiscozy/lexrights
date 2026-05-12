@@ -49,9 +49,6 @@ export default async function PrivacyPage({
               <br />
               {env.address.zip} {env.address.city}, {env.address.country}
               <br />
-              {isDe ? "Telefon: " : "Phone: "}
-              <a href={`tel:${env.phone}`} className="text-(--color-brand-electric) underline-offset-2 hover:underline">{env.phoneDisplay}</a>
-              <br />
               E-Mail: <a href={`mailto:${env.email}`} className="text-(--color-brand-electric) underline-offset-2 hover:underline">{env.email}</a>
             </address>
           </Section>

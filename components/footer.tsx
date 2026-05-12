@@ -83,13 +83,6 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
               {env.address.street} · {env.address.zip} {env.address.city}
               <br />
               <a
-                href={`tel:${env.phone}`}
-                className="link-hover transition-colors hover:text-(--color-fg)"
-              >
-                {env.phoneDisplay}
-              </a>
-              {" · "}
-              <a
                 href={`mailto:${env.email}`}
                 className="link-hover transition-colors hover:text-(--color-fg)"
               >

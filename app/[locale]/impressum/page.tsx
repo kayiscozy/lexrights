@@ -65,14 +65,6 @@ export default async function ImpressumPage({
 
           <Section heading={t("contactHeading")}>
             <p className="text-sm">
-              {locale === "de" ? "Telefon: " : "Phone: "}
-              <a
-                href={`tel:${env.phone}`}
-                className="text-(--color-brand-electric) underline-offset-2 hover:underline"
-              >
-                {env.phoneDisplay}
-              </a>
-              <br />
               E-Mail:{" "}
               <a
                 href={`mailto:${env.email}`}

@@ -1,5 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/page-hero";
@@ -30,13 +30,6 @@ export default async function ContactPage({
   const tNav = await getTranslations({ locale, namespace: "nav" });
 
   const channels = [
-    {
-      Icon: Phone,
-      title: tCh("phone"),
-      value: env.phoneDisplay,
-      href: `tel:${env.phone}`,
-      note: tCh("phoneNote"),
-    },
     {
       Icon: Mail,
       title: tCh("email"),

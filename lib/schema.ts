@@ -66,7 +66,6 @@ export function organizationJsonLd(locale: "de" | "en") {
       addressLocality: env.address.city,
       addressCountry: "DE",
     },
-    telephone: env.phone,
     email: env.email,
     areaServed: [
       { "@type": "AdministrativeArea", name: "European Union" },
