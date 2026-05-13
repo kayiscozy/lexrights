@@ -59,18 +59,24 @@ export const metadata: Metadata = {
     alternateLocale: ["de_DE"],
     images: [
       {
-        url: "/logos/combined.svg",
-        width: 500,
-        height: 165,
-        alt: "LexRights — European Boutique for Digital Rights",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "LexRights — Your digital rights. Enforced.",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     site: "@lexrights",
     creator: "@lexrights",
-    images: ["/logos/combined.svg"],
+    images: [
+      {
+        url: "/og-image.jpg",
+        alt: "LexRights — Your digital rights. Enforced.",
+      },
+    ],
   },
 };
 
