@@ -17,8 +17,16 @@ type NavLink = {
     | "/kanzlei"
     | "/wissen"
     | "/faelle"
-    | "/kontakt";
-  labelKey: "services" | "firm" | "insights" | "cases" | "contact";
+    | "/kontakt"
+    | "/cross-border";
+  labelKey:
+    | "services"
+    | "firm"
+    | "insights"
+    | "cases"
+    | "contact"
+    | "crossBorder";
+  showOn?: Locale[];
 };
 
 const NAV_LINKS: NavLink[] = [
@@ -26,10 +34,11 @@ const NAV_LINKS: NavLink[] = [
   { href: "/kanzlei", labelKey: "firm" },
   { href: "/wissen", labelKey: "insights" },
   { href: "/faelle", labelKey: "cases" },
+  { href: "/cross-border", labelKey: "crossBorder", showOn: ["en"] },
   { href: "/kontakt", labelKey: "contact" },
 ];
 
-export function Header({ locale: _locale }: { locale: Locale }) {
+export function Header({ locale }: { locale: Locale }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -95,7 +104,9 @@ export function Header({ locale: _locale }: { locale: Locale }) {
             aria-label="Primary"
             className="hidden items-center gap-1 lg:flex"
           >
-            {NAV_LINKS.map((link) => {
+            {NAV_LINKS.filter(
+              (l) => !l.showOn || l.showOn.includes(locale),
+            ).map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
@@ -202,7 +213,9 @@ export function Header({ locale: _locale }: { locale: Locale }) {
                 visible: { transition: { staggerChildren: 0.04 } },
               }}
             >
-              {NAV_LINKS.map((link) => {
+              {NAV_LINKS.filter(
+              (l) => !l.showOn || l.showOn.includes(locale),
+            ).map((link) => {
                 const active = isActive(link.href);
                 return (
                   <motion.div

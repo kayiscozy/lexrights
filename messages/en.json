@@ -10,6 +10,7 @@
     "insights": "Insights",
     "cases": "Cases",
     "contact": "Contact",
+    "crossBorder": "Cross-border",
     "consultation": "Consultation",
     "consultationCta": "Free assessment",
     "language": "Language",
@@ -19,7 +20,7 @@
   "hero": {
     "eyebrow": "Europe's boutique for digital rights",
     "headline": "Your digital rights. Enforced.",
-    "sub": "Suspended, frozen, removed? LexRights is Europe's specialized boutique law firm for digital rights. Free first assessment within 24 hours.",
+    "sub": "Suspended, frozen, removed? LexRights is Europe's specialized boutique for digital rights — EU bar admissions plus New York Bar counsel for cross-border matters. Free first assessment within 24 hours.",
     "form": {
       "issueLabel": "What's the issue?",
       "issuePlaceholder": "Please select…",
@@ -42,7 +43,7 @@
     },
     "trust": {
       "badge1": "DSA & GDPR specialists",
-      "badge2": "EU-wide",
+      "badge2": "EU + NY Bar",
       "badge3": "Free first assessment"
     }
   },
@@ -391,5 +392,115 @@
     },
     "copyright": "All rights reserved.",
     "compliance": "Admitted to the Berlin Bar Association · BRAO/BORA compliant"
+  },
+  "crossBorder": {
+    "meta": {
+      "title": "Cross-Border US ⇄ EU — Digital Disputes | LexRights",
+      "description": "EU-qualified counsel with New York Bar partner. We handle digital disputes where a US platform meets an EU user — Brussels Ia jurisdiction, DSA enforcement, US-side coordination."
+    },
+    "hero": {
+      "eyebrow": "Cross-border US ⇄ EU",
+      "title": "When a US platform meets an EU user, jurisdiction matters.",
+      "sub": "LexRights combines EU bar admissions with New York Bar counsel. We litigate digital disputes on both sides of the Atlantic — and refuse the matters that don't belong on our desk."
+    },
+    "intro": {
+      "p1": "Most platform disputes today are cross-border by design. The user lives in Munich, the platform is incorporated in Delaware, the data sits on AWS Frankfurt, and the terms of service pick California law and a Bay Area arbitrator. The legal question is rarely \"what does the law say\" — it is \"which law, in which forum, enforced how.\"",
+      "p2": "Our focus is narrow and deliberate: the EU side of US-facing platform disputes, and the US side of EU-originated matters. We do not practice US domestic law, and we do not pretend to. For matters that fall outside our lane, we say so — and refer."
+    },
+    "useCases": {
+      "title": "Where we add value",
+      "subtitle": "Three patterns we see repeatedly — and where our combined bar admissions make a measurable difference.",
+      "items": [
+        {
+          "title": "EU users against US platforms",
+          "desc": "Account terminated, content removed, payouts frozen. The TOS says \"California, JAMS arbitration\" — but Brussels Ia Art. 17/18 and the DSA say otherwise.",
+          "bullets": [
+            "Forum at the consumer's home court despite US choice-of-law clauses",
+            "DSA Art. 14/16/17/20/21 enforcement against VLOPs and intermediaries",
+            "GDPR damages claims after CJEU C-300/21 (Österreichische Post)",
+            "Coordinated pressure on the US parent through our NY counsel"
+          ]
+        },
+        {
+          "title": "US companies serving the EU",
+          "desc": "If you have EU users, the EU has rules for you — and they are enforced. We close the gap between US legal instincts and EU compliance reality.",
+          "bullets": [
+            "DSA notice-and-action workflows, transparency reports, trusted-flagger handling",
+            "GDPR Article 27 representative, DPIA review, cross-border SCC mapping",
+            "P2B Regulation compliance for marketplaces and ranking algorithms",
+            "Member-state consumer-law translation (UWG, BGB §§ 327 ff., NIS2 readiness)"
+          ]
+        },
+        {
+          "title": "US-side coordination for EU clients",
+          "desc": "When an EU mandate develops a US flank — discovery, asset tracing, parallel litigation — we keep one matter, one team, one bill.",
+          "bullets": [
+            "Letters Rogatory and 28 U.S.C. § 1782 discovery for EU proceedings",
+            "Coordination with US co-counsel for state court and federal litigation",
+            "Hague Service & enforcement of EU judgments against US-based assets",
+            "Pre-suit demand strategy under DMCA § 512 and Section 230 frameworks"
+          ]
+        }
+      ]
+    },
+    "counsel": {
+      "eyebrow": "US counsel on the team",
+      "bio": "Blaine joined LexRights as Senior Counsel (US) after a decade between Stanford Law, a Ninth Circuit clerkship, and Wilson Sonsini's tech litigation group in Palo Alto. He is admitted in New York and focuses exclusively on the US dimension of our cross-border practice — Section 230, DMCA, CCPA/CPRA, BIPA, and FTC / state-AG enforcement. He does not handle US matters disconnected from our EU practice."
+    },
+    "scope": {
+      "title": "What we do — and what we don't",
+      "subtitle": "Clarity protects you. We are German and US lawyers; we are not a one-stop US firm.",
+      "inScopeLabel": "On our desk",
+      "outOfScopeLabel": "Off our desk",
+      "inScope": [
+        "EU litigation against US platforms (Brussels Ia, DSA, GDPR)",
+        "DSA / GDPR / P2B compliance for US-based companies serving the EU",
+        "US-side proceedings tied to an EU mandate (NY State court, federal where applicable)",
+        "Pre-suit demand letters under US statutory frameworks (DMCA, Section 230, CCPA)",
+        "Cross-border discovery (§ 1782), Hague Service, judgment enforcement"
+      ],
+      "outOfScope": [
+        "Pure US-domestic disputes with no EU element",
+        "US immigration, criminal defense, family or estate matters",
+        "US tax, securities, or M&A work",
+        "Litigation in states or federal circuits where we lack admission"
+      ],
+      "outOfScopeNote": "For matters outside our scope we refer to vetted US co-counsel. We will not take a retainer for work we cannot deliver at the standard our EU mandates expect."
+    },
+    "faq": {
+      "title": "Frequently asked",
+      "items": [
+        {
+          "q": "Can you actually represent me in a US court?",
+          "a": "In New York state court, yes — through Blaine Phillips, admitted to the New York State Bar. For other states or for federal litigation outside the Southern and Eastern Districts of New York, we co-counsel with a vetted US firm and remain lead on the EU side."
+        },
+        {
+          "q": "I am a US-based creator with my channel blocked in the EU. Is that something for you?",
+          "a": "Yes — that is a textbook case for us. Your dispute touches DSA Art. 17 (statement of reasons) and Art. 20 (internal complaint handling), and likely Brussels Ia jurisdiction questions if your audience is EU-based. We handle the EU enforcement; Blaine handles US-side correspondence with the platform's US counsel."
+        },
+        {
+          "q": "We are a Series B US company about to launch in Germany. Where do we start?",
+          "a": "Pre-launch DSA and GDPR readiness review, Article 27 representative appointment if you have no EU establishment, and a translated terms-of-service that survives § 305c BGB scrutiny. Expect 4–6 weeks of focused work, not a 6-month engagement."
+        },
+        {
+          "q": "Do you handle pure US-domestic matters?",
+          "a": "No. If your matter has no EU element, we refer to US co-counsel — usually a boutique we have worked with before. It is the professionally responsible answer, and it is the answer that keeps our cross-border practice sharp."
+        },
+        {
+          "q": "How does engagement work practically — time zones, billing, language?",
+          "a": "Initial consultation by video in CET or ET, in English or German. Engagement letters in English with a German-law side letter where required. Billing in EUR; USD on request via our US correspondent account. All matters handled digitally — no office visits required."
+        },
+        {
+          "q": "What about the UK, Switzerland, or other non-EU jurisdictions?",
+          "a": "Switzerland, Liechtenstein, and the EEA we handle directly or through our DACH network. UK matters post-Brexit are handled in coordination with London solicitors where the matter is UK-litigated; we lead where the matter is EU-anchored."
+        }
+      ]
+    },
+    "cta": {
+      "title": "One mandate. Two bars. One bill.",
+      "subtitle": "Tell us the matter. We will tell you, within 24 hours, whether it belongs on our desk — and if not, who should have it.",
+      "primary": "Request free assessment",
+      "secondary": "Contact options"
+    }
   }
 }

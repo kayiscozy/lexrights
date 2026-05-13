@@ -39,6 +39,10 @@ export const pageImages = {
     src: "/images/heroes/consultation.jpg",
     alt: "Beratungsgespräch",
   },
+  crossBorder: {
+    src: "/images/heroes/crossborder.jpg",
+    alt: "Cable-stayed bridge at night — symbol for cross-border legal practice",
+  },
   pillarGaming: {
     src: "/images/heroes/gaming.jpg",
     alt: "Gaming-Setup",

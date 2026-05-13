@@ -107,6 +107,7 @@ export function organizationJsonLd(locale: "de" | "en") {
       { "@type": "Country", name: "Austria" },
       { "@type": "Country", name: "Switzerland" },
       { "@type": "Country", name: "Netherlands" },
+      { "@type": "Country", name: "United States" },
     ],
     knowsAbout: [
       "Digital Services Act",
@@ -117,6 +118,12 @@ export function organizationJsonLd(locale: "de" | "en") {
       "Digital consumer rights",
       "Brussels Ia Regulation",
       "P2B Regulation",
+      "Section 230 Communications Decency Act",
+      "Digital Millennium Copyright Act",
+      "California Consumer Privacy Act",
+      "Cross-border discovery 28 USC 1782",
+      "Hague Service Convention",
+      "FTC enforcement",
     ],
     member: team.map((m) => ({
       "@type": "Person",
