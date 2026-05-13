@@ -3,7 +3,7 @@ import { Mail, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/page-hero";
-import { env } from "@/lib/utils";
+import { env, pageAlternates } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,7 +13,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact.meta" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: pageAlternates(locale, { de: "/contact", en: "/contact" }),
+  };
 }
 
 export default async function ContactPage({

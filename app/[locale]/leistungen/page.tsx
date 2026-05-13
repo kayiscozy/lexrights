@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { platforms, platformCategories, type PlatformCategory } from "@/lib/platforms";
 import { PageHero } from "@/components/page-hero";
+import { pageAlternates } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 import type { Metadata } from "next";
 
@@ -18,6 +19,7 @@ export async function generateMetadata({
       locale === "de"
         ? "Alle Plattformen und Rechtsthemen, auf die LexRights spezialisiert ist. Tiefen-Content statt Allgemeinplätze."
         : "All platforms and legal topics LexRights specializes in. Deep content, not generic advice.",
+    alternates: pageAlternates(locale, { de: "/leistungen", en: "/services" }),
   };
 }
 

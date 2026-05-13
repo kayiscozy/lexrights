@@ -40,3 +40,29 @@ export const env = {
     url: process.env.NEXT_PUBLIC_BAR_URL || "https://www.rak-berlin.de",
   },
 } as const;
+
+/**
+ * Build per-page canonical + hreflang alternates so each subpage
+ * declares its own canonical URL (instead of inheriting the locale
+ * root from the layout, which collapses subpages onto the homepage
+ * in Google's index).
+ */
+export function pageAlternates(
+  locale: string,
+  paths: { de: string; en: string },
+) {
+  const dePath = paths.de.startsWith("/") ? paths.de : `/${paths.de}`;
+  const enPath = paths.en.startsWith("/") ? paths.en : `/${paths.en}`;
+  const canonical =
+    locale === "de"
+      ? `${env.siteUrl}/de${dePath}`
+      : `${env.siteUrl}/en${enPath}`;
+  return {
+    canonical,
+    languages: {
+      de: `${env.siteUrl}/de${dePath}`,
+      en: `${env.siteUrl}/en${enPath}`,
+      "x-default": `${env.siteUrl}/en${enPath}`,
+    },
+  };
+}

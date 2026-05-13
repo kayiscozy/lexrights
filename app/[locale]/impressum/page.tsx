@@ -1,5 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { env } from "@/lib/utils";
+import { env, pageAlternates } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,6 +13,10 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     robots: { index: true, follow: true },
+    alternates: pageAlternates(locale, {
+      de: "/impressum",
+      en: "/legal-notice",
+    }),
   };
 }
 

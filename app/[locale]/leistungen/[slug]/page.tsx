@@ -58,19 +58,26 @@ export async function generateMetadata({
   const content = getPillarContent(platform.name, locale);
   const description = platform.shortDesc[locale];
 
+  const servicesSegment = locale === "de" ? "leistungen" : "services";
+  const canonical = `${env.siteUrl}/${locale}/${servicesSegment}/${platform.slug[locale]}`;
+  const dePath = `${env.siteUrl}/de/leistungen/${platform.slug.de}`;
+  const enPath = `${env.siteUrl}/en/services/${platform.slug.en}`;
+
   return {
     title: content?.hero.headline ?? platform.name,
     description,
     alternates: {
-      canonical: `${env.siteUrl}/${locale}/leistungen/${platform.slug[locale]}`,
+      canonical,
       languages: {
-        de: `${env.siteUrl}/de/leistungen/${platform.slug.de}`,
-        en: `${env.siteUrl}/en/services/${platform.slug.en}`,
+        de: dePath,
+        en: enPath,
+        "x-default": enPath,
       },
     },
     openGraph: {
       title: content?.hero.headline ?? platform.name,
       description,
+      url: canonical,
     },
   };
 }

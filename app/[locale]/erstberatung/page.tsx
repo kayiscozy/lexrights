@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ConsultationForm } from "@/components/consultation-form";
 import { PageHero } from "@/components/page-hero";
+import { pageAlternates } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,6 +14,10 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: pageAlternates(locale, {
+      de: "/erstberatung",
+      en: "/consultation",
+    }),
   };
 }
 

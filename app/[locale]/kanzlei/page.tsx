@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Mail, Globe, GraduationCap } from "lucide-react";
 import { team, attorneyJsonLd } from "@/lib/schema";
 import { PageHero } from "@/components/page-hero";
+import { pageAlternates } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 import type { Metadata } from "next";
 
@@ -13,7 +14,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "firm.meta" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: pageAlternates(locale, { de: "/kanzlei", en: "/firm" }),
+  };
 }
 
 export default async function FirmPage({

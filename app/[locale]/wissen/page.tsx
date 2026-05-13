@@ -4,6 +4,7 @@ import { ArrowUpRight, Clock } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { articles, articleCategories, formatArticleDate } from "@/lib/articles";
 import { team } from "@/lib/schema";
+import { pageAlternates } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 import type { Metadata } from "next";
 
@@ -14,7 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "wissen.meta" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: pageAlternates(locale, { de: "/wissen", en: "/insights" }),
+  };
 }
 
 export default async function WissenPage({
