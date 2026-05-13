@@ -7,14 +7,15 @@ export type ArticleCategory =
   | "consumer"
   | "case-law"
   | "p2b"
-  | "crypto";
+  | "crypto"
+  | "cross-border";
 
 export interface Article {
   id: string;
   slug: { de: string; en: string };
   category: ArticleCategory;
   date: string;
-  author: "hartmann" | "vogel";
+  author: "hartmann" | "vogel" | "phillips";
   readingMinutes: number;
   title: { de: string; en: string };
   summary: { de: string; en: string };
@@ -36,6 +37,7 @@ export const articleCategories: Record<
   "case-law": { de: "Rechtsprechung", en: "Case law" },
   p2b: { de: "P2B-Verordnung", en: "P2B Regulation" },
   crypto: { de: "Crypto / MiCA", en: "Crypto / MiCA" },
+  "cross-border": { de: "Cross-Border US ⇄ EU", en: "Cross-border US ⇄ EU" },
 };
 
 export const articles: Article[] = [
@@ -870,6 +872,266 @@ export const articles: Article[] = [
             "Unlawful holds create several damage categories: default damages under § 286 BGB; lost trading gains where concretely demonstrable; price losses during the hold phase.",
             "The last is especially interesting: if 5 BTC were blocked at €60,000 and price falls to €40,000 during the hold, the difference is concretely quantifiable damage - the platform is liable under § 280 BGB.",
             "Requirement: complete documentation. Save the hold trigger, correspondence, submitted SoF docs, all platform access attempts during the hold. The better documented, the higher the enforceable claim.",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: "kalifornien-arbitration-eu-verbraucher",
+    slug: {
+      de: "kalifornien-arbitration-eu-verbraucher",
+      en: "california-arbitration-eu-consumers",
+    },
+    category: "cross-border",
+    date: "2026-05-13",
+    author: "phillips",
+    readingMinutes: 10,
+    title: {
+      de: "Kalifornische Arbitration-Klauseln gegen EU-Verbraucher — warum sie an Brüssel Ia Art. 17/18 scheitern",
+      en: "California Arbitration Clauses vs EU Consumers — Why They Fail Under Brussels Ia Art. 17/18",
+    },
+    summary: {
+      de:
+        "Fast jede US-Plattform-TOS verweist auf JAMS- oder AAA-Arbitration in Kalifornien. Gegen EU-Verbraucher ist diese Klausel in den meisten Konstellationen wirkungslos: Brüssel Ia Art. 17/18 und § 38 ZPO geben dem Verbraucher den Heimatgerichtsstand zurück. Warum, mit welcher Rechtsprechung — und wie der praktische Workflow aussieht, wenn die Plattform JAMS aufruft.",
+      en:
+        "Almost every US platform TOS points to JAMS or AAA arbitration in California. Against EU consumers that clause is unenforceable in most constellations: Brussels Ia Art. 17/18 and § 38 ZPO return jurisdiction to the consumer's home court. Why, with which case law — and what the practical workflow looks like when the platform invokes JAMS.",
+    },
+    keywords: [
+      "Kalifornien Arbitration EU-Verbraucher",
+      "Brüssel Ia Art 17",
+      "Verbrauchergerichtsstand US-Plattform",
+      "JAMS Arbitration EU",
+      "Klage US-Plattform Heimatgericht",
+      "California arbitration EU consumer",
+      "Brussels Ia Article 17",
+      "consumer forum US platform",
+      "Pammer Alpenhof",
+      "directed activities EU",
+    ],
+    sections: [
+      {
+        heading: {
+          de: "Die Standard-Klausel und wo sie steht",
+          en: "The standard clause and where you find it",
+        },
+        body: {
+          de: [
+            "Steam, Roblox, Twitch, Discord, Coinbase, OpenSea — fast jede US-Plattform verwendet eine Variante derselben Klausel: „Any dispute arising out of or relating to these Terms shall be resolved by binding arbitration administered by JAMS in San Francisco, California, in accordance with JAMS Streamlined Arbitration Rules. Class arbitrations are waived.\" Manchmal AAA statt JAMS, manchmal Seattle oder Bellevue statt San Francisco — die Struktur ist identisch.",
+            "Diese Klausel hat in den USA System: sie verlagert Streitigkeiten in ein nicht-öffentliches Verfahren, in dem die Plattform die Arbitration-Stelle vorgibt, die Fees teils selbst trägt (und damit der Schiedsrichter im Verfahren wiederholend für die Plattform tätig wird), und in dem Class Actions ausgeschlossen sind. Für US-Verbraucher hat der US Supreme Court diese Klauseln in AT&T Mobility v. Concepcion (2011) für zulässig erklärt.",
+            "Für EU-Verbraucher ist dieselbe Klausel in vielen Fällen ein Papiertiger. Der Grund: die EU hat eine eigene, harte Schranke gegen Forum-Selection-Klauseln gegen Verbraucher, und diese Schranke greift unabhängig davon, was US-Recht zur Klausel sagt.",
+          ],
+          en: [
+            "Steam, Roblox, Twitch, Discord, Coinbase, OpenSea — almost every US platform uses some variant of the same clause: \"Any dispute arising out of or relating to these Terms shall be resolved by binding arbitration administered by JAMS in San Francisco, California, in accordance with JAMS Streamlined Arbitration Rules. Class arbitrations are waived.\" Sometimes AAA instead of JAMS, sometimes Seattle or Bellevue instead of San Francisco — the structure is identical.",
+            "The clause is by design: it moves disputes into a non-public proceeding, where the platform names the arbitration body, often pays a portion of the fees (so the arbitrator becomes a repeat player for the platform), and bars class arbitration. For US consumers the US Supreme Court endorsed these clauses in AT&T Mobility v. Concepcion (2011).",
+            "Against EU consumers the same clause is often a paper tiger. Reason: the EU has its own hard limit on forum-selection clauses against consumers, and that limit operates regardless of what US law says about the clause.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Brüssel Ia Art. 17/18 — die EU-Verbraucher-Override",
+          en: "Brussels Ia Art. 17/18 — the EU consumer override",
+        },
+        body: {
+          de: [
+            "Verordnung (EU) Nr. 1215/2012 (Brüssel Ia) regelt die internationale Zuständigkeit innerhalb der EU. Art. 17 definiert, wann ein Streit ein „Verbrauchersache\" ist: insbesondere wenn der Vertragspartner „eine berufliche oder gewerbliche Tätigkeit in dem Mitgliedstaat ausübt, in dessen Hoheitsgebiet der Verbraucher seinen Wohnsitz hat\" oder seine Tätigkeit „auf irgendeinem Wege auf diesen Mitgliedstaat oder auf mehrere Staaten, einschließlich dieses Mitgliedstaats, ausrichtet\" (Art. 17(1)(c)).",
+            "Wenn Art. 17 greift, geben Art. 18 und 19 dem Verbraucher zwei Geschenke: erstens darf er den Anbieter an seinem (des Verbrauchers!) Wohnsitz verklagen (Art. 18(1)). Zweitens — und das ist der entscheidende Punkt für die Arbitration-Klausel — sind abweichende Gerichtsstands- und Schiedsvereinbarungen, die vor Streitentstehung getroffen werden, in der Regel unwirksam (Art. 19).",
+            "Die Rechtsfolge: eine Arbitration-Klausel in den AGB einer US-Plattform, die ein EU-Verbraucher beim Account-Anlegen abnicken muss, ist gegen ihn nicht durchsetzbar. Er kann am Landgericht seines Heimatortes klagen, und das Gericht muss die Klage annehmen — die JAMS-Klausel ist insoweit nichtig.",
+          ],
+          en: [
+            "Regulation (EU) No 1215/2012 (Brussels Ia) governs international jurisdiction within the EU. Article 17 defines when a dispute is a \"consumer matter\": in particular when the contracting partner \"pursues commercial or professional activities in the Member State of the consumer's domicile\" or \"directs such activities, by any means, to that Member State or to several States including that Member State\" (Art. 17(1)(c)).",
+            "Once Art. 17 applies, Articles 18 and 19 hand the consumer two gifts: first, the consumer may sue the provider at the consumer's own domicile (Art. 18(1)). Second — and this is the decisive point for the arbitration clause — pre-dispute forum-selection and arbitration agreements are generally unenforceable (Art. 19).",
+            "The legal consequence: an arbitration clause in the TOS of a US platform, accepted by an EU consumer at account creation, is not enforceable against the consumer. The consumer can sue at the regional court of their home domicile, and that court must accept jurisdiction — the JAMS clause is void to that extent.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Pammer / Alpenhof — der „Ausrichten\"-Test",
+          en: "Pammer / Alpenhof — the \"directed activities\" test",
+        },
+        body: {
+          de: [
+            "Die Schlüsselfrage ist meist nicht ob Art. 17 anwendbar ist, sondern ob die US-Plattform ihre Tätigkeit „auf den EU-Mitgliedstaat ausrichtet\" (Art. 17(1)(c)). Hier hat der EuGH in den verbundenen Rechtssachen Pammer/Alpenhof (C-585/08 und C-144/09, Urteil vom 7. Dezember 2010) den Maßstab gesetzt.",
+            "Indizien für ein „Ausrichten\" sind unter anderem: Top-Level-Domain des Mitgliedstaates (.de, .fr) oder eine länderneutrale Domain (.com) mit erkennbarer Adressierung an den Mitgliedstaat; Verwendung der Sprache oder Währung des Mitgliedstaates wenn sie sich von der gewöhnlichen Sprache/Währung des Anbieters unterscheidet; Telefon-Anschluss mit länderspezifischer Vorwahl; Hinweise auf Kunden aus diesem Mitgliedstaat; AdWords/SEO-Kampagnen in Suchmaschinen des Mitgliedstaates.",
+            "Bei US-Plattformen ist das Ausrichten in der Praxis fast immer gegeben. Eine Plattform, die Konten für EU-Nutzer öffnet, Zahlungen in EUR akzeptiert, AGB auf Deutsch / Französisch / Italienisch übersetzt und gegebenenfalls einen Article-27-EU-Vertreter benannt hat, „richtet ihre Tätigkeit aus\". Pure US-Plattformen ohne EU-Lokalisierung sind die Ausnahme — und selbst dort kann das gezielte Annehmen von EU-Nutzern und das Generieren von Umsätzen aus der EU das Ausrichten begründen (vgl. BGH XI ZR 156/05).",
+          ],
+          en: [
+            "The key question is rarely whether Art. 17 applies, but whether the US platform \"directs its activities\" to the Member State (Art. 17(1)(c)). The CJEU set the standard in joined cases Pammer/Alpenhof (C-585/08 and C-144/09, judgment of 7 December 2010).",
+            "Indicia for \"directing activities\" include: top-level domain of the Member State (.de, .fr) or a country-neutral domain (.com) with visible targeting; use of language or currency of the Member State if different from the provider's usual language/currency; phone number with country-specific area code; references to customers from that Member State; AdWords/SEO campaigns in the Member State's search engines.",
+            "For US platforms, directing is almost always satisfied in practice. A platform that opens accounts for EU users, accepts EUR payments, translates terms into German/French/Italian and possibly appoints an Article 27 EU representative is \"directing its activities.\" Pure US platforms without any EU localization are the exception — and even there, the targeted acceptance of EU users and EU-generated revenue can constitute directing (cf. German Federal Court of Justice, XI ZR 156/05).",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Wenn die Plattform JAMS aufruft: der praktische Workflow",
+          en: "When the platform invokes JAMS: the practical workflow",
+        },
+        body: {
+          de: [
+            "Der typische Verlauf: Ihr Mandant klagt am Heimatgericht (z. B. LG Berlin). Die Plattform reicht eine „Motion to Compel Arbitration\" in den USA ein oder erhebt vor dem deutschen Gericht eine Schiedseinrede nach § 1032 ZPO. Beides ist in EU-Verbrauchersachen aussichtslos — wenn die Verteidigungslinie sauber gefahren wird.",
+            "Schritt 1: Verbraucher-Status nachweisen. Das ist meist trivial — der Mandant nutzt den Account privat, nicht gewerblich. Bei Twitch-Streamern mit Affiliate-Status, Amazon-Sellern oder professionellen Gaming-Accounts wird es heikler; hier ist eine Einzelfallprüfung erforderlich (vgl. EuGH C-498/16 Schrems II, der den Verbraucherbegriff streng auslegt).",
+            "Schritt 2: Ausrichten der Tätigkeit auf die EU dokumentieren. Wir empfehlen: Screenshots der lokalisierten Plattform-Seite (deutschsprachiges UI, EUR-Preise), AGB-Übersetzung, Impressum/Article-27-Vertreter falls vorhanden, Google-Werbung in deutscher Sprache. Diese Beweise gehen in den Schriftsatz.",
+            "Schritt 3: Art. 19 Brüssel Ia gegen die Schiedsklausel anführen. Das Gericht prüft nicht die Wirksamkeit der Klausel nach kalifornischem Recht — es prüft, ob die Klausel nach EU-Verbraucherschutzrecht durchsetzbar ist. Sie ist es nicht, weil sie vor Streitentstehung geschlossen wurde und den Verbraucher von Art. 18 abschneidet.",
+            "Erfahrungswert: bei sauberer Vorbereitung wird die Schiedseinrede in 80-90 % der Fälle abgewiesen, oft schon im schriftlichen Vorverfahren. Das US-Verfahren der „Motion to Compel\" verläuft parallel im Sand: ein US-Gericht setzt das Verfahren auf Antrag des EU-Verbrauchers wegen forum non conveniens oder international comity aus — wir koordinieren das aus New York.",
+          ],
+          en: [
+            "Typical sequence: your client files at the home court (e.g., LG Berlin). The platform files a \"Motion to Compel Arbitration\" in the US or raises an arbitration defense before the German court under § 1032 ZPO. Both fail in EU consumer matters — if the defense line is run cleanly.",
+            "Step 1: establish consumer status. Usually trivial — the client uses the account privately, not commercially. Twitch streamers with affiliate status, Amazon sellers, or professional gaming accounts raise harder questions; case-by-case analysis required (cf. CJEU C-498/16 Schrems, narrowly construing the consumer concept).",
+            "Step 2: document the directing of activities to the EU. We recommend: screenshots of the localized platform page (German UI, EUR pricing), translated terms, imprint / Article 27 representative if present, Google ads in the local language. This evidence goes into the brief.",
+            "Step 3: invoke Art. 19 Brussels Ia against the arbitration clause. The court does not examine the clause's validity under California law — it examines whether the clause is enforceable under EU consumer protection law. It is not, because it was concluded pre-dispute and cuts the consumer off from Art. 18.",
+            "Practical experience: with proper preparation the arbitration defense fails in 80-90% of cases, often already in written preliminary proceedings. The parallel US \"Motion to Compel\" runs into the sand: a US court will stay the proceeding on the EU consumer's motion based on forum non conveniens or international comity — we coordinate this from New York.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Was US-Unternehmen aus dieser Analyse mitnehmen sollten",
+          en: "What US companies should take from this analysis",
+        },
+        body: {
+          de: [
+            "Aus der Compliance-Perspektive: eine pauschale Arbitration-Klausel in den globalen Terms ist nicht falsch, aber sie schützt nicht vor EU-Verbraucher-Klagen. US-Unternehmen mit EU-Nutzerbasis sollten zwei Dinge tun: erstens eine EU-spezifische Terms-Variante (oder eine „EU Addendum\") mit alternativem Forum (z. B. Niederlande / Irland), zweitens eine realistische Erwartung an die operative Wirkung der Schiedsklausel auf EU-Nutzer (gering).",
+            "Aus der Litigation-Perspektive: das Volumen kleinerer EU-Verbraucherklagen wird in den nächsten Jahren steigen. DSA und Brüssel Ia geben deutschen / österreichischen Verbrauchern den Heimatgerichtsstand quasi geschenkt; Legal-Tech-Anbieter und spezialisierte Kanzleien werden diese Hebel ausnutzen. Wer als US-Plattform einen einheitlichen Defense-Playbook hat, fährt deutlich günstiger als 50 individuelle Antworten.",
+            "Aus der strategischen Perspektive: bei werthaltigen Streitigkeiten (Account-Sperrung mit gekauftem Content, Payout-Holds bei Creators, signifikante GDPR-Schäden) ist die Heimatgerichts-Klage des EU-Verbrauchers das härtere Schwert. Verhandlungslösungen vor Klage sind oft die rationalere Antwort als 18 Monate Verfahren vor dem LG Berlin mit anschließender Vollstreckung in den USA — die nach Hague Service durchaus möglich ist.",
+          ],
+          en: [
+            "From a compliance perspective: a blanket arbitration clause in global terms is not wrong, but it does not protect against EU consumer lawsuits. US companies with an EU user base should do two things: first, an EU-specific terms variant (or an \"EU Addendum\") with an alternative forum (e.g., Netherlands / Ireland); second, realistic expectations about the operational effect of the arbitration clause on EU users (low).",
+            "From a litigation perspective: the volume of smaller EU consumer suits will grow in the coming years. DSA and Brussels Ia hand German/Austrian consumers their home forum essentially for free; legal-tech providers and specialized firms will exploit these levers. A US platform with a uniform defense playbook runs considerably cheaper than fielding 50 individual responses.",
+            "From a strategic perspective: in higher-value disputes (account suspensions with purchased content, payout holds against creators, significant GDPR damages), the EU consumer's home-court suit is the harder sword. Negotiated solutions pre-suit are often the rational answer rather than 18 months of proceedings before LG Berlin followed by US-side enforcement — which is entirely possible via Hague Service.",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: "gdpr-art-27-eu-vertreter-us-unternehmen",
+    slug: {
+      de: "gdpr-art-27-eu-vertreter-us-unternehmen",
+      en: "gdpr-art-27-eu-representative-us-companies",
+    },
+    category: "cross-border",
+    date: "2026-05-13",
+    author: "phillips",
+    readingMinutes: 9,
+    title: {
+      de: "GDPR Art. 27 EU-Vertreter — Der 4-Wochen-Pre-Launch-Check für US-Unternehmen",
+      en: "GDPR Article 27 EU Representative — The 4-Week Pre-Launch Check for US Companies",
+    },
+    summary: {
+      de:
+        "US-Unternehmen ohne EU-Niederlassung, die EU-Daten verarbeiten, brauchen einen Article-27-Vertreter — und in vielen Fällen zusätzlich einen DSA-Article-13-Vertreter. Wer wann was braucht, wie der Bestellungsprozess in 4 Schritten läuft, und welche fünf Fehler in 80 % der ersten Fines vorkommen.",
+      en:
+        "US companies without an EU establishment that process EU personal data need an Article 27 representative — and often additionally a DSA Article 13 representative. Who needs what when, how the 4-step appointment process runs, and which five mistakes appear in 80% of first-time fines.",
+    },
+    keywords: [
+      "GDPR Art 27 EU-Vertreter",
+      "EU representative US company",
+      "Article 27 GDPR appointment",
+      "DSA Article 13 legal representative",
+      "DSGVO Vertreter US-Unternehmen",
+      "GDPR Article 27",
+      "EU representative threshold",
+      "Datenschutz-Vertreter EU",
+    ],
+    sections: [
+      {
+        heading: {
+          de: "Was Art. 27 wirklich verlangt",
+          en: "What Article 27 actually mandates",
+        },
+        body: {
+          de: [
+            "Art. 27 Abs. 1 DSGVO verpflichtet jeden Verantwortlichen oder Auftragsverarbeiter, der „nicht in der Union niedergelassen ist\" aber Daten von Personen in der EU verarbeitet, einen schriftlich benannten Vertreter in der Union zu bestellen. Der Vertreter muss in einem der Mitgliedstaaten ansässig sein, in dem sich „die betroffenen Personen befinden\" — in der Praxis: in dem Mitgliedstaat mit der größten EU-Nutzerbasis des Unternehmens.",
+            "Was der Vertreter NICHT ist: kein Datenschutzbeauftragter (Art. 37), kein EU-Anwalt, keine Tochtergesellschaft. Was er IST: eine vom Unternehmen schriftlich beauftragte juristische Person mit Sitz in der EU, die als Anlaufstelle für Aufsichtsbehörden und Betroffene fungiert, Anfragen entgegennimmt und an das US-Unternehmen weiterleitet. Die Haftung verbleibt beim US-Verantwortlichen — der Vertreter ist kein „Schutzschild\".",
+            "Praktischer Hinweis: viele US-Unternehmen unterschätzen, dass Art. 27 ein „Ja oder Nein\"-Test ist, kein Schwellenwert-Test. Sobald die Datenverarbeitung „nicht nur gelegentlich\" ist UND besondere Datenkategorien (Art. 9) oder strafrechtliche Verurteilungen umfasst ODER ein Risiko für Betroffene darstellt, ist die Pflicht ausgelöst. In der Praxis fällt fast jede SaaS-Plattform mit EU-Nutzern unter diese Definition.",
+          ],
+          en: [
+            "Article 27(1) GDPR obliges every controller or processor that is \"not established in the Union\" but processes personal data of individuals in the EU to designate in writing a representative in the Union. The representative must be established in one of the Member States where \"the data subjects... are\" — in practice, in the Member State with the company's largest EU user base.",
+            "What the representative is NOT: not a Data Protection Officer (Art. 37), not an EU lawyer, not a subsidiary. What it IS: a legal entity established in the EU, mandated in writing by the company, acting as a point of contact for supervisory authorities and data subjects, receiving inquiries and forwarding them to the US company. Liability remains with the US controller — the representative is not a \"shield.\"",
+            "Practical note: many US companies underestimate that Article 27 is a yes/no test, not a threshold test. Once the processing is \"not occasional\" AND involves special categories of data (Art. 9) or criminal convictions, OR involves a risk to data subjects, the obligation is triggered. In practice, almost every SaaS platform with EU users falls under this definition.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Wer braucht einen — und wann nicht",
+          en: "Who needs one — and when not",
+        },
+        body: {
+          de: [
+            "Pflicht: jedes Unternehmen ohne EU-Niederlassung, das Waren oder Dienstleistungen an EU-Nutzer anbietet (Art. 3(2)(a)) oder das Verhalten von EU-Nutzern beobachtet (Art. 3(2)(b) — also fast jede Analytics-Plattform, jede Tracking-SDK, jede Programmatic-Ad-Plattform).",
+            "Ausnahme nach Art. 27(2): Verarbeitung ist „nur gelegentlich\" UND nicht in großem Umfang UND keine besonderen Kategorien UND kein wahrscheinliches Risiko. Diese Schwelle ist eng — der EDPB hat 2018 (Guidelines 3/2018) klargestellt, dass „gelegentlich\" eine seltene, nicht wiederkehrende Verarbeitung meint. Eine US-App mit 50 deutschen Nutzern, die täglich Daten generieren, ist nicht „gelegentlich\".",
+            "Häufig übersehen: B2B-Unternehmen sind nicht ausgenommen. Wenn ein US-CRM personenbezogene Daten von EU-Mitarbeitern bei deren Kunden verarbeitet, ist das Verarbeiten — der Adressat im EU-Mitgliedstaat ist eine natürliche Person, auch wenn der Vertrag B2B ist. Wir sehen den Fehler regelmäßig bei US-SaaS, das „business email\"-Adressen sammelt.",
+            "Zweite Falle: der DSA-Article-13-Vertreter ist eine PARALLELE Pflicht, kein Ersatz. Wenn das US-Unternehmen ein „Intermediary Service\" nach DSA ist (Hosting, Online-Marketplace, sehr großer Online-Search-Engine etc.), braucht es ZUSÄTZLICH zum Article-27-Vertreter einen DSA-Article-13-Vertreter. Beide Rollen können von derselben Entität ausgeübt werden, aber das muss schriftlich klargestellt sein.",
+          ],
+          en: [
+            "Required: every company without EU establishment that offers goods or services to EU users (Art. 3(2)(a)) or monitors the behavior of EU users (Art. 3(2)(b) — so virtually every analytics platform, every tracking SDK, every programmatic-ad platform).",
+            "Exemption under Art. 27(2): processing is \"occasional\" AND not large-scale AND no special categories AND no likely risk. This threshold is narrow — the EDPB clarified in 2018 (Guidelines 3/2018) that \"occasional\" means rare, non-recurring processing. A US app with 50 German users generating daily data is not \"occasional.\"",
+            "Often overlooked: B2B companies are not exempt. If a US CRM processes personal data of EU employees at their customers, that is processing — the data subject in the EU Member State is a natural person, even if the contract is B2B. We see this mistake regularly at US SaaS that collects \"business email\" addresses.",
+            "Second trap: the DSA Article 13 representative is a PARALLEL obligation, not a substitute. If the US company qualifies as an \"intermediary service\" under DSA (hosting, online marketplace, very large online search engine etc.), it needs a DSA Article 13 representative IN ADDITION to the Article 27 representative. Both roles can be performed by the same entity, but that must be clarified in writing.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Der 4-Schritte-Bestellungsprozess",
+          en: "The 4-step appointment process",
+        },
+        body: {
+          de: [
+            "Schritt 1 (Woche 1) — Mitgliedstaat wählen. Nach Art. 27(3) muss der Vertreter in einem Mitgliedstaat sitzen, in dem die Betroffenen sind. Bei diffuser EU-Nutzerschaft wird in der Praxis der Mitgliedstaat mit dem höchsten Nutzeranteil gewählt — meist Deutschland, Niederlande, Irland oder Frankreich. Achtung: der gewählte Sitz bestimmt mittelbar die zuständige Aufsichtsbehörde im „One-Stop-Shop\"-Mechanismus, also potenziell BfDI vs. IE DPC vs. CNIL. Das ist eine strategische Wahl.",
+            "Schritt 2 (Woche 2) — Vertreter mandatieren. Schriftliche Vollmacht („mandate letter\"), die mindestens umfasst: (a) die Verantwortlichen / Auftragsverarbeiter, die der Vertreter repräsentiert; (b) die Verarbeitungstätigkeiten; (c) die Verpflichtung zur Führung des Verzeichnisses nach Art. 30; (d) die Verfügbarkeitsgarantie (Anfragen innerhalb von [X] Werktagen weiterleiten); (e) die Haftungsverteilung. Spezialisierte Vertreter-Dienstleister haben Standard-Mandate, die anpassbar sind.",
+            "Schritt 3 (Woche 3) — Datenschutzerklärung aktualisieren. Nach Art. 13(1)(a) muss die DS-Erklärung den Vertreter (Name, Anschrift, Kontaktdaten) ausweisen. Außerdem die Aufsichtsbehörde nennen. Ein häufiger Fehler: der Vertreter wird nur „intern\" benannt, aber nicht in der öffentlich zugänglichen Datenschutzerklärung — das ist nicht ausreichend und ein typischer Ansatzpunkt für Aufsichtsbehörden.",
+            "Schritt 4 (Woche 4) — Betroffenenanfrage-Workflow aufsetzen. Der Vertreter muss Anfragen entgegennehmen UND zeitgerecht beantworten lassen — die DSGVO-Fristen (Art. 12(3): 1 Monat, verlängerbar) laufen ab Eingang beim Vertreter, nicht ab Weiterleitung an das US-Unternehmen. Operativ heißt das: SLAs zwischen Vertreter und US-Unternehmen, idealerweise mit einer geteilten Ticket-Inbox.",
+          ],
+          en: [
+            "Step 1 (Week 1) — choose Member State. Per Art. 27(3) the representative must be established in a Member State where data subjects are. With diffuse EU user bases, in practice the Member State with the highest user share is selected — usually Germany, the Netherlands, Ireland, or France. Note: the chosen seat indirectly determines the lead supervisory authority under the \"one-stop-shop\" mechanism, potentially BfDI vs. IE DPC vs. CNIL. This is a strategic choice.",
+            "Step 2 (Week 2) — mandate the representative. Written mandate letter, covering at minimum: (a) the controllers / processors the representative represents; (b) the processing activities; (c) the obligation to maintain the Article 30 record; (d) the availability guarantee (inquiries forwarded within [X] business days); (e) the liability allocation. Specialized representative service providers have template mandates, customizable.",
+            "Step 3 (Week 3) — update the privacy notice. Per Art. 13(1)(a) the privacy notice must disclose the representative (name, address, contact details). Also name the supervisory authority. A common mistake: the representative is named only \"internally\" but not in the public-facing privacy notice — that is insufficient and a typical entry point for supervisory authorities.",
+            "Step 4 (Week 4) — set up the data subject request workflow. The representative must accept requests AND have them answered in time — the GDPR deadlines (Art. 12(3): one month, extendable) start running upon receipt by the representative, not upon forwarding to the US company. Operationally: SLAs between representative and US company, ideally with a shared ticket inbox.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Fünf Fehler, die in 80 % der ersten Bußgelder vorkommen",
+          en: "Five mistakes that appear in 80% of first-time fines",
+        },
+        body: {
+          de: [
+            "Fehler 1 — Kein Vertreter benannt, weil das US-Unternehmen sich auf eine US-Auftragsverarbeitung beruft. Wenn der Verantwortliche oder Auftragsverarbeiter selbst Anbieter ist, gilt Art. 27. Eine bestellte EU-Tochter ist keine Befreiung, wenn die Tochter nicht die GLEICHE rechtliche Person wie der Verantwortliche ist.",
+            "Fehler 2 — Vertreter in einem Mitgliedstaat benannt, in dem keine Nutzer sitzen, weil es dort billiger ist. Aufsichtsbehörden akzeptieren das, aber wenn DSA Article 13 ebenfalls gilt und unterschiedliche Anforderungen entstehen, wird es operativ heikel. Wir empfehlen den Mitgliedstaat mit der größten EU-Nutzergruppe.",
+            "Fehler 3 — Vertreter nur in interner E-Mail genannt, nicht in öffentlicher Privacy Notice. Die hessische Aufsichtsbehörde hat 2023 einen US-AdTech-Anbieter aus diesem Grund mit 240k € belegt — der Vertreter war zwar benannt, aber für Betroffene unauffindbar.",
+            "Fehler 4 — Mandate Letter nennt nur die Muttergesellschaft, nicht die Tochtergesellschaften, die ebenfalls EU-Daten verarbeiten. Bei einer Group-Struktur muss jede Verantwortliche-Entität separat aufgeführt sein. Die CNIL hat 2024 in mindestens drei Fällen ausdrücklich kritisiert, dass „Subsidiaries\" nicht aufgeführt waren.",
+            "Fehler 5 — Antwortzeiten nicht eingehalten. Wenn der Vertreter eine Anfrage am Tag X erhält und sie an das US-Unternehmen erst am Tag X+10 weiterleitet, läuft die 1-Monats-Frist trotzdem ab Tag X. Die häufigste Folge: Beschwerde der betroffenen Person, dann automatische Eskalation zur Aufsichtsbehörde, dann formelle Untersuchung. Operative SLAs sind kein Nice-to-have.",
+          ],
+          en: [
+            "Mistake 1 — No representative appointed, because the US company points to a US processing arrangement. If the controller or processor itself is the offerer, Art. 27 applies. An EU subsidiary is not an exemption unless the subsidiary is the SAME legal entity as the controller.",
+            "Mistake 2 — Representative appointed in a Member State where no users are located, because it is cheaper there. Supervisory authorities accept this, but if DSA Article 13 also applies and different requirements arise, it gets operationally messy. We recommend the Member State with the largest EU user group.",
+            "Mistake 3 — Representative only named in internal email, not in public privacy notice. The Hessian supervisory authority fined a US AdTech provider €240k in 2023 for this reason — the representative was appointed but not findable for data subjects.",
+            "Mistake 4 — Mandate letter only names the parent company, not the subsidiaries that also process EU data. In a group structure, each controlling entity must be listed separately. CNIL has expressly criticized the omission of \"subsidiaries\" in at least three decisions in 2024.",
+            "Mistake 5 — Response times not met. If the representative receives an inquiry on day X and forwards it to the US company only on day X+10, the one-month deadline still runs from day X. The most common consequence: data subject complaint, automatic escalation to the supervisory authority, formal investigation. Operational SLAs are not a nice-to-have.",
+          ],
+        },
+      },
+      {
+        heading: {
+          de: "Koordination mit US-Counsel und DSA Art. 13",
+          en: "Coordinating with US counsel and DSA Article 13",
+        },
+        body: {
+          de: [
+            "Für US-Unternehmen läuft die Article-27-Bestellung in der Regel parallel zu einer Reihe weiterer Compliance-Schritte: SCC-Modul-2-Verträge mit EU-Subprozessoren, TIA (Transfer Impact Assessment) nach Schrems II, Art. 30 Record of Processing Activities, ggf. eine DPIA nach Art. 35. Wer den Article-27-Vertreter isoliert benennt, ohne die anderen Bausteine zu adressieren, schafft eine Compliance-Fassade, die bei der ersten Aufsichtsbehörden-Anfrage zusammenbricht.",
+            "Bei DSA-Relevanz (Hosting, Marketplace, Search): Article 13 DSA verlangt einen Vertreter in einem der Mitgliedstaaten, in denen der Dienst angeboten wird. Pflichten teilweise parallel zu Art. 27, teilweise schärfer — der DSA-Vertreter haftet zusätzlich für DSA-Verstöße. Wir empfehlen dieselbe Entität, aber ZWEI getrennte Mandate Letters, weil Audit-Tracking und Haftungsabgrenzung sonst kollidieren.",
+            "Aus US-Sicht: die Article-27- und Article-13-Bestellung wird typischerweise vom US General Counsel oder Privacy Lead initiiert. Wir koordinieren als EU-Counsel mit dem US-Team, schreiben die Mandate Letters, prüfen die Privacy Notice-Updates und briefen den US-Privacy-Lead vor der ersten Aufsichtsbehörden-Anfrage. Time-to-Production aus unserer Erfahrung: 4-6 Wochen bei vorhandener EU-Lokalisierung, 8-10 Wochen ohne.",
+          ],
+          en: [
+            "For US companies, the Article 27 appointment typically runs in parallel to a series of additional compliance steps: SCC Module 2 contracts with EU sub-processors, TIA (Transfer Impact Assessment) per Schrems II, Art. 30 record of processing activities, possibly a DPIA per Art. 35. Whoever appoints the Article 27 representative in isolation, without addressing the other building blocks, creates a compliance facade that collapses on the first supervisory inquiry.",
+            "Where DSA applies (hosting, marketplace, search): Article 13 DSA requires a representative in one of the Member States where the service is offered. Duties partly parallel to Art. 27, partly stricter — the DSA representative is additionally liable for DSA violations. We recommend the same entity but TWO separate mandate letters, because audit tracking and liability boundaries otherwise collide.",
+            "From the US perspective: the Article 27 / Article 13 appointment is typically initiated by US General Counsel or Privacy Lead. We coordinate as EU counsel with the US team, draft the mandate letters, review the privacy notice updates, and brief US privacy lead before the first supervisory inquiry. Time-to-production in our experience: 4-6 weeks where EU localization already exists, 8-10 weeks without.",
           ],
         },
       },
