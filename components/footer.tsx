@@ -14,15 +14,26 @@ type FooterLink = {
     | "/wissen"
     | "/faelle"
     | "/kontakt"
+    | "/cross-border"
     | "/impressum"
     | "/datenschutz";
   label: string;
 };
 
-export function Footer({ locale: _locale }: { locale: Locale }) {
+export function Footer({ locale }: { locale: Locale }) {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
   const year = new Date().getFullYear();
+
+  const firmLinks: FooterLink[] = [
+    { href: "/kanzlei", label: t("links.team") },
+    { href: "/wissen", label: t("links.insights") },
+    { href: "/faelle", label: t("links.cases") },
+  ];
+  if (locale === "en") {
+    firmLinks.push({ href: "/cross-border", label: tNav("crossBorder") });
+  }
+  firmLinks.push({ href: "/kontakt", label: tNav("contact") });
 
   const sections: { heading: string; links: FooterLink[] }[] = [
     {
@@ -36,12 +47,7 @@ export function Footer({ locale: _locale }: { locale: Locale }) {
     },
     {
       heading: t("sections.firm"),
-      links: [
-        { href: "/kanzlei", label: t("links.team") },
-        { href: "/wissen", label: t("links.insights") },
-        { href: "/faelle", label: t("links.cases") },
-        { href: "/kontakt", label: tNav("contact") },
-      ],
+      links: firmLinks,
     },
     {
       heading: t("sections.legal"),

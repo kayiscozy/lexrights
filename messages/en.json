@@ -136,7 +136,7 @@
     "hero": {
       "eyebrow": "Firm",
       "title": "A law firm for a new legal reality.",
-      "sub": "LexRights was founded with a clear mission: give consumers and businesses across Europe access to specialized legal protection in the digital space - at eye level with the major platforms."
+      "sub": "LexRights was founded with a clear mission: give consumers and businesses across Europe access to specialized legal protection in the digital space — at eye level with the major platforms. With German bar admissions in Berlin and New York Bar counsel on the team, we run cross-border digital-rights mandates as one matter, not two."
     },
     "values": {
       "title": "Our principles",
@@ -392,6 +392,26 @@
     },
     "copyright": "All rights reserved.",
     "compliance": "Admitted to the Berlin Bar Association · BRAO/BORA compliant"
+  },
+  "crossBorderHomeTile": {
+    "eyebrow": "Cross-border US ⇄ EU",
+    "title": "One mandate. Two bars. One bill.",
+    "subtitle": "When a US platform meets an EU user, jurisdiction matters. We combine EU bar admissions with New York Bar counsel — and refuse the matters that don't belong on our desk.",
+    "pillars": {
+      "eu": {
+        "title": "EU enforcement",
+        "desc": "Brussels Ia, DSA, GDPR — at the consumer's home court, despite US TOS clauses."
+      },
+      "us": {
+        "title": "US counsel on the team",
+        "desc": "Stanford Law, NY State Bar, ex-Wilson Sonsini — for the US side of cross-border matters."
+      },
+      "litigation": {
+        "title": "Coordinated litigation",
+        "desc": "§ 1782 discovery, Hague Service, parallel proceedings — one team, one strategy."
+      }
+    },
+    "cta": "Explore our cross-border practice"
   },
   "crossBorder": {
     "meta": {
